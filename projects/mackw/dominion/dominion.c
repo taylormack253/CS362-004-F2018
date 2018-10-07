@@ -667,31 +667,10 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-      return playAdventurer(currentPlayer,state);
+      return playAdventurer(currentPlayer, state);
 			
     case council_room:
-      //+4 Cards
-      for (i = 0; i < 4; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //+1 Buy
-      state->numBuys++;
-			
-      //Each other player draws a card
-      for (i = 0; i < state->numPlayers; i++)
-	{
-	  if ( i != currentPlayer )
-	    {
-	      drawCard(i, state);
-	    }
-	}
-			
-      //put played card in played card pile
-      discardCard(handPos, currentPlayer, state, 0);
-			
-      return 0;
+      return playCouncilRoom(currentPlayer, state);
 			
     case feast:
       //gain card with cost up to 5
@@ -745,7 +724,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       //Reset Hand
       			
       return 0;
-			
+
+    //*********Gardens******************	
     case gardens:
       return -1;
 			
@@ -1238,10 +1218,41 @@ int playSmithy(int player, struct gameState *state, int handPos)
   {
     drawCard(currentPlayer, state);
   } 
+  
   //discard card from hand
   discardCard(handPos, currentPlayer, state, 0);
   return 0;
 }
+
+int playCouncilRoom(int player, struct gameState *state, int handPos)
+{
+  //+4 Cards
+
+  for (i = 0; i < 4; i++)
+  {
+    drawCard(player, state);
+  }
+   
+  //+1 Buy
+  state->numBuys++;
+      
+  //Each other player draws a card
+  for (i = 0; i < state->numPlayers; i++)
+  {
+    if ( i != player )
+    {
+      drawCard(i, state);
+    }
+  }
+      
+  //put played card in played card pile
+  discardCard(handPos, currentPlayer, state, 0);
+      
+  return 0;
+}
+
+
+
 
 
 
