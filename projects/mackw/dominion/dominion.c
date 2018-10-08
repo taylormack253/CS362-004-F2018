@@ -1251,7 +1251,7 @@ int playVillage(int player, struct gameState *state, int handPos)
 int playGreatHall(int player, struct gameState *state, int handPos)
 {
   //+1 Card
-  drawCard(currentPlayer, state);
+  drawCard(player, state);
       
   //+1 Actions
   state->numActions++;
