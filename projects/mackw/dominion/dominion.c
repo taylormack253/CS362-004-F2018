@@ -1197,20 +1197,21 @@ int playAdventurer(int player, struct gameState *state)
 int playSmithy(int player, struct gameState *state, int handPos)
 {
   // +3 cards
+  int i;
   for (i = 0; i < 3; i++)
   {
-    drawCard(currentPlayer, state);
+    drawCard(player, state);
   } 
 
   //discard card from hand
-  discardCard(handPos, currentPlayer, state, 0);
+  discardCard(handPos, player, state, 0);
   return 0;
 }
 
 int playCouncilRoom(int player, struct gameState *state, int handPos)
 {
   //+4 Cards
-
+  int i;
   for (i = 0; i < 4; i++)
   {
     drawCard(player, state);
@@ -1229,7 +1230,7 @@ int playCouncilRoom(int player, struct gameState *state, int handPos)
   }
       
   //put played card in played card pile
-  discardCard(handPos, currentPlayer, state, 0);
+  discardCard(handPos, player, state, 0);
       
   return 0;
 }
@@ -1256,7 +1257,7 @@ int playGreatHall(int player, struct gameState *state, int handPos)
   state->numActions++;
       
   //discard card from hand
-  discardCard(handPos, currentPlayer, state, 0);
+  discardCard(handPos, player, state, 0);
   return 0;
 }
 
