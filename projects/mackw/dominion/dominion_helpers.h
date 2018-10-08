@@ -15,5 +15,6 @@ int playAdventurer(int player, struct gameState *state);
 int playSmithy(int player, struct gameState *state, int handPos);
 int playCouncilRoom(int player, struct gameState *state, int handPos);
 int playVillage(int player, struct gameState *state, int handPos);
+int playGreatHall(int player, struct gameState *state, int handPos);
 
 #endif
