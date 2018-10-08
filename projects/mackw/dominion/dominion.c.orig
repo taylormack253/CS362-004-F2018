@@ -667,7 +667,11 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
+<<<<<<< HEAD
       return playAdventurer(currentPlayer,state);
+=======
+      return playAdventurer(currentPlayer, state);
+>>>>>>> 2b679cabb5581e76d6b572255b4b0f40215cdacf
 			
     case council_room:
       return playCouncilRoom(currentPlayer, state);
@@ -1194,6 +1198,14 @@ int playAdventurer(int player, struct gameState *state)
 }
 
 
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
 int playSmithy(int player, struct gameState *state, int handPos)
 {
   // +3 cards
@@ -1259,6 +1271,8 @@ int playGreatHall(int player, struct gameState *state, int handPos)
   discardCard(handPos, currentPlayer, state, 0);
   return 0;
 }
+>>>>>>> 2b679cabb5581e76d6b572255b4b0f40215cdacf
+
 
 
 
