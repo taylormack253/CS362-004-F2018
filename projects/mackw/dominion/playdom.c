@@ -141,8 +141,8 @@ int main (int argc, char** argv) {
         buyCard(silver, &G);
       }
 
-      if (g.numBuys > 0){
-        printf("player 0 has another buy remaining")
+      if (G.numBuys > 0){
+        printf("player 0 has another buy remaining");
       }
 
       printf("0: end turn\n");
