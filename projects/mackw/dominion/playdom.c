@@ -142,7 +142,24 @@ int main (int argc, char** argv) {
       }
 
       if (G.numBuys > 0){
-        printf("0: 1 buy remaining %d money ramaining\n", money);
+        printf("0: 1 buy remaining %d money remaining\n", money);
+        if (money >= 8) {
+          printf("0: bought province\n");
+          buyCard(province, &G);
+        }
+        else if (money >= 6) {
+          printf("0: bought gold\n");
+          buyCard(gold, &G);
+        }
+        else if ((money >= 5) && (numCouncilRooms < 2)) {
+          printf("0: bought council room\n");
+          buyCard(council_room, &G);
+          numCouncilRooms++;
+        }
+        else if (money >= 3) {
+          printf("0: bought silver\n");
+          buyCard(silver, &G);
+        }
       }
 
       printf("0: end turn\n");
