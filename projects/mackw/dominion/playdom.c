@@ -168,7 +168,7 @@ int main (int argc, char** argv) {
     }
     else {
       ///////////////////// Adventurer Strategy //////////////////////////////////////////
-      /*if (adventurerPos != -1) {
+      if (adventurerPos != -1) {
         printf("1: adventurer played from position %d\n", adventurerPos);
         playCard(adventurerPos, -1, -1, -1, &G);
         money = 0;
@@ -208,10 +208,10 @@ int main (int argc, char** argv) {
       }
       printf("1: endTurn\n");
 
-      endTurn(&G); */
+      endTurn(&G); 
 
       ///////////////////// Great Hall Strategy //////////////////////////////////////////
-      if (great_hallPos != -1) {
+      /*if (great_hallPos != -1) {
         printf("1: great hall played from position %d\n", great_hallPos);
         playCard(great_hallPos, -1, -1, -1, &G);
         money = 0;
@@ -261,7 +261,7 @@ int main (int argc, char** argv) {
       printf("1: endTurn\n");
 
       endTurn(&G);
-    }
+    }*/
   } // end of While
 
   printf ("Finished game.\n");
