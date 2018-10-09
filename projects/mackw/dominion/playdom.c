@@ -220,13 +220,22 @@ int main (int argc, char** argv) {
         printf("1: bought great hall\n");
         buyCard(great_hall, &G);
         numGreatHalls++;
-      }else if (money >= 6){
+      }
+      else if (money >= 6){
         printf("1: bought gold\n");
         buyCard(gold, &G);
-        }
+      }
+      else if (money >= 5){
+        printf("1: bought duchy\n");
+        buyCard(duchy, &G);
+      }
       else if (money >= 3){
         printf("1: bought silver\n");
         buyCard(silver, &G);
+      }
+      else if (money >= 2){
+        printf("1: bought estate\n");
+        buyCard(estate, &G);
       }
       printf("1: endTurn\n");
 
