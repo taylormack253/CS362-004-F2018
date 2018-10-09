@@ -122,25 +122,27 @@ int main (int argc, char** argv) {
           i++;
         }
       }
-      while (G.numBuys > 0)
-      {
-        if (money >= 8) {
-          printf("0: bought province\n");
-          buyCard(province, &G);
-        }
-        else if (money >= 6) {
-          printf("0: bought gold\n");
-          buyCard(gold, &G);
-        }
-        else if ((money >= 5) && (numCouncilRooms < 2)) {
-          printf("0: bought council room\n");
-          buyCard(council_room, &G);
-          numCouncilRooms++;
-        }
-        else if (money >= 3) {
-          printf("0: bought silver\n");
-          buyCard(silver, &G);
-        }
+    
+      if (money >= 8) {
+        printf("0: bought province\n");
+        buyCard(province, &G);
+      }
+      else if (money >= 6) {
+        printf("0: bought gold\n");
+        buyCard(gold, &G);
+      }
+      else if ((money >= 5) && (numCouncilRooms < 2)) {
+        printf("0: bought council room\n");
+        buyCard(council_room, &G);
+        numCouncilRooms++;
+      }
+      else if (money >= 3) {
+        printf("0: bought silver\n");
+        buyCard(silver, &G);
+      }
+
+      if (g.numBuys > 0){
+        printf("player 0 has another buy remaining")
       }
 
       printf("0: end turn\n");
