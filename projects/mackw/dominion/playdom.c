@@ -147,7 +147,7 @@ int main (int argc, char** argv) {
     }
     else {
       ///////////////////// Adventurer Strategy //////////////////////////////////////////
-      if (adventurerPos != -1) {
+      /*if (adventurerPos != -1) {
         printf("1: adventurer played from position %d\n", adventurerPos);
         playCard(adventurerPos, -1, -1, -1, &G);
         money = 0;
@@ -184,6 +184,49 @@ int main (int argc, char** argv) {
       else if (money >= 3){
         printf("1: bought silver\n");
 	    buyCard(silver, &G);
+      }
+      printf("1: endTurn\n");
+
+      endTurn(&G); */
+
+      ///////////////////// Great Hall Strategy //////////////////////////////////////////
+      if (great_hallPos != -1) {
+        printf("1: great hall played from position %d\n", great_hallPos);
+        playCard(great_hallPos, -1, -1, -1, &G);
+        money = 0;
+        i=0;
+        while(i<numHandCards(&G)){
+          if (handCard(i, &G) == copper){
+            playCard(i, -1, -1, -1, &G);
+            money++;
+          }
+          else if (handCard(i, &G) == silver){
+            playCard(i, -1, -1, -1, &G);
+            money += 2;
+          }
+          else if (handCard(i, &G) == gold){
+            playCard(i, -1, -1, -1, &G);
+            money += 3;
+          }
+          i++;
+        }
+      }
+
+      if (money >= 8) {
+        printf("1: bought province\n");
+        buyCard(province, &G);
+      }
+      else if ((money >= 3) && (numGreatHalls < 2)) {
+        printf("1: bought great hall\n");
+        buyCard(great_hall, &G);
+        numGreatHalls++;
+      }else if (money >= 6){
+        printf("1: bought gold\n");
+        buyCard(gold, &G);
+        }
+      else if (money >= 3){
+        printf("1: bought silver\n");
+        buyCard(silver, &G);
       }
       printf("1: endTurn\n");
 
