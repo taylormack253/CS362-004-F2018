@@ -142,7 +142,7 @@ int main (int argc, char** argv) {
       }
 
       if (G.numBuys > 0){
-        printf("player 0 has another buy remaining");
+        printf("0: 1 buy remaining %d money ramaining\n", money);
       }
 
       printf("0: end turn\n");
