@@ -260,8 +260,8 @@ int main (int argc, char** argv) {
       }
       printf("1: endTurn\n");
 
-      endTurn(&G);
-    }*/
+      endTurn(&G);*/
+    }
   } // end of While
 
   printf ("Finished game.\n");
