@@ -5,7 +5,7 @@
 
 int main (int argc, char** argv) {
   struct gameState G;
-  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse,
+  int k[10] = {adventurer, gardens, council_room, village, great_hall, mine, cutpurse,
            sea_hag, tribute, smithy};
 
   printf ("Starting game.\n");
@@ -15,15 +15,26 @@ int main (int argc, char** argv) {
   int money = 0;
   int smithyPos = -1;
   int adventurerPos = -1;
+  int council_roomPos = -1;
+  int great_hallPos = -1;
+  int villagePos = -1;
+
   int i=0;
 
   int numSmithies = 0;
   int numAdventurers = 0;
+  int numVillages = 0;
+  int numCouncilRooms = 0;
+  int numGreatHalls = 0;
 
   while (!isGameOver(&G)) {
     money = 0;
     smithyPos = -1;
     adventurerPos = -1;
+    council_roomPos = -1;
+    great_hallPos = -1;
+    villagePos = -1;
+    
     for (i = 0; i < numHandCards(&G); i++) {
       if (handCard(i, &G) == copper)
     money++;
@@ -35,10 +46,17 @@ int main (int argc, char** argv) {
     smithyPos = i;
       else if (handCard(i, &G) == adventurer)
     adventurerPos = i;
+      else if (handCard(i, &G) == council_room)
+    council_roomPos = i;
+      else if (handCard(i, &G) == great_hall)
+    great_hallPos = i;
+      else if (handCard(i, &G) == village)
+    villagePos = i;
     }
 
     if (whoseTurn(&G) == 0) {
-      if (smithyPos != -1) {
+      ////////////////////////////// Smithy Strategy ////////////////////////////////////
+      /*if (smithyPos != -1) {
         printf("0: smithy played from position %d\n", smithyPos);
         playCard(smithyPos, -1, -1, -1, &G);
         //printf("smithy played.\n");
@@ -80,9 +98,55 @@ int main (int argc, char** argv) {
       }
 
       printf("0: end turn\n");
+      endTurn(&G); */
+
+      ////////////////////////// Council Room Strategy ////////////////////////////////////////
+      if (council_roomPos != -1) {
+        printf("0: council room played from position %d\n", council_roomPos);
+        playCard(council_roomPos, -1, -1, -1, &G);
+        money = 0;
+        i=0;
+        while(i<numHandCards(&G)){
+          if (handCard(i, &G) == copper){
+            playCard(i, -1, -1, -1, &G);
+            money++;
+          }
+          else if (handCard(i, &G) == silver){
+            playCard(i, -1, -1, -1, &G);
+            money += 2;
+          }
+          else if (handCard(i, &G) == gold){
+            playCard(i, -1, -1, -1, &G);
+            money += 3;
+          }
+          i++;
+        }
+      }
+
+      if (money >= 8) {
+        printf("0: bought province\n");
+        buyCard(province, &G);
+      }
+      else if (money >= 6) {
+        printf("0: bought gold\n");
+        buyCard(gold, &G);
+      }
+      else if ((money >= 5) && (numCouncilRooms < 2)) {
+        printf("0: bought council room\n");
+        buyCard(council_room, &G);
+        numCouncilRooms++;
+      }
+      else if (money >= 3) {
+        printf("0: bought silver\n");
+        buyCard(silver, &G);
+      }
+
+      printf("0: end turn\n");
       endTurn(&G);
+
     }
     else {
+      ///////////////////// Adventurer Strategy //////////////////////////////////////////
       if (adventurerPos != -1) {
         printf("1: adventurer played from position %d\n", adventurerPos);
         playCard(adventurerPos, -1, -1, -1, &G);
