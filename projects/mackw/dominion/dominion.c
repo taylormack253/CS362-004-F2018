@@ -670,7 +670,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return playAdventurer(currentPlayer,state);
 			
     case council_room:
-      return playCouncilRoom(currentPlayer, state);
+      return playCouncilRoom(currentPlayer, state, handPos);
 			
     case feast:
       //gain card with cost up to 5
