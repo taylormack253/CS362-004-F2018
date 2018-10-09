@@ -122,7 +122,7 @@ int main (int argc, char** argv) {
           i++;
         }
       }
-      while (G->numBuys > 0)
+      while (G.numBuys > 0)
       {
         if (money >= 8) {
           printf("0: bought province\n");
