@@ -1218,7 +1218,7 @@ int playCouncilRoom(int player, struct gameState *state, int handPos)
   }
    
   //+1 Buy
-  state->numBuys++;
+  //state->numBuys++;
       
   //Each other player draws a card
   for (i = 0; i < state->numPlayers; i++)
@@ -1254,7 +1254,7 @@ int playGreatHall(int player, struct gameState *state, int handPos)
   drawCard(player, state);
       
   //+1 Actions
-  state->numActions++;
+  //state->numActions++;
       
   //discard card from hand
   discardCard(handPos, player, state, 0);
