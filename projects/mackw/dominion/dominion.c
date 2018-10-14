@@ -1168,7 +1168,7 @@ int playAdventurer(int player, struct gameState *state)
     int tempHand[MAX_HAND];
     int z = 0;
 
-    while(drawnTreasure<2)
+    while(drawnTreasure<=2)
     {
         if (state->deckCount[player] <1)
         {//if the deck is empty we need to shuffle discard and add to deck
@@ -1198,7 +1198,7 @@ int playSmithy(int player, struct gameState *state, int handPos)
 {
   // +3 cards
   int i;
-  for (i = 0; i < 3; i++)
+  for (i = 0; i < 4; i++)
   {
     drawCard(player, state);
   } 
