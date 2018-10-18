@@ -1,5 +1,4 @@
 ///////////////////////////////////////////////////////////////////////
-// File: cardest1.c
+// File: cardtest1.c
 // Author: William Taylor Mack
-// Description: Unit testing for ______________________
-
+// Description: Card testing for adventurer.

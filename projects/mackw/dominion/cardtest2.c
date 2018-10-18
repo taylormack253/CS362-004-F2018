@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////
 // File: cardtest2.c
 // Author: William Taylor Mack
-// Description: Card testing for ______________________
+// Description: Card testing for smithy.
 
 
