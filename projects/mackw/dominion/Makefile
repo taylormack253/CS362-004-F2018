@@ -39,4 +39,4 @@ clean:
 	rm -f *.o playdom.exe playdom player player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
 
 unittest1: dominion.o unittest1.c
-	gcc -o unittest1 -g unitest1.c dominion.o rngs.o $(CFLAGS)
+	gcc -o unittest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
