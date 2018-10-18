@@ -28,7 +28,7 @@ int main () {
 			printf("Cost is CORRECT\n");
 		else 
 			printf("Cost is INCORRECT\n");
-		card++
+		card++;
 		i++;
 	}
 	
