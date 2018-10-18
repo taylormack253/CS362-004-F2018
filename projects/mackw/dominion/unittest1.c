@@ -13,12 +13,9 @@ int cardCosts[] = {0,2,5,8,0,3,6,6,5,4,4,5,4,4,3,4,3,5,3,5,3,4,2,5,4,4,4};
 
 int main () {
 	// create card and initilize to 0
-	int card; 
-	card = 0;
-	int cost; 
-	cost = 0;
-	int i;
-	i = 0;
+	int card = 0;
+	int cost = 0;
+	int i = 0;
 
 	printf ("Unit test 1\n");
 
@@ -31,6 +28,7 @@ int main () {
 			printf("Cost is CORRECT\n");
 		else 
 			printf("Cost is INCORRECT\n");
+		card++
 		i++;
 	}
 	
