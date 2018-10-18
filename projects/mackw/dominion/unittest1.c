@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dominion.h"
+#include "dominion_helpers.h"
 #include "rngs.h"
 
 int cardCosts[] = {0,2,5,8,0,3,6,6,5,4,4,5,4,4,3,4,3,5,3,5,3,4,2,5,4,4,4};
