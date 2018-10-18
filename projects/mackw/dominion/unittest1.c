@@ -27,7 +27,7 @@ int main () {
 		printf("Card #%d\n", card);
 		cost = getCost(card);
 		printf("Cost %d coins\n", cost);
-		if (cost = cardCosts[i])
+		if (cost == cardCosts[i])
 			printf("Cost is CORRECT\n");
 		else 
 			printf("Cost is INCORRECT\n");
