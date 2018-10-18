@@ -27,6 +27,7 @@ int main () {
 			printf("Cost is CORRECT");
 		else 
 			printf("Cost is INCORRECT");
+		i++;
 	}
 	
 }
