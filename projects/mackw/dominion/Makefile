@@ -6,6 +6,10 @@ rngs.o: rngs.h rngs.c
 dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
+
+assertCustom.o: assertFxns.h assertFxns.c dominion.o
+	gcc -c assertFxns.c -g $(CFLAGS)
+
 playdom: dominion.o playdom.c
 	gcc -o playdom playdom.c -g dominion.o rngs.o $(CFLAGS)
 #To run playdom you need to entere: ./playdom <any integer number> like ./playdom 10*/
@@ -40,3 +44,6 @@ clean:
 
 unittest1: dominion.o unittest1.c
 	gcc -o unittest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
+
+unitTest3: unittest3.c dominion.o rngs.o assertFxn.o
+	gcc -o unitTest3 -g unittest3.c dominion.o rngs.o assertFxn.o $(CFLAGS)
