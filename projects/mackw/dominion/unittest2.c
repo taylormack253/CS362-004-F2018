@@ -31,37 +31,7 @@ void assertCustom(int boolean, char * message){
 
 }
 
-void assertGameState(int player, struct gameState * oldG, struct gameState * newG){
-    int failed = FALSE;
-    if(oldG->handCount[player] !=   newG->handCount[player]){
-        printf("TEST FAILED: Hand Count for non-action player Changed\n");
-        failed = TRUE;
-    }
-    if(oldG->numPlayers != newG->numPlayers){
-        printf("TEST FAILED: Number of Players in Game Changed\n");
-        failed = TRUE;
-    }
-    if(oldG->deckCount[player] !=   newG->deckCount[player]){
-        printf("TEST FAILED: Deck Count for non-action player Changed\n");
-        failed = TRUE;
-    }
-    int i;
-    for(i = curse; i < NUM_CARDS; i++){
-        if(oldG->supplyCount[i] != newG->supplyCount[i]){
-            printf("TEST FAILED Card %d Supply Count Changed\n", i);
-           failed = TRUE;
-        }
-        if(oldG->embargoTokens[i] != newG->embargoTokens[i]){
-            printf("TEST FAILED Embargo Token on Card %d Changed\n", i);
-            failed = TRUE;
 
-        }
-    }
-    if(!failed){
-        printf("TEST PASSED: Game State Invariants\n");
-    }
-
-}
 
 int main() {
     int i;

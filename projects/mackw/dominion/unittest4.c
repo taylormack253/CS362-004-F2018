@@ -12,6 +12,18 @@
 #include <stdlib.h>
 #include <assert.h>
 
+void assertCustom(int boolean, char * message){
+
+    if(boolean == TRUE){
+
+        printf("TEST PASSED: %s\n", message );
+    }
+    if(boolean == FALSE){
+
+        printf("TEST FAILED: %s\n", message );
+    }
+
+}
 //unit test 4 tests to check next player's turn
 //this acts to check if another player is existant 
 int main (int argc, char** argv)	{
@@ -26,7 +38,7 @@ int main (int argc, char** argv)	{
     for (int x = 2 ; x < 5 ; ++x)	{
         a = initializeGame(2, k, 5, &G);
         a = whoseTurn(&G);
-        assert(a == G.whoseTurn);
+        assertCustom(a == G.whoseTurn, "player valid");
 		printf("Test Passed\n");		
 	}
 
