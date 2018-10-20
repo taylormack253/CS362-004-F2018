@@ -8,6 +8,10 @@
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include "rngs.h"
+#define NO_CARDS 0
+#define NUM_CARDS 27
+#define TRUE 1
+#define FALSE 0
 
 void assertCustom(int boolean, char * message){
 
@@ -35,10 +39,10 @@ int main () {
 	printf ("** Unit test 1: getCost() **\n");
 
 	// print cards and costs
-	while (i < 27){
+	while (i < NUM_CARDS){
 		printf("Card #%d\n", card);
 		cost = getCost(card);
-		assertCustom(cost == cardCosts[i], "cost of card")
+		assertCustom(cost == cardCosts[i], "cost of card");
 		/*if (cost == cardCosts[i])
 			printf("Cost is CORRECT\n");
 		else 
