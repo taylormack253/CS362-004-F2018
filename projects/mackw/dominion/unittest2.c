@@ -106,7 +106,7 @@ int main() {
                 G.handCount[p] = handCount;                 
                 memcpy(G.hand[p], coppers, sizeof(int) * handCount); // set all the cards to copper
                
-                printf ("Test all coppers in player hand");
+                printf ("Test all coppers in player hand\n");
                 updateCoins(p, &G, bonus);
                 assertCustom(G.coins == handCount * 1 + bonus, "number of coins is correct"); // check if the number of coins is correct
 
@@ -114,14 +114,14 @@ int main() {
                 memcpy(G.hand[p], silvers, sizeof(int) * handCount); // set all the cards to silver
                 updateCoins(p, &G, bonus);
 
-                printf ("Test all silvers in player hand");
+                printf ("Test all silvers in player hand\n");
                 assertCustom(G.coins == handCount * 2 + bonus, "number of coins is correct"); // check if the number of coins is correct
 
                 // copy all golds to players hand
                 memcpy(G.hand[p], golds, sizeof(int) * handCount); // set all the cards to gold
                 updateCoins(p, &G, bonus);
 
-                printf ("Test all golds in player hand");
+                printf ("Test all golds in player hand\n");
                 assertCustom(G.coins == handCount * 3 + bonus, "number of coins is correct"); // check if the number of coins is correct
             }
         }
