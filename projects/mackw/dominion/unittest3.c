@@ -11,6 +11,7 @@
 #include "assertFxns.h"
 #include <stdlib.h>
 #define NO_CARDS 0
+#define NUM_CARDS 27
 #define TRUE 1
 #define FALSE 0
 
