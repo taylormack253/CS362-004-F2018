@@ -7,11 +7,60 @@
 #include "dominion_helpers.h"
 #include <string.h>
 #include <stdio.h>
-#include <assert.h>
 #include "rngs.h"
+#include "assertFxns.h"
+#include <stdlib.h>
+#define NO_CARDS 0
+#define NUM_CARDS 27
+#define TRUE 1
+#define FALSE 0
 
-// set NOISY_TEST to 0 to remove printfs from output
-#define NOISY_TEST 1
+void assertCustom(int boolean, char * message){
+
+    if(boolean == TRUE){
+
+        printf("TEST PASSED: %s\n", message );
+    }
+    if(boolean == FALSE){
+
+        printf("TEST FAILED: %s\n", message );
+
+
+    }
+
+}
+
+void assertGameState(int player, struct gameState * oldG, struct gameState * newG){
+    int failed = FALSE;
+    if(oldG->handCount[player] !=   newG->handCount[player]){
+        printf("TEST FAILED: Hand Count for non-action player Changed\n");
+        failed = TRUE;
+    }
+    if(oldG->numPlayers != newG->numPlayers){
+        printf("TEST FAILED: Number of Players in Game Changed\n");
+        failed = TRUE;
+    }
+    if(oldG->deckCount[player] !=   newG->deckCount[player]){
+        printf("TEST FAILED: Deck Count for non-action player Changed\n");
+        failed = TRUE;
+    }
+    int i;
+    for(i = curse; i < NUM_CARDS; i++){
+        if(oldG->supplyCount[i] != newG->supplyCount[i]){
+            printf("TEST FAILED Card %d Supply Count Changed\n", i);
+           failed = TRUE;
+        }
+        if(oldG->embargoTokens[i] != newG->embargoTokens[i]){
+            printf("TEST FAILED Embargo Token on Card %d Changed\n", i);
+            failed = TRUE;
+
+        }
+    }
+    if(!failed){
+        printf("TEST PASSED: Game State Invariants\n");
+    }
+
+}
 
 int main() {
     int i;
@@ -48,31 +97,27 @@ int main() {
         	// test each bonus amount
             for (bonus = 0; bonus <= maxBonus; bonus++)
             {
-#if (NOISY_TEST == 1)
                 printf("Test player %d with %d treasure card(s) and %d bonus.\n", p, handCount, bonus);
-#endif
                 memset(&G, 23, sizeof(struct gameState));   // clear the game state
                 
                 G.handCount[p] = handCount;                 // set the number of cards on hand
                 memcpy(G.hand[p], coppers, sizeof(int) * handCount); // set all the cards to copper
                 updateCoins(p, &G, bonus);
-#if (NOISY_TEST == 1)
+
+
                 printf("G.coins = %d, expected = %d\n", G.coins, handCount * 1 + bonus);
-#endif
                 assert(G.coins == handCount * 1 + bonus); // check if the number of coins is correct
 
                 memcpy(G.hand[p], silvers, sizeof(int) * handCount); // set all the cards to silver
                 updateCoins(p, &G, bonus);
-#if (NOISY_TEST == 1)
+
                 printf("G.coins = %d, expected = %d\n", G.coins, handCount * 2 + bonus);
-#endif
                 assert(G.coins == handCount * 2 + bonus); // check if the number of coins is correct
 
                 memcpy(G.hand[p], golds, sizeof(int) * handCount); // set all the cards to gold
                 updateCoins(p, &G, bonus);
-#if (NOISY_TEST == 1)
+
                 printf("G.coins = %d, expected = %d\n", G.coins, handCount * 3 + bonus);
-#endif
                 assert(G.coins == handCount * 3 + bonus); // check if the number of coins is correct
             }
         }
