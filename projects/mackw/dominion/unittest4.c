@@ -11,6 +11,10 @@
 #include <math.h>
 #include <stdlib.h>
 #include <assert.h>
+#define NO_CARDS 0
+#define NUM_CARDS 27
+#define TRUE 1
+#define FALSE 0
 
 void assertCustom(int boolean, char * message){
 
