@@ -40,7 +40,7 @@ int main (int argc, char** argv)	{
 	printf("\nRunning test 3 times because base game is set to 4 players\n");
 	printf("Checking to see if other three players are still legal targets\n");
     for (int x = 2 ; x < 5 ; ++x)	{
-    	printf("Testing game with %d players", x)
+    	printf("Testing game with %d players", x);
         a = initializeGame(x, k, 5, &G);
         a = whoseTurn(&G);
         assertCustom(a == G.whoseTurn, "for this number of players");		
