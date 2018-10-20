@@ -40,7 +40,10 @@ int main () {
 
 	// print cards and costs
 	while (i <= NUM_CARDS){
-		printf("Card #%d\n", card);
+		if (i == NUM_CARDS)
+			printf("Test invalid card id\n");
+		else
+			printf("Card #%d\n", card);
 		cost = getCost(card);
 		assertCustom(cost == cardCosts[i], "cost of card");
 		/*if (cost == cardCosts[i])

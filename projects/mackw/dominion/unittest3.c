@@ -45,7 +45,7 @@ void assertGameState(int player, struct gameState * oldG, struct gameState * new
         failed = TRUE;
     }
     int i;
-    for(i = curse; i < NUM_CARDS; i++){
+    /*for(i = curse; i < NUM_CARDS; i++){
         if(oldG->supplyCount[i] != newG->supplyCount[i]){
             printf("TEST FAILED Card %d Supply Count Changed\n", i);
            failed = TRUE;
@@ -55,7 +55,7 @@ void assertGameState(int player, struct gameState * oldG, struct gameState * new
             failed = TRUE;
 
         }
-    }
+    }*/
     if(!failed){
         printf("TEST PASSED: Game State Invariants\n");
     }
@@ -72,7 +72,7 @@ void gameTests(int thisPlayer,struct gameState G, struct gameState testG){
     assertCustom(testG.numActions == G.numActions, "Number of actions" );
     assertCustom(testG.numBuys == G.numBuys, "Number of Buys" );
     assertCustom(testG.playedCardCount == G.playedCardCount, "Number of Cards Discarded");
-    assertGameState(thisPlayer+1, &G, &testG);
+    //assertGameState(thisPlayer+1, &G, &testG);
 
 }
 
@@ -91,7 +91,7 @@ int main() {
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
 
-   printf ("\n** Unit Test 3: isGameOver() **\n");
+   	printf ("\n** Unit Test 3: isGameOver() **\n");
    
     //copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -99,6 +99,7 @@ int main() {
 
     // province pile empty
     testG.supplyCount[province] = NO_CARDS;
+    printf("Test no province cards left\n");
     // test that the game is over
     assertCustom(isGameOver(&testG) == TRUE, "Game over: No province Cards");
     gameTests(thisPlayer, G, testG);
@@ -109,16 +110,19 @@ int main() {
     // Test 2 piles empty
     testG.supplyCount[curse] = NO_CARDS;
     testG.supplyCount[adventurer] = NO_CARDS;
-    assertCustom(isGameOver(&testG)== FALSE, "Game over: Curse and Adventurer have no Cards");
+    printf("Test 2 piles with no cards left\n");
+    assertCustom(isGameOver(&testG)== FALSE, "Game not over: Only 2 piles have no Cards");
     gameTests(thisPlayer, G, testG);
 
     // Test 3 piles empty
     testG.supplyCount[gold] = NO_CARDS;
+    printf("Test 3 piles with no cards left\n");
     assertCustom(isGameOver(&testG)== TRUE, "Game over: Curse, Adventurer, Gold have no Cards");
     gameTests(thisPlayer, G, testG);
 
     // Test 3 piles empty and provinces
     testG.supplyCount[province] = NO_CARDS;
+    printf("Test 3 piles with no cards left and no provinces\n");
     assertCustom(isGameOver(&testG)== TRUE, "Game over: Curse, Adventurer, Gold and Province no Cards");
     gameTests(thisPlayer, G, testG);
 
