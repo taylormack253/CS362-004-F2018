@@ -15,7 +15,7 @@
 #define FALSE 0
 
 // Function to test that the game state was not altered by isGameOver
-void tests(int thisPlayer,struct gameState G, struct gameState testG){
+void gameTests(int thisPlayer,struct gameState G, struct gameState testG){
 
     assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer], "Receives No cards");
     assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer], "Deck has the same number of cards");
@@ -53,7 +53,7 @@ int main() {
     testG.supplyCount[province] = NO_CARDS;
     // test that the game is over
     assertCustom(isGameOver(&testG) == TRUE, "Game over: No province Cards");
-    tests(thisPlayer, G, testG);
+    gameTests(thisPlayer, G, testG);
 
     // re-initilize the game struct
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -62,17 +62,17 @@ int main() {
     testG.supplyCount[curse] = NO_CARDS;
     testG.supplyCount[adventurer] = NO_CARDS;
     assertCustom(isGameOver(&testG)== FALSE, "Game over: Curse and Adventurer have no Cards");
-    tests(thisPlayer, G, testG);
+    gameTests(thisPlayer, G, testG);
 
     // Test 3 piles empty
     testG.supplyCount[gold] = NO_CARDS;
     assertCustom(isGameOver(&testG)== TRUE, "Game over: Curse, Adventurer, Gold have no Cards");
-    tests(thisPlayer, G, testG);
+    gameTests(thisPlayer, G, testG);
 
     // Test 3 piles empty and provinces
     testG.supplyCount[province] = NO_CARDS;
     assertCustom(isGameOver(&testG)== TRUE, "Game over: Curse, Adventurer, Gold and Province no Cards");
-    tests(thisPlayer, G, testG);
+    gameTests(thisPlayer, G, testG);
 
 
     return 0;
