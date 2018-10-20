@@ -9,27 +9,45 @@
 #include "dominion_helpers.h"
 #include "rngs.h"
 
-int cardCosts[] = {0,2,5,8,0,3,6,6,5,4,4,5,4,4,3,4,3,5,3,5,3,4,2,5,4,4,4};
+void assertCustom(int boolean, char * message){
+
+    if(boolean == TRUE){
+
+        printf("TEST PASSED: %s\n", message );
+    }
+    if(boolean == FALSE){
+
+        printf("TEST FAILED: %s\n", message );
+
+
+    }
+
+}
 
 int main () {
 	// create card and initilize to 0
 	int card = 0;
 	int cost = 0;
 	int i = 0;
+	int cardCosts[] = {0,2,5,8,0,3,6,6,5,4,4,5,4,4,3,4,3,5,3,5,3,4,2,5,4,4,4};
 
-	printf ("Unit test 1\n");
+
+	printf ("** Unit test 1: getCost() **\n");
 
 	// print cards and costs
 	while (i < 27){
 		printf("Card #%d\n", card);
 		cost = getCost(card);
-		printf("Cost %d coins\n", cost);
-		if (cost == cardCosts[i])
+		assertCustom(cost == cardCosts[i], "cost of card")
+		/*if (cost == cardCosts[i])
 			printf("Cost is CORRECT\n");
 		else 
 			printf("Cost is INCORRECT\n");
+		*/
 		card++;
 		i++;
 	}
-	
+
+	printf("\n** End of Unit Test 1: getCost **\n");
+
 }

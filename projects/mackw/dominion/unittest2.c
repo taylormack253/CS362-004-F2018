@@ -58,7 +58,8 @@ int main() {
 
     r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
 
-    printf ("TESTING updateCoins():\n");
+	printf("\n** Unit Test 3: updateCoins() **\n");
+
     // loop all players
     for (p = 0; p < numPlayer; p++)
     {
@@ -97,7 +98,7 @@ int main() {
         }
     }
 
-    printf("All tests passed!\n");
+	printf("\n** End of Unit Test 2: updateCoins() **\n");
 
     return 0;
 }

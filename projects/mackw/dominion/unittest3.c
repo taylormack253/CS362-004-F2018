@@ -91,7 +91,7 @@ int main() {
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
 
-    printf("----------------- Testing isGameOver----------------\n");
+   printf ("\n** Unit Test 3: isGameOver() **\n");
    
     //copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -123,5 +123,6 @@ int main() {
     gameTests(thisPlayer, G, testG);
 
 
+	printf("\n** End of Unit Test 3: isGameOver() **\n");
     return 0;
 }
