@@ -45,5 +45,5 @@ clean:
 unittest1: dominion.o unittest1.c
 	gcc -o unittest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
 
-unitTest3: unittest3.c dominion.o rngs.o assertFxn.o
-	gcc -o unitTest3 -g unittest3.c dominion.o rngs.o assertFxn.o $(CFLAGS)
+unitTest3: unittest3.c dominion.o rngs.o assertFxns.o
+	gcc -o unitTest3 -g unittest3.c dominion.o rngs.o assertFxns.o $(CFLAGS)
