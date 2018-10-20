@@ -92,34 +92,37 @@ int main() {
     // loop all players
     for (p = 0; p < numPlayer; p++)
     {
-    	// loop each card in hand
+    	// loop 5 times so hands contain 1 to 5 treasure cards.
         for (handCount = 1; handCount <= maxHandCount; handCount++)
         {
         	// test each bonus amount
             for (bonus = 0; bonus <= maxBonus; bonus++)
             {
                 printf("Test player %d with %d treasure card(s) and %d bonus.\n", p, handCount, bonus);
-                memset(&G, 23, sizeof(struct gameState));   // clear the game state
+                // clear the game state
+                memset(&G, 23, sizeof(struct gameState));   
                 
-                G.handCount[p] = handCount;                 // set the number of cards on hand
+                // set the number of cards in hand
+                G.handCount[p] = handCount;                 
                 memcpy(G.hand[p], coppers, sizeof(int) * handCount); // set all the cards to copper
+               
+                printf ("Test all coppers in player hand");
                 updateCoins(p, &G, bonus);
+                assertCustom(G.coins == handCount * 1 + bonus, "number of coins is correct"); // check if the number of coins is correct
 
-
-                printf("G.coins = %d, expected = %d\n", G.coins, handCount * 1 + bonus);
-                assert(G.coins == handCount * 1 + bonus); // check if the number of coins is correct
-
+                // copy all silvers to players hand
                 memcpy(G.hand[p], silvers, sizeof(int) * handCount); // set all the cards to silver
                 updateCoins(p, &G, bonus);
 
-                printf("G.coins = %d, expected = %d\n", G.coins, handCount * 2 + bonus);
-                assert(G.coins == handCount * 2 + bonus); // check if the number of coins is correct
+                printf ("Test all silvers in player hand");
+                assertCustom(G.coins == handCount * 2 + bonus, "number of coins is correct"); // check if the number of coins is correct
 
+                // copy all golds to players hand
                 memcpy(G.hand[p], golds, sizeof(int) * handCount); // set all the cards to gold
                 updateCoins(p, &G, bonus);
 
-                printf("G.coins = %d, expected = %d\n", G.coins, handCount * 3 + bonus);
-                assert(G.coins == handCount * 3 + bonus); // check if the number of coins is correct
+                printf ("Test all golds in player hand");
+                assertCustom(G.coins == handCount * 3 + bonus, "number of coins is correct"); // check if the number of coins is correct
             }
         }
     }
