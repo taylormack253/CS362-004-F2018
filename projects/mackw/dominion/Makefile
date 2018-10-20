@@ -7,7 +7,7 @@ dominion.o: dominion.h dominion.c rngs.o
 	gcc -c dominion.c -g  $(CFLAGS)
 
 
-assertCustom.o: assertFxns.h assertFxns.c dominion.o
+assertFxns.o: assertFxns.h assertFxns.c dominion.o
 	gcc -c assertFxns.c -g $(CFLAGS)
 
 playdom: dominion.o playdom.c
