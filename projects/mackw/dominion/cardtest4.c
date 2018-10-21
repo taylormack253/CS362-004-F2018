@@ -105,10 +105,11 @@ int main() {
     printf("----------------- Testing Card State: %s ----------------\n", TESTCARD);
    
     //copy game state
-    /*
-    printf("--------------------Test Case Copper, Copper, Gold on top of deck------------");
+    
+    //printf("--------------------Test Case Copper, Copper, Gold on top of deck------------");
     memcpy(&testG, &G, sizeof(struct gameState));
-
+    
+    /*
     deckcount = testG.deckCount[player];
 
 
