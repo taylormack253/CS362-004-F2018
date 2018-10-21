@@ -74,7 +74,7 @@ int main() {
     //copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
 
-    printf("Test no province cards left\n");
+    printf("** Test no province cards left **\n");
     // test that the game is over
     assertCustom(isGameOver(&testG) == TRUE, "Game over: No province Cards", "Game NOT over but not province cards left");
     gameTests(player, G, testG);
@@ -89,13 +89,13 @@ int main() {
     //copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
 
-    printf("Test 2 piles with no cards left\n");
+    printf("** Test 2 piles with no cards left **\n");
     assertCustom(isGameOver(&testG)== FALSE, "Game not over: Only 2 piles have no Cards", "Game over but only 2 empty supply piles");
     gameTests(player, G, testG);
 
     // Test 3 piles empty
     testG.supplyCount[gold] = NO_CARDS;
-    printf("Test 3 piles with no cards left\n");
+    printf("** Test 3 piles with no cards left **\n");
 
     //copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
@@ -105,7 +105,7 @@ int main() {
 
     // Test 3 piles empty and provinces
     testG.supplyCount[province] = NO_CARDS;
-    printf("Test 3 piles with no cards left and no provinces\n");
+    printf("** Test 3 piles with no cards left and no provinces **\n");
 
     //copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
