@@ -74,8 +74,8 @@ int main() {
     //int remove1, remove2;
     int seed = 1000;
     int numPlayers = 2;
-    int thisPlayer = 0;
-    int nextPlayer = 1;
+    int player = 0;
+    //int nextPlayer = 1;
     struct gameState G, testG;
     int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
@@ -87,15 +87,19 @@ int main() {
     //copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
 
+    //play card
     cardEffect(council_room, choice1, choice2, choice3, &testG, handpos, &bonus);
+
+    // test game state
+    gameTests(player, G, testG);
     
     //newCards = 4;
     //xtraCoins = 0;
     //numBuys = 1;
 
     /*
-    assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer] +newCards - discarded, "Receives 4 cards");
-    assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards, "Deck has 4 less Cards");
+    assertCustom(testG.handCount[player] == G.handCount[player] +newCards - discarded, "Receives 4 cards");
+    assertCustom(testG.deckCount[player] == G.deckCount[player] - newCards + shuffledCards, "Deck has 4 less Cards");
     assertCustom(testG.coins == G.coins + xtraCoins, "No extra coins received");
     assertCustom(testG.whoseTurn == G.whoseTurn, "Same Player's Turn");
     assertCustom(testG.numActions == G.numActions, "Number of actions" );
