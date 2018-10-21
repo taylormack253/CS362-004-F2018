@@ -73,7 +73,7 @@ int main() {
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
 
-    printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
+    printf("----------------- Testing Card: %s -------------------\n", TESTCARD);
        
     //copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -83,6 +83,8 @@ int main() {
 
     //Council Room Player draws 4 cards and gets one buy, each other player draws a card.
     gameTests(player, G, testG);
+
+    printf("----------------- End of card test for: %s ----------------\n", TESTCARD);
     
     return 0;
 }

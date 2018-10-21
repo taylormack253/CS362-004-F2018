@@ -84,6 +84,8 @@ int main() {
     // Great Hall should receive one card and one action
     gameTests(player, G, testG);
 
+    printf("----------------- End of card test for: %s ----------------\n", TESTCARD);
+
     return 0;
 }
 
