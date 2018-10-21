@@ -1,8 +1,7 @@
 ///////////////////////////////////////////////////////////////////////
 // File: cardtest4.c
 // Author: William Taylor Mack
-// Description: Card testing for ______________________
-
+// Description: Card testing for adventurer
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <string.h>
@@ -49,7 +48,7 @@ int main() {
     int thisPlayer = 0;
     //int nextPlayer = 1;
     struct gameState G, testG;
-    int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+    int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
 
     // initialize a game state and player cards

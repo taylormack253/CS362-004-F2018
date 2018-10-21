@@ -45,9 +45,9 @@ int main() {
     int thisPlayer = 0;
     int nextPlayer = 1;
     struct gameState G, testG;
-    int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+    int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
-
+                 
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
