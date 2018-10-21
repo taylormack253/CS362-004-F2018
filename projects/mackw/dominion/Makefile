@@ -62,8 +62,20 @@ player: player.c interface.o
 
 all: playdom player 
 
-allunitttests: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4
-	
+allunittests: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4
+
+unittestresults: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4
+	./unitTest1 >> unittestresults.out
+	./unitTest2 >> unittestresults.out
+	./unitTest3 >> unittestresults.out
+	./unitTest4 >> unittestresults.out
+	./cardTest1 >> unittestresults.out
+	./cardTest2 >> unittestresults.out
+	./cardTest3 >> unittestresults.out
+	./cardTest4 >> unittestresults.out
+	gcov -b -u dominion.c >> unittestresults.out
+	cat dominion.c.gcov >> unittestresults.out
+
 clean:
 	rm -f *.o playdom.exe playdom player player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
 

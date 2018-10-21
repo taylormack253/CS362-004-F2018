@@ -12,20 +12,20 @@
 #define NUM_CARDS 27
 #define TRUE 1
 #define FALSE 0
+#define TESTFXN "getCost()"
 
-void assertCustom(int boolean, char * message){
+void assertCustom(int boolean, char * passMsg, char * failMsg){
 
     if(boolean == TRUE){
 
-        printf("TEST PASSED: %s\n", message );
+        printf("TEST PASSED: %s\n", passMsg );
     }
     if(boolean == FALSE){
 
-        printf("TEST FAILED: %s\n", message );
+        printf("TEST FAILED: %s\n", failMsg );
 
 
     }
-
 }
 
 int main () {
@@ -36,7 +36,7 @@ int main () {
 	int cardCosts[] = {0,2,5,8,0,3,6,6,5,4,4,5,4,4,3,4,3,5,3,5,3,4,2,5,4,4,4,-1};
 
 
-	printf ("** Unit test 1: getCost() **\n");
+	printf("----------------- Testing function: %s ----------------\n", TESTFXN);
 
 	// print cards and costs
 	while (i <= NUM_CARDS){
@@ -45,16 +45,13 @@ int main () {
 		else
 			printf("Card #%d\n", card);
 		cost = getCost(card);
-		assertCustom(cost == cardCosts[i], "cost of card");
-		/*if (cost == cardCosts[i])
-			printf("Cost is CORRECT\n");
-		else 
-			printf("Cost is INCORRECT\n");
-		*/
+		assertCustom(cost == cardCosts[i], "Cost of card CORRECT", "Cost of card INCORRECT");
+
+		// move to next card
 		card++;
 		i++;
 	}
 
-	printf("\n** End of Unit Test 1: getCost **\n");
+	printf("----------------- End of unit test for: %s ----------------\n", TESTFXN);
 
 }
