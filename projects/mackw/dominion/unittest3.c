@@ -34,17 +34,16 @@ void assertCustom(int boolean, char * passMsg, char * failMsg){
 // Function to test that the game state was not altered by isGameOver
 void gameTests(int player,struct gameState G, struct gameState testG){
 
-    assertCustom(testG.handCount[player] == G.handCount[player], "Player 1 receives No cards");
-    assertCustom(testG.handCount[player+1] == G.handCount[player+1], "Player 2 receives No cards");
-    assertCustom(testG.deckCount[player] == G.deckCount[player], "Player 1 deck has the same number of cards");
-    assertCustom(testG.deckCount[player+1] == G.deckCount[player+1], "Player 2 deck has the same number of cards");
-    assertCustom(testG.coins == G.coins, "No extra coins received");
-    assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn");
-    assertCustom(testG.numActions == G.numActions, "Number of actions" );
-    assertCustom(testG.numBuys == G.numBuys, "Number of Buys" );
-    assertCustom(testG.playedCardCount == G.playedCardCount, "Number of Cards Discarded");
-    assertCustom(testG.numPlayers == G.numPlayer, "Same number of players in the game")
-    //assertGameState(player+1, &G, &testG);
+    assertCustom(testG.handCount[player] == G.handCount[player], "Player 0 receives no cards", "Player 0 hand count INCORRECT");
+    assertCustom(testG.handCount[player+1] == G.handCount[player+1], "Player 1 receives no cards", "Player 0 card count INCORRECT");
+    assertCustom(testG.deckCount[player] == G.deckCount[player], "Player 0 deck has the same number of cards", "Player 0 deck count INCORRECT");
+    assertCustom(testG.deckCount[player+1] == G.deckCount[player+1], "Player 1 deck has the same number of cards", "Player 1 deck count INCORRECT");
+    assertCustom(testG.coins == G.coins, "No extra coins received", "Coin count INCORRECT");
+    assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn", "Wrong players turn");
+    assertCustom(testG.numActions == G.numActions, "Number of actions un-changed", "Number of actions CHANGED");
+    assertCustom(testG.numBuys == G.numBuys, "Number of Buys un-changed", "Number of buys CHANGED");
+    assertCustom(testG.playedCardCount == G.playedCardCount, "Number of Cards Discarded", "INCORRECT number of cards discarded");
+    assertCustom(testG.numPlayers == G.numPlayer, "Same number of players in the game", "Number of players in game CHANGED")
 
 }
 
@@ -110,7 +109,7 @@ int main() {
 
     //copy game state for both test games
     memcpy(&testG, &G, sizeof(struct gameState));
-    
+
     assertCustom(isGameOver(&testG)== TRUE, "Game over: Curse, Adventurer, Gold and Province no Cards", "Game NOT over even though 3 supply piles and provinces are empty");
     gameTests(player, G, testG);
 
