@@ -44,7 +44,7 @@ int main (int argc, char** argv){
     	printf("Testing game with %d players\n", x);
         a = initializeGame(x, k, 5, &G);
         a = whoseTurn(&G);
-        assertCustom(a == G.whoseTurn, "for this number of players");		
+        assertCustom(a == G.whoseTurn, "CORRECT players turn", "INCORRECT players turn");		
 	}
 
     printf("----------------- End of unit test for: %s ----------------\n", TESTFXN);
