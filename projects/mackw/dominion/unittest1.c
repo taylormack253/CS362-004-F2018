@@ -8,6 +8,7 @@
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include "rngs.h"
+
 #define NO_CARDS 0
 #define NUM_CARDS 27
 #define TRUE 1
