@@ -101,7 +101,7 @@ int main() {
 
     
 
-    printf("----------------- Testing Card State: %s ----------------\n", TESTCARD);
+    printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
    
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
@@ -131,6 +131,6 @@ int main() {
     gameTests(player, G, testG);
 
     printf("----------------- End of card test for: %s ----------------\n", TESTCARD);
-    
+
     return 0;
 }

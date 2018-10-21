@@ -37,8 +37,7 @@ int main() {
     int maxBonus = 10;
     int p, handCount;
     int bonus;
-    int k[10] = {adventurer, council_room, feast, gardens, mine
-               , remodel, smithy, village, baron, great_hall};
+    int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, village, baron, great_hall};
     struct gameState G;
     int maxHandCount = 5;
     
@@ -56,7 +55,7 @@ int main() {
     // create game state
     initializeGame(numPlayers, k, seed, &G); // initialize a new game
 
-	printf("----------------- Testing function: %s ----------------\n", TESTFXN);
+	printf("----------------- Unit testing for function: %s ----------------\n", TESTFXN);
 
     // loop all players
     for (p = 0; p < numPlayers; p++)
