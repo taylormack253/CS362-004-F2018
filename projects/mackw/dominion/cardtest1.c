@@ -7,9 +7,7 @@
 #include "dominion_helpers.h"
 #include <string.h>
 #include <stdio.h>
-#include <assert.h>
 #include "rngs.h"
-#include "assertCustom.h"
 #include <stdlib.h>
 
 #define TESTCARD "smithy"
