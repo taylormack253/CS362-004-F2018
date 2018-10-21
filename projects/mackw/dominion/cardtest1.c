@@ -78,6 +78,7 @@ int main() {
     //copy game state of test game
     memcpy(&testG, &G, sizeof(struct gameState));
 
+    // play card
     cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
 
     //Smithy should receive exactly 3-cards
