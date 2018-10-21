@@ -49,7 +49,7 @@ void gameTests(int player,struct gameState G, struct gameState testG){
             printf("TEST FAILED Card %d Supply Count Changed\n", i);
            failed = TRUE;
         }
-        if(testG->embargoTokens[i] != G->embargoTokens[i]){
+        if(testG.embargoTokens[i] != G.embargoTokens[i]){
             printf("TEST FAILED Embargo Token on Card %d Changed\n", i);
             failed = TRUE;
         }
