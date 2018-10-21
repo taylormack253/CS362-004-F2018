@@ -10,7 +10,8 @@
 #include <stdlib.h>
 
 #define TESTCARD "great_hall"
-
+#define TRUE 1
+#define FALSE 0
 
 void assertCustom(int boolean, char * message){
 
@@ -36,9 +37,9 @@ int main() {
     int numBuys = 0;
     int numActions = 0;
 
-    int i, j, m;
+    //int i, j, m;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-    int remove1, remove2;
+    //int remove1, remove2;
     int seed = 1000;
     int numPlayers = 2;
     int thisPlayer = 0;

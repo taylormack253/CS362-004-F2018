@@ -11,6 +11,8 @@
 #include <stdlib.h>
 
 #define TESTCARD "adventurer"
+#define TRUE 1
+#define FALSE 0
 
 void assertCustom(int boolean, char * message){
 
