@@ -43,7 +43,7 @@ void gameTests(int player,struct gameState G, struct gameState testG){
     assertCustom(testG.numActions == G.numActions, "Number of actions un-changed", "Number of actions CHANGED");
     assertCustom(testG.numBuys == G.numBuys, "Number of Buys un-changed", "Number of buys CHANGED");
     assertCustom(testG.playedCardCount == G.playedCardCount, "Number of Cards Discarded", "INCORRECT number of cards discarded");
-    assertCustom(testG.numPlayers == G.numPlayer, "Same number of players in the game", "Number of players in game CHANGED");
+    assertCustom(testG.numPlayers == G.numPlayers, "Same number of players in the game", "Number of players in game CHANGED");
 
 }
 
