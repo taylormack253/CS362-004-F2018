@@ -35,11 +35,11 @@ int main() {
     int xtraCoins = 0;
     int shuffledCards = 0;
     int numBuys = 0;
-    int numActions = 0;
+    //int numActions = 0;
 
-    int i, j, m;
+    //int i, j, m;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-    int remove1, remove2;
+    //int remove1, remove2;
     int seed = 1000;
     int numPlayers = 2;
     int thisPlayer = 0;
@@ -50,7 +50,7 @@ int main() {
 
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
-    printf("----------------- Testing Council Room Card: %s ----------------\n", TESTCARD);
+    printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
     //Council Room - each other player draws a card. Player draws 4 cards and gets one buy.
     //copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
