@@ -33,12 +33,12 @@ void gameTests(int player,struct gameState G, struct gameState testG){
     int failed = FALSE;
     int i;
     assertCustom(testG.handCount[player] == G.handCount[player], "Player 1 receives 1 card", "Incorrect number of cards drawn");
-    assertCustom(testG.deckCount[player] == G.deckCount[player] - 1, "Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
+    assertCustom(testG.deckCount[player] == G.deckCount[player] - 1, "Card came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
     assertCustom(testG.handCount[player+1] == G.handCount[player+1], "Player 2 receives no cards", "Player 2 hand count changed");
     assertCustom(testG.deckCount[player+1] == G.deckCount[player+1], "Player 2 deck has same number of cards", "Player 2 deck count chnaged");
     assertCustom(testG.coins == G.coins, "No extra coins received","Extra coins recieved");
     assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn", "NOT same players turn");
-    assertCustom(testG.numActions == G.numActions + 1, "Number of actions same", "Number of actions changed" );
+    assertCustom(testG.numActions == G.numActions + 1, "Number of actions correct", "Number of actions incorrect" );
     assertCustom(testG.numBuys == G.numBuys, "Number of buys same", "Number of buys changed" );
     assertCustom(testG.playedCardCount == G.playedCardCount + 1, "1 card played", "Played card count incorrect");
     assertCustom(testG.numPlayers == G.numPlayers, "Same number of players in the game", "Number of players in game changed");

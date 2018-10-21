@@ -13,28 +13,60 @@
 #define TESTCARD "council_room"
 #define TRUE 1
 #define FALSE 0
+#define NUM_CARDS 27
 
-void assertCustom(int boolean, char * message){
+void assertCustom(int boolean, char * passMsg, char * failMsg){
 
     if(boolean == TRUE){
 
-        printf("TEST PASSED: %s\n", message );
+        printf("TEST PASSED: %s\n", passMsg );
     }
     if(boolean == FALSE){
 
-        printf("TEST FAILED: %s\n", message );
+        printf("TEST FAILED: %s\n", failMsg );
 
 
     }
 
 }
 
+void gameTests(int player,struct gameState G, struct gameState testG){
+    int failed = FALSE;
+    int i;
+    assertCustom(testG.handCount[player] == G.handCount[player] + 3, "Player 1 receives 1 card", "Incorrect number of cards drawn");
+    assertCustom(testG.deckCount[player] == G.deckCount[player] - 3, "Card came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
+    assertCustom(testG.handCount[player+1] == G.handCount[player+1] + 1, "Player 2 receives 1 card", "Player 2 hand count incorrect");
+    assertCustom(testG.deckCount[player+1] == G.deckCount[player+1] - 1, "Card came from Player 2's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
+    assertCustom(testG.coins == G.coins, "No extra coins received","Extra coins recieved");
+    assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn", "NOT same players turn");
+    assertCustom(testG.numActions == G.numActions, "Number of actions correct", "Number of actions incorrect" );
+    assertCustom(testG.numBuys == G.numBuys + 1, "Number of buys same", "Number of buys changed" );
+    assertCustom(testG.playedCardCount == G.playedCardCount + 1, "1 card played", "Played card count incorrect");
+    assertCustom(testG.numPlayers == G.numPlayers, "Same number of players in the game", "Number of players in game changed");
+
+    for(i = curse; i < NUM_CARDS; i++){
+        if(testG.supplyCount[i] != G.supplyCount[i]){
+            printf("TEST FAILED Card %d Supply Count Changed\n", i);
+           failed = TRUE;
+        }
+        if(testG.embargoTokens[i] != G.embargoTokens[i]){
+            printf("TEST FAILED Embargo Token on Card %d Changed\n", i);
+            failed = TRUE;
+        }
+    }
+    if(!failed){
+        printf("TEST PASSED: Supply count and embargo tokens same\n");
+    }
+
+
+}
+
 int main() {
-    int newCards = 0;
-    int discarded = 1;
-    int xtraCoins = 0;
-    int shuffledCards = 0;
-    int numBuys = 0;
+    //int newCards = 0;
+    //int discarded = 1;
+    //int xtraCoins = 0;
+    //int shuffledCards = 0;
+    //int numBuys = 0;
     //int numActions = 0;
 
     //int i, j, m;
@@ -56,10 +88,12 @@ int main() {
     memcpy(&testG, &G, sizeof(struct gameState));
 
     cardEffect(council_room, choice1, choice2, choice3, &testG, handpos, &bonus);
-    newCards = 4;
-    xtraCoins = 0;
-    numBuys = 1;
+    
+    //newCards = 4;
+    //xtraCoins = 0;
+    //numBuys = 1;
 
+    /*
     assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer] +newCards - discarded, "Receives 4 cards");
     assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards, "Deck has 4 less Cards");
     assertCustom(testG.coins == G.coins + xtraCoins, "No extra coins received");
@@ -72,7 +106,7 @@ int main() {
     testG.handCount[nextPlayer]--;
 
     //assertGameState(nextPlayer, &G, &testG);
-
+    */
 
 
     return 0;
