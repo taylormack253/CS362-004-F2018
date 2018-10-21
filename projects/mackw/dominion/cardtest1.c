@@ -13,6 +13,7 @@
 #define TESTCARD "smithy"
 #define TRUE 1
 #define FALSE 0
+#define NUM_CARDS 27
 
 void assertCustom(int boolean, char * message){
 
@@ -41,17 +42,16 @@ void gameTests(int player,struct gameState G, struct gameState testG){
     assertCustom(testG.numActions == G.numActions, "Number of actions" );
     assertCustom(testG.numBuys == G.numBuys, "Number of Buys" );
     assertCustom(testG.playedCardCount == G.playedCardCount, "Number of Cards Discarded");
-    assertCustom(testG.numPlayers == G.numPlayer, "Same number of players in the game");
+    assertCustom(testG.numPlayers == G.numPlayers, "Same number of players in the game");
 
     for(i = curse; i < NUM_CARDS; i++){
         if(testG.supplyCount[i] != G.supplyCount[i]){
             printf("TEST FAILED Card %d Supply Count Changed\n", i);
            failed = TRUE;
         }
-        if(oldG->embargoTokens[i] != newG->embargoTokens[i]){
+        if(testG->embargoTokens[i] != G->embargoTokens[i]){
             printf("TEST FAILED Embargo Token on Card %d Changed\n", i);
             failed = TRUE;
-
         }
     }
     if(!failed){
