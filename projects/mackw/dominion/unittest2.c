@@ -35,7 +35,7 @@ int main() {
     int seed = 100;
     int numPlayers = 2;
     int maxBonus = 10;
-    int p, r, handCount;
+    int p, handCount;
     int bonus;
     int k[10] = {adventurer, council_room, feast, gardens, mine
                , remodel, smithy, village, baron, great_hall};
@@ -53,7 +53,8 @@ int main() {
         golds[i] = gold;
     }
 
-    r = initializeGame(numPlayers, k, seed, &G); // initialize a new game
+    // create game state
+    initializeGame(numPlayers, k, seed, &G); // initialize a new game
 
 	printf("----------------- Testing function: %s ----------------\n", TESTFXN);
 
