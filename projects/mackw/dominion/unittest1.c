@@ -40,13 +40,16 @@ int main () {
 
 	// print cards and costs
 	while (i <= NUM_CARDS){
-		if (i == NUM_CARDS)
+		if (i == NUM_CARDS){
 			printf("Test invalid card id\n");
-		else
+			cost = getCost(card);
+			assertCustom(cost == cardCosts[i], "Returned value of -1", "Cost of invalid card id INCORRECT");
+		}
+		else{
 			printf("Card #%d\n", card);
-		cost = getCost(card);
-		assertCustom(cost == cardCosts[i], "Cost of card CORRECT", "Cost of card INCORRECT");
-
+			cost = getCost(card);
+			assertCustom(cost == cardCosts[i], "Cost of card CORRECT", "Cost of card INCORRECT");
+		}
 		// move to next card
 		card++;
 		i++;
