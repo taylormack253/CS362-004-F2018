@@ -29,6 +29,8 @@ void assertCustom(int boolean, char * message){
 
 }
 
+
+
 int main() {
     int newCards = 0;
     int discarded = 1;
