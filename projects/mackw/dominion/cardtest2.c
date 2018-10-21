@@ -14,15 +14,15 @@
 #define FALSE 0
 #define NUM_CARDS 27
 
-void assertCustom(int boolean, char * message){
+void assertCustom(int boolean, char * passMsg, char * failMsg){
 
     if(boolean == TRUE){
 
-        printf("TEST PASSED: %s\n", message );
+        printf("TEST PASSED: %s\n", passMsg );
     }
     if(boolean == FALSE){
 
-        printf("TEST FAILED: %s\n", message );
+        printf("TEST FAILED: %s\n", failMsg );
 
 
     }
@@ -61,12 +61,12 @@ void gameTests(int player,struct gameState G, struct gameState testG){
 }
 
 int main() {
-    int newCards = 0;
-    int discarded = 1;
-    int xtraCoins = 0;
-    int shuffledCards = 0;
-    int numBuys = 0;
-    int numActions = 0;
+    //int newCards = 0;
+    //int discarded = 1;
+    //int xtraCoins = 0;
+    //int shuffledCards = 0;
+    //int numBuys = 0;
+    //int numActions = 0;
 
     //int i, j, m;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
