@@ -49,7 +49,7 @@ int main() {
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
 
-    printf("----------------- Testing Smithy Card: %s ----------------\n", TESTCARD);
+    printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 
     
     //copy game state
