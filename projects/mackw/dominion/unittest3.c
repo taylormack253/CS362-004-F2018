@@ -44,7 +44,7 @@ void assertGameState(int player, struct gameState * oldG, struct gameState * new
         printf("TEST FAILED: Deck Count for non-action player Changed\n");
         failed = TRUE;
     }
-    int i;
+    //int i;
     /*for(i = curse; i < NUM_CARDS; i++){
         if(oldG->supplyCount[i] != newG->supplyCount[i]){
             printf("TEST FAILED Card %d Supply Count Changed\n", i);
@@ -65,8 +65,10 @@ void assertGameState(int player, struct gameState * oldG, struct gameState * new
 // Function to test that the game state was not altered by isGameOver
 void gameTests(int thisPlayer,struct gameState G, struct gameState testG){
 
-    assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer], "Receives No cards");
-    assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer], "Deck has the same number of cards");
+    assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer], "Player 1 receives No cards");
+    assertCustom(testG.handCount[thisPlayer+1] == G.handCount[thisPlayer+1], "Player 2 receives No cards");
+    assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer], "Player 1 deck has the same number of cards");
+    assertCustom(testG.deckCount[thisPlayer+1] == G.deckCount[thisPlayer+1], "Player 2 deck has the same number of cards");
     assertCustom(testG.coins == G.coins, "No extra coins received");
     assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn");
     assertCustom(testG.numActions == G.numActions, "Number of actions" );
@@ -83,7 +85,7 @@ int main() {
     int seed = 1000;
     int numPlayers = 2;
     int thisPlayer = 0;
-    int bonus = 0;
+    //int bonus = 0;
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
