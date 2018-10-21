@@ -39,7 +39,7 @@ void gameTests(int player,struct gameState G, struct gameState testG){
     assertCustom(testG.deckCount[player+1] == G.deckCount[player+1], "Player 2 deck has same number of cards", "Player 2 deck count chnaged");
     assertCustom(testG.coins == G.coins, "No extra coins received","Extra coins recieved");
     assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn", "NOT same players turn");
-    assertCustom(testG.numActions == G.numActions + 1, "Number of actions correct", "Number of actions incorrect" );
+    assertCustom(testG.numActions == G.numActions, "Number of actions correct", "Number of actions incorrect" );
     assertCustom(testG.numBuys == G.numBuys, "Number of buys same", "Number of buys changed" );
     assertCustom(testG.playedCardCount == G.playedCardCount + 1, "1 card played", "Played card count incorrect");
     assertCustom(testG.numPlayers == G.numPlayers, "Same number of players in the game", "Number of players in game changed");
@@ -99,94 +99,36 @@ int main() {
     int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
 
-    // initialize a game state and player cards
-    initializeGame(numPlayers, k, seed, &G);
+    
 
     printf("----------------- Testing Card State: %s ----------------\n", TESTCARD);
    
+    // initialize a game state and player cards
+    initializeGame(numPlayers, k, seed, &G);
+
     //copy game state
-    
-    //printf("--------------------Test Case Copper, Copper, Gold on top of deck------------");
     memcpy(&testG, &G, sizeof(struct gameState));
     
-    /*
-    deckcount = testG.deckCount[player];
-
-
-    int newDeck1 [] = {copper, copper, gold};
-    newDeckCount = 3;
-
-    for(i = 0; i < newDeckCount; i++){
-        testG.deck[player][--deckcount] = newDeck1[i];
-    }
-
-    */
-
     // play card
     cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
    
     // adventureer will draw cards untill 2 treasures drawn.
     gameTests(player, G, testG);
 
-    /*
-    newCards = 2;
-    xtraCoins = 0;
-    numBuys = 0;
-    handCount = testG.handCount[player];
+    printf("--------------- Create new game and test again  -------------\n");
 
+    seed = 5;
+    // initilize new game with new seed
+    initializeGame(numPlayers, k, seed, &G);
 
-    assertCustom(testG.handCount[player] == G.handCount[player] + newCards - discarded, "Receives 2 cards");
-    assertCustom(testG.hand[player][--handCount] == copper, "First Treasure is Copper");
-    assertCustom(testG.hand[player][--handCount] == copper, "Second Treasure is Copper");
-    assertCustom(testG.deckCount[player] == G.deckCount[player] - newCards + shuffledCards, "Deck has 2 less Cards");
-    assertCustom(testG.coins == G.coins + xtraCoins, "No extra coins received");
-    assertCustom(testG.whoseTurn == G.whoseTurn, "Same Player's Turn");
-    assertCustom(testG.numActions == G.numActions, "Number of actions" );
-    assertCustom(testG.numBuys == G.numBuys + numBuys, "Number of Buys" );
-    assertCustom(testG.playedCardCount == G.playedCardCount + discarded, "Number of Cards Discarded");
-
-    //assertGameState(nextPlayer, &G, &testG);
-
-*/
-
-/*
+    //copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
-
-    deckcount = testG.deckCount[player];
-
-
-    printf("--------------------Test Case Gold, Province, Silver ------------");
-    int newDeck2 [] = {silver, province, gold};
-    newDeckCount = 3;
-
-    for(i = 0; i < newDeckCount; i++){
-        testG.deck[player][--deckcount] = newDeck2[i];
-    }
-
+    
+    // play card
     cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
-    newCards = 2;
-    xtraCoins = 0;
-    numActions = 0;
-    numBuys = 0;
-    handCount = testG.handCount[player];
-    discarded = 1;
-
-    assertCustom(testG.handCount[player] == G.handCount[player] + newCards - discarded, "Receives 2 cards");
-    assertCustom(testG.hand[player][--handCount] == gold, "First Treasure is Gold");
-    assertCustom(testG.hand[player][--handCount] == silver, "Second Treasure is Silver");
-    assertCustom(testG.deckCount[player] == G.deckCount[player] - newCards - 1 + shuffledCards, "Deck has 3 less Cards");
-    assertCustom(testG.coins == G.coins + xtraCoins, "No extra coins received");
-    assertCustom(testG.whoseTurn == G.whoseTurn, "Same Player's Turn");
-    assertCustom(testG.numActions == G.numActions, "Number of actions" );
-    assertCustom(testG.numBuys == G.numBuys + numBuys, "Number of Buys" );
-    assertCustom(testG.playedCardCount == G.playedCardCount + discarded+1, "Number of Cards Discarded");
-
-
-
-
-    //assertGameState(nextPlayer, &G, &testG);
-*/
-
+   
+    // adventureer will draw cards until 2 treasures drawn.
+    gameTests(player, G, testG);
 
 
     return 0;
