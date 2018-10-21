@@ -51,7 +51,7 @@ void gameTests(int player,struct gameState G, struct gameState testG){
         printf("TEST FAILED: 1st card kept was not treasure card\n");
     }
 
-    if(testG.hand[player][handCount-2 == copper || testG.hand[player][handCount-2] == silver || testG.hand[player][handCount-2] == gold){
+    if(testG.hand[player][handCount-2] == copper || testG.hand[player][handCount-2] == silver || testG.hand[player][handCount-2] == gold){
         printf("TEST PASSED: 2nd card kept was a treasure card\n");
     }
     else{
