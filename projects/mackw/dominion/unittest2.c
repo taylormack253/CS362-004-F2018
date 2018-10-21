@@ -1,8 +1,7 @@
 ///////////////////////////////////////////////////////////////////////
 // File: unittest2.c
 // Author: William Taylor Mack
-// Description: Unit testing for ______________________
-
+// Description: Unit testing for updateCoins()
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <string.h>
@@ -15,28 +14,27 @@
 #define NUM_CARDS 27
 #define TRUE 1
 #define FALSE 0
+#define TESTFXN "updateCoins()"
 
-void assertCustom(int boolean, char * message){
+void assertCustom(int boolean, char * passMsg, char * failMsg){
 
     if(boolean == TRUE){
 
-        printf("TEST PASSED: %s\n", message );
+        printf("TEST PASSED: %s\n", passMsg );
     }
     if(boolean == FALSE){
 
-        printf("TEST FAILED: %s\n", message );
+        printf("TEST FAILED: %s\n", failMsg );
 
 
     }
-
 }
-
 
 
 int main() {
     int i;
     int seed = 100;
-    int numPlayer = 2;
+    int numPlayers = 2;
     int maxBonus = 10;
     int p, r, handCount;
     int bonus;
@@ -56,12 +54,12 @@ int main() {
         golds[i] = gold;
     }
 
-    r = initializeGame(numPlayer, k, seed, &G); // initialize a new game
+    r = initializeGame(numPlayers, k, seed, &G); // initialize a new game
 
-	printf("\n** Unit Test 3: updateCoins() **\n");
+	printf("----------------- Testing function: %s ----------------\n", TESTFXN);
 
     // loop all players
-    for (p = 0; p < numPlayer; p++)
+    for (p = 0; p < numPlayers; p++)
     {
     	// loop 5 times so hands contain 1 to 5 treasure cards.
         for (handCount = 1; handCount <= maxHandCount; handCount++)
@@ -74,31 +72,37 @@ int main() {
                 memset(&G, 23, sizeof(struct gameState));   
                 
                 // set the number of cards in hand
-                G.handCount[p] = handCount;                 
-                memcpy(G.hand[p], coppers, sizeof(int) * handCount); // set all the cards to copper
+                G.handCount[p] = handCount;
+
+                // coppy all coppers to players hand                 
+                memcpy(G.hand[p], coppers, sizeof(int) * handCount);
                
                 printf ("Test all coppers in player hand\n");
                 updateCoins(p, &G, bonus);
-                assertCustom(G.coins == handCount * 1 + bonus, "number of coins is correct"); // check if the number of coins is correct
+
+                // test coins
+                assertCustom(G.coins == handCount * 1 + bonus, "Number of coins is CORRECT", "Number of coins is INCORRECT"); // check if the number of coins is correct
 
                 // copy all silvers to players hand
-                memcpy(G.hand[p], silvers, sizeof(int) * handCount); // set all the cards to silver
+                memcpy(G.hand[p], silvers, sizeof(int) * handCount);
                 updateCoins(p, &G, bonus);
 
+                // Test coins
                 printf ("Test all silvers in player hand\n");
-                assertCustom(G.coins == handCount * 2 + bonus, "number of coins is correct"); // check if the number of coins is correct
+                assertCustom(G.coins == handCount * 2 + bonus, "Number of coins is CORRECT", "Number of coins is INCORRECT"); // check if the number of coins is correct
 
                 // copy all golds to players hand
-                memcpy(G.hand[p], golds, sizeof(int) * handCount); // set all the cards to gold
+                memcpy(G.hand[p], golds, sizeof(int) * handCount); 
                 updateCoins(p, &G, bonus);
 
+                // test coins
                 printf ("Test all golds in player hand\n");
-                assertCustom(G.coins == handCount * 3 + bonus, "number of coins is correct"); // check if the number of coins is correct
+                assertCustom(G.coins == handCount * 3 + bonus, "number of coins is CORRECT", "number of coins is INCORRECT"); // check if the number of coins is correct
             }
         }
     }
 
-	printf("\n** End of Unit Test 2: updateCoins() **\n");
+    printf("----------------- End of unit test for: %s ----------------\n", TESTFXN);
 
     return 0;
 }
