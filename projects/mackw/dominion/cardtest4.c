@@ -85,7 +85,7 @@ int main() {
     assertCustom(testG.numBuys == G.numBuys + numBuys, "Number of Buys" );
     assertCustom(testG.playedCardCount == G.playedCardCount + discarded, "Number of Cards Discarded");
 
-    assertGameState(nextPlayer, &G, &testG);
+    //assertGameState(nextPlayer, &G, &testG);
 
 
 
@@ -109,7 +109,7 @@ int main() {
     numBuys = 0;
     handCount = testG.handCount[thisPlayer];
     discarded = 1;
-    
+
     assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + newCards - discarded, "Receives 2 cards");
     assertCustom(testG.hand[thisPlayer][--handCount] == gold, "First Treasure is Gold");
     assertCustom(testG.hand[thisPlayer][--handCount] == silver, "Second Treasure is Silver");
