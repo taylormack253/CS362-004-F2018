@@ -80,6 +80,7 @@ int main() {
     gameTests(player, G, testG);
 
     // re-initilize the game struct
+    initializeGame(numPlayers, k, seed, &G);
     memcpy(&testG, &G, sizeof(struct gameState));
 
     // Test 2 piles empty
