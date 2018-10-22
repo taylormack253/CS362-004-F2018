@@ -48,7 +48,7 @@ int main (int argc, char** argv){
         assertCustom(a == G.whoseTurn, "CORRECT players turn", "INCORRECT players turn");		
 	}
 
-    printf("----------------- End of unit test for: %s ----------------\n", TESTFXN);
+    printf("----------------- End of unit test for: %s ----------------\n\n\n", TESTFXN);
 
 	return 0;
 }

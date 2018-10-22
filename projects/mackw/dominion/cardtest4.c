@@ -130,7 +130,7 @@ int main() {
     // adventureer will draw cards until 2 treasures drawn.
     gameTests(player, G, testG);
 
-    printf("----------------- End of card test for: %s ----------------\n", TESTCARD);
+    printf("----------------- End of card test for: %s ----------------\n\n\n", TESTCARD);
 
     return 0;
 }

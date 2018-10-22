@@ -84,7 +84,7 @@ int main() {
     //Council Room Player draws 4 cards and gets one buy, each other player draws a card.
     gameTests(player, G, testG);
 
-    printf("----------------- End of card test for: %s ----------------\n", TESTCARD);
+    printf("----------------- End of card test for: %s ----------------\n\n\n", TESTCARD);
     
     return 0;
 }

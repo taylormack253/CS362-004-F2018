@@ -101,7 +101,7 @@ int main() {
         }
     }
 
-    printf("----------------- End of unit test for: %s ----------------\n", TESTFXN);
+    printf("----------------- End of unit test for: %s ----------------\n\n\n", TESTFXN);
 
     return 0;
 }

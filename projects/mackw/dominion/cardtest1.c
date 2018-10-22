@@ -84,7 +84,7 @@ int main() {
     //Smithy should receive exactly 3-cards
     gameTests(player, G, testG);
 
-    printf("----------------- End of card test for: %s ----------------\n", TESTCARD);
+    printf("----------------- End of card test for: %s ----------------\n\n\n", TESTCARD);
 
     return 0;
 }
