@@ -36,7 +36,8 @@ void assertCustom(int boolean, char * passMsg, char * failMsg){
 int main (int argc, char** argv){
     struct gameState G;
     int a;
-	int k[10] = {adventurer, gardens, minion, village, embargo, mine, cutpurse, baron, tribute, smithy};
+	int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
+                 sea_hag, tribute, smithy, council_room};
 	
 	printf("----------------- Unit test for function: %s ----------------\n", TESTFXN);
 	
