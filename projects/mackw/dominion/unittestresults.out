@@ -5734,3 +5734,2561 @@ unconditional  0 taken 100%
         -: 1379:
         -: 1380://end of dominion.c
         -: 1381:
+----------------- Testing function: getCost() ----------------
+Card #0
+TEST PASSED: Cost of card CORRECT
+Card #1
+TEST PASSED: Cost of card CORRECT
+Card #2
+TEST PASSED: Cost of card CORRECT
+Card #3
+TEST PASSED: Cost of card CORRECT
+Card #4
+TEST PASSED: Cost of card CORRECT
+Card #5
+TEST PASSED: Cost of card CORRECT
+Card #6
+TEST PASSED: Cost of card CORRECT
+Card #7
+TEST PASSED: Cost of card CORRECT
+Card #8
+TEST PASSED: Cost of card CORRECT
+Card #9
+TEST PASSED: Cost of card CORRECT
+Card #10
+TEST PASSED: Cost of card CORRECT
+Card #11
+TEST PASSED: Cost of card CORRECT
+Card #12
+TEST PASSED: Cost of card CORRECT
+Card #13
+TEST PASSED: Cost of card CORRECT
+Card #14
+TEST PASSED: Cost of card CORRECT
+Card #15
+TEST PASSED: Cost of card CORRECT
+Card #16
+TEST PASSED: Cost of card CORRECT
+Card #17
+TEST PASSED: Cost of card CORRECT
+Card #18
+TEST PASSED: Cost of card CORRECT
+Card #19
+TEST PASSED: Cost of card CORRECT
+Card #20
+TEST PASSED: Cost of card CORRECT
+Card #21
+TEST PASSED: Cost of card CORRECT
+Card #22
+TEST PASSED: Cost of card CORRECT
+Card #23
+TEST PASSED: Cost of card CORRECT
+Card #24
+TEST PASSED: Cost of card CORRECT
+Card #25
+TEST PASSED: Cost of card CORRECT
+Card #26
+TEST PASSED: Cost of card CORRECT
+Test invalid card id
+TEST PASSED: Returned value of -1
+----------------- End of unit test for: getCost() ----------------
+----------------- Testing function: updateCoins() ----------------
+Test player 0 with 1 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 1 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 2 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 3 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 4 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 0 with 5 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 1 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 2 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 3 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 4 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 0 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 1 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 2 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 3 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 4 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 5 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 6 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 7 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 8 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 9 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+Test player 1 with 5 treasure card(s) and 10 bonus.
+TEST PASSED: Coin count with all copper tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all silver tresasure cards in hand CORRECT
+TEST PASSED: Coin count with all gold tresasure cards in hand CORRECT
+----------------- End of unit test for: updateCoins() ----------------
+----------------- Unit test for function: isGameOver() ----------------
+** Test no province cards left **
+TEST PASSED: Game over: No province Cards
+TEST PASSED: Player 0 receives no cards
+TEST PASSED: Player 1 receives no cards
+TEST PASSED: Player 0 deck has the same number of cards
+TEST PASSED: Player 1 deck has the same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions un-changed
+TEST PASSED: Number of Buys un-changed
+TEST PASSED: Number of Cards Discarded
+TEST PASSED: Same number of players in the game
+** Test 2 piles with no cards left **
+TEST FAILED: Game over but only 2 empty supply piles
+TEST PASSED: Player 0 receives no cards
+TEST PASSED: Player 1 receives no cards
+TEST PASSED: Player 0 deck has the same number of cards
+TEST PASSED: Player 1 deck has the same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions un-changed
+TEST PASSED: Number of Buys un-changed
+TEST PASSED: Number of Cards Discarded
+TEST PASSED: Same number of players in the game
+** Test 3 piles with no cards left **
+TEST PASSED: Game over: Curse, Adventurer, Gold have no Cards
+TEST PASSED: Player 0 receives no cards
+TEST PASSED: Player 1 receives no cards
+TEST PASSED: Player 0 deck has the same number of cards
+TEST PASSED: Player 1 deck has the same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions un-changed
+TEST PASSED: Number of Buys un-changed
+TEST PASSED: Number of Cards Discarded
+TEST PASSED: Same number of players in the game
+** Test 3 piles with no cards left and no provinces **
+TEST PASSED: Game over: Curse, Adventurer, Gold and Province no Cards
+TEST PASSED: Player 0 receives no cards
+TEST PASSED: Player 1 receives no cards
+TEST PASSED: Player 0 deck has the same number of cards
+TEST PASSED: Player 1 deck has the same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions un-changed
+TEST PASSED: Number of Buys un-changed
+TEST PASSED: Number of Cards Discarded
+TEST PASSED: Same number of players in the game
+----------------- End of unit test for: isGameOver() ----------------
+----------------- Unit test for function: whosTurn() ----------------
+Testing game with 2 players
+TEST PASSED: CORRECT players turn
+Testing game with 3 players
+TEST PASSED: CORRECT players turn
+Testing game with 4 players
+TEST PASSED: CORRECT players turn
+----------------- End of unit test for: whosTurn() ----------------
+----------------- Testing Card: smithy ----------------
+TEST FAILED: Incorrect number of cards drawn
+TEST FAILED: Cards DID NOT come from Player 1's deck or incorrect number of cards drawn
+TEST PASSED: Player 2 receives no cards
+TEST PASSED: Player 2 deck has same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions same
+TEST PASSED: Number of buys same
+TEST PASSED: 1 card played
+TEST PASSED: Same number of players in the game
+TEST PASSED: Supply count and embargo tokens same
+----------------- End of card test for: smithy ----------------
+----------------- Testing Card: great_hall ----------------
+TEST PASSED: Player 1 receives 1 card
+TEST PASSED: Card came from Player 1's deck
+TEST PASSED: Player 2 receives no cards
+TEST PASSED: Player 2 deck has same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST FAILED: Number of actions incorrect
+TEST PASSED: Number of buys same
+TEST PASSED: 1 card played
+TEST PASSED: Same number of players in the game
+TEST PASSED: Supply count and embargo tokens same
+----------------- End of card test for: great_hall ----------------
+----------------- Testing Card: council_room -------------------
+TEST PASSED: Player 1 receives 1 card
+TEST PASSED: Card came from Player 1's deck
+TEST PASSED: Player 2 receives 1 card
+TEST PASSED: Card came from Player 2's deck
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions correct
+TEST FAILED: Number of buys incorrect
+TEST PASSED: 1 card played
+TEST PASSED: Same number of players in the game
+TEST PASSED: Supply count and embargo tokens same
+----------------- End of card test for: council_room ----------------
+----------------- Testing Card: adventurer ----------------
+TEST FAILED: Incorrect number of cards drawn
+TEST FAILED: Cards DID NOT come from Player 1's deck or incorrect number of cards drawn
+TEST PASSED: Player 2 receives no cards
+TEST PASSED: Player 2 deck has same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions correct
+TEST PASSED: Number of buys same
+TEST FAILED: Played card count incorrect
+TEST PASSED: Same number of players in the game
+TEST PASSED: 1st card kept was a treasure card
+TEST PASSED: 2nd card kept was a treasure card
+TEST PASSED: Supply count and embargo tokens same
+--------------- Create new game and test again  -------------
+TEST FAILED: Incorrect number of cards drawn
+TEST FAILED: Cards DID NOT come from Player 1's deck or incorrect number of cards drawn
+TEST PASSED: Player 2 receives no cards
+TEST PASSED: Player 2 deck has same number of cards
+TEST PASSED: No extra coins received
+TEST PASSED: Same Players Turn
+TEST PASSED: Number of actions correct
+TEST PASSED: Number of buys same
+TEST FAILED: Played card count incorrect
+TEST PASSED: Same number of players in the game
+TEST PASSED: 1st card kept was a treasure card
+TEST PASSED: 2nd card kept was a treasure card
+TEST PASSED: Supply count and embargo tokens same
+----------------- End of card test for: adventurer ----------------
+File 'dominion.c'
+Lines executed:37.28% of 558
+Branches executed:37.65% of 417
+Taken at least once:31.18% of 417
+Calls executed:23.16% of 95
+Creating 'dominion.c.gcov'
+
+        -:    0:Source:dominion.c
+        -:    0:Graph:dominion.gcno
+        -:    0:Data:dominion.gcda
+        -:    0:Runs:59
+        -:    0:Programs:40
+        -:    1:#include "dominion.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include "rngs.h"
+        -:    4:#include <stdio.h>
+        -:    5:#include <math.h>
+        -:    6:#include <stdlib.h>
+        -:    7:
+function compare called 2475 returned 100% blocks executed 83%
+     2475:    8:int compare(const void* a, const void* b) {
+     2475:    9:  if (*(int*)a > *(int*)b)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+    #####:   10:    return 1;
+     2475:   11:  if (*(int*)a < *(int*)b)
+branch  0 taken 27% (fallthrough)
+branch  1 taken 73%
+      660:   12:    return -1;
+     1815:   13:  return 0;
+        -:   14:}
+        -:   15:
+function newGame called 0 returned 0% blocks executed 0%
+    #####:   16:struct gameState* newGame() {
+    #####:   17:  struct gameState* g = malloc(sizeof(struct gameState));
+    #####:   18:  return g;
+        -:   19:}
+        -:   20:
+function kingdomCards called 0 returned 0% blocks executed 0%
+    #####:   21:int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
+        -:   22:		  int k8, int k9, int k10) {
+    #####:   23:  int* k = malloc(10 * sizeof(int));
+    #####:   24:  k[0] = k1;
+    #####:   25:  k[1] = k2;
+    #####:   26:  k[2] = k3;
+    #####:   27:  k[3] = k4;
+    #####:   28:  k[4] = k5;
+    #####:   29:  k[5] = k6;
+    #####:   30:  k[6] = k7;
+    #####:   31:  k[7] = k8;
+    #####:   32:  k[8] = k9;
+    #####:   33:  k[9] = k10;
+    #####:   34:  return k;
+        -:   35:}
+        -:   36:
+function initializeGame called 72 returned 100% blocks executed 95%
+       72:   37:int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
+        -:   38:		   struct gameState *state) {
+        -:   39:
+        -:   40:  int i;
+        -:   41:  int j;
+        -:   42:  int it;			
+        -:   43:  //set up random number generator
+       72:   44:  SelectStream(1);
+call    0 returned 100%
+       72:   45:  PutSeed((long)randomSeed);
+call    0 returned 100%
+        -:   46:  
+        -:   47:  //check number of players
+       72:   48:  if (numPlayers > MAX_PLAYERS || numPlayers < 2)
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 0% (fallthrough)
+branch  3 taken 100%
+        -:   49:    {
+    #####:   50:      return -1;
+        -:   51:    }
+        -:   52:
+        -:   53:  //set number of players
+       72:   54:  state->numPlayers = numPlayers;
+        -:   55:
+        -:   56:  //check selected kingdom cards are different
+      792:   57:  for (i = 0; i < 10; i++)
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+        -:   58:    {
+     7920:   59:      for (j = 0; j < 10; j++)
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+        -:   60:        {
+     7200:   61:	  if (j != i && kingdomCards[j] == kingdomCards[i])
+branch  0 taken 90% (fallthrough)
+branch  1 taken 10%
+branch  2 taken 0% (fallthrough)
+branch  3 taken 100%
+        -:   62:	    {
+    #####:   63:	      return -1;
+        -:   64:	    }
+        -:   65:        }
+        -:   66:    }
+        -:   67:
+        -:   68:
+        -:   69:  //initialize supply
+        -:   70:  ///////////////////////////////
+        -:   71:
+        -:   72:  //set number of Curse cards
+       72:   73:  if (numPlayers == 2)
+branch  0 taken 81% (fallthrough)
+branch  1 taken 19%
+        -:   74:    {
+       58:   75:      state->supplyCount[curse] = 10;
+        -:   76:    }
+       14:   77:  else if (numPlayers == 3)
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+        -:   78:    {
+        7:   79:      state->supplyCount[curse] = 20;
+        -:   80:    }
+        -:   81:  else
+        -:   82:    {
+        7:   83:      state->supplyCount[curse] = 30;
+        -:   84:    }
+        -:   85:
+        -:   86:  //set number of Victory cards
+       72:   87:  if (numPlayers == 2)
+branch  0 taken 81% (fallthrough)
+branch  1 taken 19%
+        -:   88:    {
+       58:   89:      state->supplyCount[estate] = 8;
+       58:   90:      state->supplyCount[duchy] = 8;
+       58:   91:      state->supplyCount[province] = 8;
+        -:   92:    }
+        -:   93:  else
+        -:   94:    {
+       14:   95:      state->supplyCount[estate] = 12;
+       14:   96:      state->supplyCount[duchy] = 12;
+       14:   97:      state->supplyCount[province] = 12;
+        -:   98:    }
+        -:   99:
+        -:  100:  //set number of Treasure cards
+       72:  101:  state->supplyCount[copper] = 60 - (7 * numPlayers);
+       72:  102:  state->supplyCount[silver] = 40;
+       72:  103:  state->supplyCount[gold] = 30;
+        -:  104:
+        -:  105:  //set number of Kingdom cards
+     1512:  106:  for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
+branch  0 taken 95%
+branch  1 taken 5% (fallthrough)
+        -:  107:    {
+    11880:  108:      for (j = 0; j < 10; j++)           		//loop chosen cards
+branch  0 taken 94%
+branch  1 taken 6% (fallthrough)
+        -:  109:	{
+    11160:  110:	  if (kingdomCards[j] == i)
+branch  0 taken 6% (fallthrough)
+branch  1 taken 94%
+        -:  111:	    {
+        -:  112:	      //check if card is a 'Victory' Kingdom card
+      720:  113:	      if (kingdomCards[j] == great_hall || kingdomCards[j] == gardens)
+branch  0 taken 94% (fallthrough)
+branch  1 taken 6%
+branch  2 taken 4% (fallthrough)
+branch  3 taken 96%
+        -:  114:		{
+      132:  115:		  if (numPlayers == 2){ 
+branch  0 taken 79% (fallthrough)
+branch  1 taken 21%
+       52:  116:		    state->supplyCount[i] = 8; 
+        -:  117:		  }
+       14:  118:		  else{ state->supplyCount[i] = 12; }
+        -:  119:		}
+        -:  120:	      else
+        -:  121:		{
+      654:  122:		  state->supplyCount[i] = 10;
+        -:  123:		}
+      720:  124:	      break;
+        -:  125:	    }
+        -:  126:	  else    //card is not in the set choosen for the game
+        -:  127:	    {
+    10440:  128:	      state->supplyCount[i] = -1;
+        -:  129:	    }
+        -:  130:	}
+        -:  131:
+        -:  132:    }
+        -:  133:
+        -:  134:  ////////////////////////
+        -:  135:  //supply intilization complete
+        -:  136:
+        -:  137:  //set player decks
+      237:  138:  for (i = 0; i < numPlayers; i++)
+branch  0 taken 70%
+branch  1 taken 30% (fallthrough)
+        -:  139:    {
+      165:  140:      state->deckCount[i] = 0;
+      660:  141:      for (j = 0; j < 3; j++)
+branch  0 taken 75%
+branch  1 taken 25% (fallthrough)
+        -:  142:	{
+      495:  143:	  state->deck[i][j] = estate;
+      495:  144:	  state->deckCount[i]++;
+        -:  145:	}
+     1320:  146:      for (j = 3; j < 10; j++)
+branch  0 taken 88%
+branch  1 taken 13% (fallthrough)
+        -:  147:	{
+     1155:  148:	  state->deck[i][j] = copper;
+     1155:  149:	  state->deckCount[i]++;		
+        -:  150:	}
+        -:  151:    }
+        -:  152:
+        -:  153:  //shuffle player decks
+      237:  154:  for (i = 0; i < numPlayers; i++)
+branch  0 taken 70%
+branch  1 taken 30% (fallthrough)
+        -:  155:    {
+      165:  156:      if ( shuffle(i, state) < 0 )
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+        -:  157:	{
+    #####:  158:	  return -1;
+        -:  159:	}
+        -:  160:    }
+        -:  161:
+        -:  162:  //draw player hands
+      237:  163:  for (i = 0; i < numPlayers; i++)
+branch  0 taken 70%
+branch  1 taken 30% (fallthrough)
+        -:  164:    {  
+        -:  165:      //initialize hand size to zero
+      165:  166:      state->handCount[i] = 0;
+      165:  167:      state->discardCount[i] = 0;
+        -:  168:      //draw 5 cards
+        -:  169:      // for (j = 0; j < 5; j++)
+        -:  170:      //	{
+        -:  171:      //	  drawCard(i, state);
+        -:  172:      //	}
+        -:  173:    }
+        -:  174:  
+        -:  175:  //set embargo tokens to 0 for all supply piles
+     2016:  176:  for (i = 0; i <= treasure_map; i++)
+branch  0 taken 96%
+branch  1 taken 4% (fallthrough)
+        -:  177:    {
+     1944:  178:      state->embargoTokens[i] = 0;
+        -:  179:    }
+        -:  180:
+        -:  181:  //initialize first player's turn
+       72:  182:  state->outpostPlayed = 0;
+       72:  183:  state->phase = 0;
+       72:  184:  state->numActions = 1;
+       72:  185:  state->numBuys = 1;
+       72:  186:  state->playedCardCount = 0;
+       72:  187:  state->whoseTurn = 0;
+       72:  188:  state->handCount[state->whoseTurn] = 0;
+        -:  189:  //int it; move to top
+        -:  190:
+        -:  191:  //Moved draw cards to here, only drawing at the start of a turn
+      432:  192:  for (it = 0; it < 5; it++){
+branch  0 taken 83%
+branch  1 taken 17% (fallthrough)
+      360:  193:    drawCard(state->whoseTurn, state);
+call    0 returned 100%
+        -:  194:  }
+        -:  195:
+       72:  196:  updateCoins(state->whoseTurn, state, 0);
+call    0 returned 100%
+        -:  197:
+       72:  198:  return 0;
+        -:  199:}
+        -:  200:
+function shuffle called 26665 returned 100% blocks executed 100%
+    26665:  201:int shuffle(int player, struct gameState *state) {
+        -:  202: 
+        -:  203:
+        -:  204:  int newDeck[MAX_DECK];
+    26665:  205:  int newDeckPos = 0;
+        -:  206:  int card;
+        -:  207:  int i;
+        -:  208:
+    26665:  209:  if (state->deckCount[player] < 1)
+branch  0 taken 99% (fallthrough)
+branch  1 taken 1%
+    26500:  210:    return -1;
+      165:  211:  qsort ((void*)(state->deck[player]), state->deckCount[player], sizeof(int), compare); 
+call    0 returned 100%
+        -:  212:  /* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
+        -:  213:
+     1980:  214:  while (state->deckCount[player] > 0) {
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+     1650:  215:    card = floor(Random() * state->deckCount[player]);
+call    0 returned 100%
+     1650:  216:    newDeck[newDeckPos] = state->deck[player][card];
+     1650:  217:    newDeckPos++;
+     5512:  218:    for (i = card; i < state->deckCount[player]-1; i++) {
+branch  0 taken 70%
+branch  1 taken 30% (fallthrough)
+     3862:  219:      state->deck[player][i] = state->deck[player][i+1];
+        -:  220:    }
+     1650:  221:    state->deckCount[player]--;
+        -:  222:  }
+     1815:  223:  for (i = 0; i < newDeckPos; i++) {
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+     1650:  224:    state->deck[player][i] = newDeck[i];
+     1650:  225:    state->deckCount[player]++;
+        -:  226:  }
+        -:  227:
+      165:  228:  return 0;
+        -:  229:}
+        -:  230:
+function playCard called 0 returned 0% blocks executed 0%
+    #####:  231:int playCard(int handPos, int choice1, int choice2, int choice3, struct gameState *state) 
+        -:  232:{	
+        -:  233:  int card;
+    #####:  234:  int coin_bonus = 0; 		//tracks coins gain from actions
+        -:  235:
+        -:  236:  //check if it is the right phase
+    #####:  237:  if (state->phase != 0)
+branch  0 never executed
+branch  1 never executed
+        -:  238:    {
+    #####:  239:      return -1;
+        -:  240:    }
+        -:  241:	
+        -:  242:  //check if player has enough actions
+    #####:  243:  if ( state->numActions < 1 )
+branch  0 never executed
+branch  1 never executed
+        -:  244:    {
+    #####:  245:      return -1;
+        -:  246:    }
+        -:  247:	
+        -:  248:  //get card played
+    #####:  249:  card = handCard(handPos, state);
+call    0 never executed
+        -:  250:	
+        -:  251:  //check if selected card is an action
+    #####:  252:  if ( card < adventurer || card > treasure_map )
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  253:    {
+    #####:  254:      return -1;
+        -:  255:    }
+        -:  256:	
+        -:  257:  //play card
+    #####:  258:  if ( cardEffect(card, choice1, choice2, choice3, state, handPos, &coin_bonus) < 0 )
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  259:    {
+    #####:  260:      return -1;
+        -:  261:    }
+        -:  262:	
+        -:  263:  //reduce number of actions
+    #####:  264:  state->numActions--;
+        -:  265:
+        -:  266:  //update coins (Treasure cards may be added with card draws)
+    #####:  267:  updateCoins(state->whoseTurn, state, coin_bonus);
+call    0 never executed
+        -:  268:	
+    #####:  269:  return 0;
+        -:  270:}
+        -:  271:
+function buyCard called 0 returned 0% blocks executed 0%
+    #####:  272:int buyCard(int supplyPos, struct gameState *state) {
+        -:  273:  int who;
+        -:  274:  if (DEBUG){
+        -:  275:    printf("Entering buyCard...\n");
+        -:  276:  }
+        -:  277:
+        -:  278:  // I don't know what to do about the phase thing.
+        -:  279:
+    #####:  280:  who = state->whoseTurn;
+        -:  281:
+    #####:  282:  if (state->numBuys < 1){
+branch  0 never executed
+branch  1 never executed
+        -:  283:    if (DEBUG)
+        -:  284:      printf("You do not have any buys left\n");
+    #####:  285:    return -1;
+    #####:  286:  } else if (supplyCount(supplyPos, state) <1){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  287:    if (DEBUG)
+        -:  288:      printf("There are not any of that type of card left\n");
+    #####:  289:    return -1;
+    #####:  290:  } else if (state->coins < getCost(supplyPos)){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  291:    if (DEBUG) 
+        -:  292:      printf("You do not have enough money to buy that. You have %d coins.\n", state->coins);
+    #####:  293:    return -1;
+        -:  294:  } else {
+    #####:  295:    state->phase=1;
+        -:  296:    //state->supplyCount[supplyPos]--;
+    #####:  297:    gainCard(supplyPos, state, 0, who); //card goes in discard, this might be wrong.. (2 means goes into hand, 0 goes into discard)
+call    0 never executed
+        -:  298:  
+    #####:  299:    state->coins = (state->coins) - (getCost(supplyPos));
+call    0 never executed
+    #####:  300:    state->numBuys--;
+        -:  301:    if (DEBUG)
+        -:  302:      printf("You bought card number %d for %d coins. You now have %d buys and %d coins.\n", supplyPos, getCost(supplyPos), state->numBuys, state->coins);
+        -:  303:  }
+        -:  304:
+        -:  305:  //state->discard[who][state->discardCount[who]] = supplyPos;
+        -:  306:  //state->discardCount[who]++;
+        -:  307:    
+    #####:  308:  return 0;
+        -:  309:}
+        -:  310:
+function numHandCards called 0 returned 0% blocks executed 0%
+    #####:  311:int numHandCards(struct gameState *state) {
+    #####:  312:  return state->handCount[ whoseTurn(state) ];
+call    0 never executed
+        -:  313:}
+        -:  314:
+function handCard called 0 returned 0% blocks executed 0%
+    #####:  315:int handCard(int handPos, struct gameState *state) {
+    #####:  316:  int currentPlayer = whoseTurn(state);
+call    0 never executed
+    #####:  317:  return state->hand[currentPlayer][handPos];
+        -:  318:}
+        -:  319:
+function supplyCount called 0 returned 0% blocks executed 0%
+    #####:  320:int supplyCount(int card, struct gameState *state) {
+    #####:  321:  return state->supplyCount[card];
+        -:  322:}
+        -:  323:
+function fullDeckCount called 0 returned 0% blocks executed 0%
+    #####:  324:int fullDeckCount(int player, int card, struct gameState *state) {
+        -:  325:  int i;
+    #####:  326:  int count = 0;
+        -:  327:
+    #####:  328:  for (i = 0; i < state->deckCount[player]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  329:    {
+    #####:  330:      if (state->deck[player][i] == card) count++;
+branch  0 never executed
+branch  1 never executed
+        -:  331:    }
+        -:  332:
+    #####:  333:  for (i = 0; i < state->handCount[player]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  334:    {
+    #####:  335:      if (state->hand[player][i] == card) count++;
+branch  0 never executed
+branch  1 never executed
+        -:  336:    }
+        -:  337:
+    #####:  338:  for (i = 0; i < state->discardCount[player]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  339:    {
+    #####:  340:      if (state->discard[player][i] == card) count++;
+branch  0 never executed
+branch  1 never executed
+        -:  341:    }
+        -:  342:
+    #####:  343:  return count;
+        -:  344:}
+        -:  345:
+function whoseTurn called 56 returned 100% blocks executed 100%
+       56:  346:int whoseTurn(struct gameState *state) {
+       56:  347:  return state->whoseTurn;
+        -:  348:}
+        -:  349:
+function endTurn called 0 returned 0% blocks executed 0%
+    #####:  350:int endTurn(struct gameState *state) {
+        -:  351:  int k;
+        -:  352:  int i;
+    #####:  353:  int currentPlayer = whoseTurn(state);
+call    0 never executed
+        -:  354:  
+        -:  355:  //Discard hand
+    #####:  356:  for (i = 0; i < state->handCount[currentPlayer]; i++){
+branch  0 never executed
+branch  1 never executed
+    #####:  357:    state->discard[currentPlayer][state->discardCount[currentPlayer]++] = state->hand[currentPlayer][i];//Discard
+    #####:  358:    state->hand[currentPlayer][i] = -1;//Set card to -1
+        -:  359:  }
+    #####:  360:  state->handCount[currentPlayer] = 0;//Reset hand count
+        -:  361:    
+        -:  362:  //Code for determining the player
+    #####:  363:  if (currentPlayer < (state->numPlayers - 1)){ 
+branch  0 never executed
+branch  1 never executed
+    #####:  364:    state->whoseTurn = currentPlayer + 1;//Still safe to increment
+        -:  365:  }
+        -:  366:  else{
+    #####:  367:    state->whoseTurn = 0;//Max player has been reached, loop back around to player 1
+        -:  368:  }
+        -:  369:
+    #####:  370:  state->outpostPlayed = 0;
+    #####:  371:  state->phase = 0;
+    #####:  372:  state->numActions = 1;
+    #####:  373:  state->coins = 0;
+    #####:  374:  state->numBuys = 1;
+    #####:  375:  state->playedCardCount = 0;
+    #####:  376:  state->handCount[state->whoseTurn] = 0;
+        -:  377:
+        -:  378:  //int k; move to top
+        -:  379:  //Next player draws hand
+    #####:  380:  for (k = 0; k < 5; k++){
+branch  0 never executed
+branch  1 never executed
+    #####:  381:    drawCard(state->whoseTurn, state);//Draw a card
+call    0 never executed
+        -:  382:  }
+        -:  383:
+        -:  384:  //Update money
+    #####:  385:  updateCoins(state->whoseTurn, state , 0);
+call    0 never executed
+        -:  386:
+    #####:  387:  return 0;
+        -:  388:}
+        -:  389:
+function isGameOver called 32 returned 100% blocks executed 100%
+       32:  390:int isGameOver(struct gameState *state) {
+        -:  391:  int i;
+        -:  392:  int j;
+        -:  393:	
+        -:  394:  //if stack of Province cards is empty, the game ends
+       32:  395:  if (state->supplyCount[province] == 0)
+branch  0 taken 69% (fallthrough)
+branch  1 taken 31%
+        -:  396:    {
+       22:  397:      return 1;
+        -:  398:    }
+        -:  399:
+        -:  400:  //if three supply pile are at 0, the game ends
+       10:  401:  j = 0;
+      260:  402:  for (i = 0; i < 25; i++)
+branch  0 taken 96%
+branch  1 taken 4% (fallthrough)
+        -:  403:    {
+      250:  404:      if (state->supplyCount[i] == 0)
+branch  0 taken 6% (fallthrough)
+branch  1 taken 94%
+        -:  405:	{
+       15:  406:	  j++;
+        -:  407:	}
+        -:  408:    }
+       10:  409:  if ( j >= 3)
+branch  0 taken 30% (fallthrough)
+branch  1 taken 70%
+        -:  410:    {
+        3:  411:      return 1;
+        -:  412:    }
+        -:  413:
+        7:  414:  return 0;
+        -:  415:}
+        -:  416:
+function scoreFor called 0 returned 0% blocks executed 0%
+    #####:  417:int scoreFor (int player, struct gameState *state) {
+        -:  418:
+        -:  419:  int i;
+    #####:  420:  int score = 0;
+        -:  421:  //score from hand
+    #####:  422:  for (i = 0; i < state->handCount[player]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  423:    {
+    #####:  424:      if (state->hand[player][i] == curse) { score = score - 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  425:      if (state->hand[player][i] == estate) { score = score + 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  426:      if (state->hand[player][i] == duchy) { score = score + 3; };
+branch  0 never executed
+branch  1 never executed
+    #####:  427:      if (state->hand[player][i] == province) { score = score + 6; };
+branch  0 never executed
+branch  1 never executed
+    #####:  428:      if (state->hand[player][i] == great_hall) { score = score + 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  429:      if (state->hand[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+        -:  430:    }
+        -:  431:
+        -:  432:  //score from discard
+    #####:  433:  for (i = 0; i < state->discardCount[player]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  434:    {
+    #####:  435:      if (state->discard[player][i] == curse) { score = score - 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  436:      if (state->discard[player][i] == estate) { score = score + 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  437:      if (state->discard[player][i] == duchy) { score = score + 3; };
+branch  0 never executed
+branch  1 never executed
+    #####:  438:      if (state->discard[player][i] == province) { score = score + 6; };
+branch  0 never executed
+branch  1 never executed
+    #####:  439:      if (state->discard[player][i] == great_hall) { score = score + 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  440:      if (state->discard[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+        -:  441:    }
+        -:  442:
+        -:  443:  //score from deck
+    #####:  444:  for (i = 0; i < state->discardCount[player]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  445:    {
+    #####:  446:      if (state->deck[player][i] == curse) { score = score - 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  447:      if (state->deck[player][i] == estate) { score = score + 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  448:      if (state->deck[player][i] == duchy) { score = score + 3; };
+branch  0 never executed
+branch  1 never executed
+    #####:  449:      if (state->deck[player][i] == province) { score = score + 6; };
+branch  0 never executed
+branch  1 never executed
+    #####:  450:      if (state->deck[player][i] == great_hall) { score = score + 1; };
+branch  0 never executed
+branch  1 never executed
+    #####:  451:      if (state->deck[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
+branch  0 never executed
+branch  1 never executed
+call    2 never executed
+        -:  452:    }
+        -:  453:
+    #####:  454:  return score;
+        -:  455:}
+        -:  456:
+function getWinners called 0 returned 0% blocks executed 0%
+    #####:  457:int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
+        -:  458:  int i;	
+        -:  459:  int j;
+        -:  460:  int highScore;
+        -:  461:  int currentPlayer;
+        -:  462:
+        -:  463:  //get score for each player
+    #####:  464:  for (i = 0; i < MAX_PLAYERS; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  465:    {
+        -:  466:      //set unused player scores to -9999
+    #####:  467:      if (i >= state->numPlayers)
+branch  0 never executed
+branch  1 never executed
+        -:  468:	{
+    #####:  469:	  players[i] = -9999;
+        -:  470:	}
+        -:  471:      else
+        -:  472:	{
+    #####:  473:	  players[i] = scoreFor (i, state);
+call    0 never executed
+        -:  474:	}
+        -:  475:    }
+        -:  476:
+        -:  477:  //find highest score
+    #####:  478:  j = 0;
+    #####:  479:  for (i = 0; i < MAX_PLAYERS; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  480:    {
+    #####:  481:      if (players[i] > players[j])
+branch  0 never executed
+branch  1 never executed
+        -:  482:	{
+    #####:  483:	  j = i;
+        -:  484:	}
+        -:  485:    }
+    #####:  486:  highScore = players[j];
+        -:  487:
+        -:  488:  //add 1 to players who had less turns
+    #####:  489:  currentPlayer = whoseTurn(state);
+call    0 never executed
+    #####:  490:  for (i = 0; i < MAX_PLAYERS; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  491:    {
+    #####:  492:      if ( players[i] == highScore && i > currentPlayer )
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  493:	{
+    #####:  494:	  players[i]++;
+        -:  495:	}
+        -:  496:    }
+        -:  497:
+        -:  498:  //find new highest score
+    #####:  499:  j = 0;
+    #####:  500:  for (i = 0; i < MAX_PLAYERS; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  501:    {
+    #####:  502:      if ( players[i] > players[j] )
+branch  0 never executed
+branch  1 never executed
+        -:  503:	{
+    #####:  504:	  j = i;
+        -:  505:	}
+        -:  506:    }
+    #####:  507:  highScore = players[j];
+        -:  508:
+        -:  509:  //set winners in array to 1 and rest to 0
+    #####:  510:  for (i = 0; i < MAX_PLAYERS; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  511:    {
+    #####:  512:      if ( players[i] == highScore )
+branch  0 never executed
+branch  1 never executed
+        -:  513:	{
+    #####:  514:	  players[i] = 1;
+        -:  515:	}
+        -:  516:      else
+        -:  517:	{
+    #####:  518:	  players[i] = 0;
+        -:  519:	}
+        -:  520:    }
+        -:  521:
+    #####:  522:  return 0;
+        -:  523:}
+        -:  524:
+function drawCard called 13719 returned 100% blocks executed 85%
+    13719:  525:int drawCard(int player, struct gameState *state)
+        -:  526:{	int count;
+        -:  527:  int deckCounter;
+    13719:  528:  if (state->deckCount[player] <= 0){//Deck is empty
+branch  0 taken 97% (fallthrough)
+branch  1 taken 3%
+        -:  529:    
+        -:  530:    //Step 1 Shuffle the discard pile back into a deck
+        -:  531:    int i;
+        -:  532:    //Move discard to deck
+    13250:  533:    for (i = 0; i < state->discardCount[player];i++){
+branch  0 taken 0%
+branch  1 taken 100% (fallthrough)
+    #####:  534:      state->deck[player][i] = state->discard[player][i];
+    #####:  535:      state->discard[player][i] = -1;
+        -:  536:    }
+        -:  537:
+    13250:  538:    state->deckCount[player] = state->discardCount[player];
+    13250:  539:    state->discardCount[player] = 0;//Reset discard
+        -:  540:
+        -:  541:    //Shufffle the deck
+    13250:  542:    shuffle(player, state);//Shuffle the deck up and make it so that we can draw
+call    0 returned 100%
+        -:  543:   
+        -:  544:    if (DEBUG){//Debug statements
+        -:  545:      printf("Deck count now: %d\n", state->deckCount[player]);
+        -:  546:    }
+        -:  547:    
+    13250:  548:    state->discardCount[player] = 0;
+        -:  549:
+        -:  550:    //Step 2 Draw Card
+    13250:  551:    count = state->handCount[player];//Get current player's hand count
+        -:  552:    
+        -:  553:    if (DEBUG){//Debug statements
+        -:  554:      printf("Current hand count: %d\n", count);
+        -:  555:    }
+        -:  556:    
+    13250:  557:    deckCounter = state->deckCount[player];//Create a holder for the deck count
+        -:  558:
+    13250:  559:    if (deckCounter == 0)
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+    13250:  560:      return -1;
+        -:  561:
+    #####:  562:    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to hand
+    #####:  563:    state->deckCount[player]--;
+    #####:  564:    state->handCount[player]++;//Increment hand count
+        -:  565:  }
+        -:  566:
+        -:  567:  else{
+      469:  568:    int count = state->handCount[player];//Get current hand count for player
+        -:  569:    int deckCounter;
+        -:  570:    if (DEBUG){//Debug statements
+        -:  571:      printf("Current hand count: %d\n", count);
+        -:  572:    }
+        -:  573:
+      469:  574:    deckCounter = state->deckCount[player];//Create holder for the deck count
+      469:  575:    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
+      469:  576:    state->deckCount[player]--;
+      469:  577:    state->handCount[player]++;//Increment hand count
+        -:  578:  }
+        -:  579:
+      469:  580:  return 0;
+        -:  581:}
+        -:  582:
+function getCost called 222 returned 100% blocks executed 100%
+      222:  583:int getCost(int cardNumber)
+        -:  584:{
+      222:  585:  switch( cardNumber ) 
+branch  0 taken 4%
+branch  1 taken 4%
+branch  2 taken 4%
+branch  3 taken 4%
+branch  4 taken 4%
+branch  5 taken 4%
+branch  6 taken 4%
+branch  7 taken 4%
+branch  8 taken 4%
+branch  9 taken 4%
+branch 10 taken 4%
+branch 11 taken 4%
+branch 12 taken 4%
+branch 13 taken 4%
+branch 14 taken 4%
+branch 15 taken 4%
+branch 16 taken 4%
+branch 17 taken 4%
+branch 18 taken 4%
+branch 19 taken 4%
+branch 20 taken 4%
+branch 21 taken 4%
+branch 22 taken 4%
+branch 23 taken 4%
+branch 24 taken 4%
+branch 25 taken 4%
+branch 26 taken 4%
+branch 27 taken 3%
+        -:  586:    {
+        -:  587:    case curse:
+        8:  588:      return 0;
+        -:  589:    case estate:
+        8:  590:      return 2;
+        -:  591:    case duchy:
+        8:  592:      return 5;
+        -:  593:    case province:
+        8:  594:      return 8;
+        -:  595:    case copper:
+        8:  596:      return 0;
+        -:  597:    case silver:
+        8:  598:      return 3;
+        -:  599:    case gold:
+        8:  600:      return 6;
+        -:  601:    case adventurer:
+        8:  602:      return 6;
+        -:  603:    case council_room:
+        8:  604:      return 5;
+        -:  605:    case feast:
+        8:  606:      return 4;
+        -:  607:    case gardens:
+        8:  608:      return 4;
+        -:  609:    case mine:
+        8:  610:      return 5;
+        -:  611:    case remodel:
+        8:  612:      return 4;
+        -:  613:    case smithy:
+        8:  614:      return 4;
+        -:  615:    case village:
+        8:  616:      return 3;
+        -:  617:    case baron:
+        8:  618:      return 4;
+        -:  619:    case great_hall:
+        8:  620:      return 3;
+        -:  621:    case minion:
+        8:  622:      return 5;
+        -:  623:    case steward:
+        8:  624:      return 3;
+        -:  625:    case tribute:
+        8:  626:      return 5;
+        -:  627:    case ambassador:
+        8:  628:      return 3;
+        -:  629:    case cutpurse:
+        8:  630:      return 4;
+        -:  631:    case embargo: 
+        8:  632:      return 2;
+        -:  633:    case outpost:
+        8:  634:      return 5;
+        -:  635:    case salvager:
+        8:  636:      return 4;
+        -:  637:    case sea_hag:
+        8:  638:      return 4;
+        -:  639:    case treasure_map:
+        8:  640:      return 4;
+        -:  641:    }
+        -:  642:	
+        6:  643:  return -1;
+        -:  644:}
+        -:  645:
+function cardEffect called 32 returned 100% blocks executed 4%
+       32:  646:int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
+        -:  647:{
+        -:  648:  int i;
+        -:  649:  int j;
+        -:  650:  int k;
+        -:  651:  int x;
+        -:  652:  int index;
+       32:  653:  int currentPlayer = whoseTurn(state);
+call    0 returned 100%
+       32:  654:  int nextPlayer = currentPlayer + 1;
+        -:  655:
+       32:  656:  int tributeRevealedCards[2] = {-1, -1};
+        -:  657:  int temphand[MAX_HAND];// moved above the if statement
+       32:  658:  int drawntreasure=0;
+        -:  659:  int cardDrawn;
+       32:  660:  int z = 0;// this is the counter for the temp hand
+       32:  661:  if (nextPlayer > (state->numPlayers - 1)){
+branch  0 taken 3% (fallthrough)
+branch  1 taken 97%
+        1:  662:    nextPlayer = 0;
+        -:  663:  }
+        -:  664:  
+        -:  665:	
+        -:  666:  //uses switch to select card and perform actions
+       32:  667:  switch( card ) 
+branch  0 taken 44%
+branch  1 taken 19%
+branch  2 taken 0%
+branch  3 taken 0%
+branch  4 taken 0%
+branch  5 taken 0%
+branch  6 taken 22%
+branch  7 taken 0%
+branch  8 taken 0%
+branch  9 taken 16%
+branch 10 taken 0%
+branch 11 taken 0%
+branch 12 taken 0%
+branch 13 taken 0%
+branch 14 taken 0%
+branch 15 taken 0%
+branch 16 taken 0%
+branch 17 taken 0%
+branch 18 taken 0%
+branch 19 taken 0%
+branch 20 taken 0%
+        -:  668:    {
+        -:  669:    case adventurer:
+       14:  670:      return playAdventurer(currentPlayer,state);
+call    0 returned 100%
+        -:  671:			
+        -:  672:    case council_room:
+        6:  673:      return playCouncilRoom(currentPlayer, state, handPos);
+call    0 returned 100%
+        -:  674:			
+        -:  675:    case feast:
+        -:  676:      //gain card with cost up to 5
+        -:  677:      //Backup hand
+    #####:  678:      for (i = 0; i <= state->handCount[currentPlayer]; i++){
+branch  0 never executed
+branch  1 never executed
+    #####:  679:	temphand[i] = state->hand[currentPlayer][i];//Backup card
+    #####:  680:	state->hand[currentPlayer][i] = -1;//Set to nothing
+        -:  681:      }
+        -:  682:      //Backup hand
+        -:  683:
+        -:  684:      //Update Coins for Buy
+    #####:  685:      updateCoins(currentPlayer, state, 5);
+call    0 never executed
+    #####:  686:      x = 1;//Condition to loop on
+    #####:  687:      while( x == 1) {//Buy one card
+branch  0 never executed
+branch  1 never executed
+    #####:  688:	if (supplyCount(choice1, state) <= 0){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  689:	  if (DEBUG)
+        -:  690:	    printf("None of that card left, sorry!\n");
+        -:  691:
+        -:  692:	  if (DEBUG){
+        -:  693:	    printf("Cards Left: %d\n", supplyCount(choice1, state));
+        -:  694:	  }
+        -:  695:	}
+    #####:  696:	else if (state->coins < getCost(choice1)){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  697:	  printf("That card is too expensive!\n");
+call    0 never executed
+        -:  698:
+        -:  699:	  if (DEBUG){
+        -:  700:	    printf("Coins: %d < %d\n", state->coins, getCost(choice1));
+        -:  701:	  }
+        -:  702:	}
+        -:  703:	else{
+        -:  704:
+        -:  705:	  if (DEBUG){
+        -:  706:	    printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
+        -:  707:	  }
+        -:  708:
+    #####:  709:	  gainCard(choice1, state, 0, currentPlayer);//Gain the card
+call    0 never executed
+    #####:  710:	  x = 0;//No more buying cards
+        -:  711:
+        -:  712:	  if (DEBUG){
+        -:  713:	    printf("Deck Count: %d\n", state->handCount[currentPlayer] + state->deckCount[currentPlayer] + state->discardCount[currentPlayer]);
+        -:  714:	  }
+        -:  715:
+        -:  716:	}
+        -:  717:      }     
+        -:  718:
+        -:  719:      //Reset Hand
+    #####:  720:      for (i = 0; i <= state->handCount[currentPlayer]; i++){
+branch  0 never executed
+branch  1 never executed
+    #####:  721:	state->hand[currentPlayer][i] = temphand[i];
+    #####:  722:	temphand[i] = -1;
+        -:  723:      }
+        -:  724:      //Reset Hand
+        -:  725:      			
+    #####:  726:      return 0;
+        -:  727:
+        -:  728:    case gardens:
+    #####:  729:      return -1;
+        -:  730:			
+        -:  731:    case mine:
+    #####:  732:      j = state->hand[currentPlayer][choice1];  //store card we will trash
+        -:  733:
+    #####:  734:      if (state->hand[currentPlayer][choice1] < copper || state->hand[currentPlayer][choice1] > gold)
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  735:	{
+    #####:  736:	  return -1;
+        -:  737:	}
+        -:  738:		
+    #####:  739:      if (choice2 > treasure_map || choice2 < curse)
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  740:	{
+    #####:  741:	  return -1;
+        -:  742:	}
+        -:  743:
+    #####:  744:      if ( (getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2) )
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  745:	{
+    #####:  746:	  return -1;
+        -:  747:	}
+        -:  748:
+    #####:  749:      gainCard(choice2, state, 2, currentPlayer);
+call    0 never executed
+        -:  750:
+        -:  751:      //discard card from hand
+    #####:  752:      discardCard(handPos, currentPlayer, state, 0);
+call    0 never executed
+        -:  753:
+        -:  754:      //discard trashed card
+    #####:  755:      for (i = 0; i < state->handCount[currentPlayer]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  756:	{
+    #####:  757:	  if (state->hand[currentPlayer][i] == j)
+branch  0 never executed
+branch  1 never executed
+        -:  758:	    {
+    #####:  759:	      discardCard(i, currentPlayer, state, 0);			
+call    0 never executed
+    #####:  760:	      break;
+        -:  761:	    }
+        -:  762:	}
+        -:  763:			
+    #####:  764:      return 0;
+        -:  765:			
+        -:  766:    case remodel:
+    #####:  767:      j = state->hand[currentPlayer][choice1];  //store card we will trash
+        -:  768:
+    #####:  769:      if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  770:	{
+    #####:  771:	  return -1;
+        -:  772:	}
+        -:  773:
+    #####:  774:      gainCard(choice2, state, 0, currentPlayer);
+call    0 never executed
+        -:  775:
+        -:  776:      //discard card from hand
+    #####:  777:      discardCard(handPos, currentPlayer, state, 0);
+call    0 never executed
+        -:  778:
+        -:  779:      //discard trashed card
+    #####:  780:      for (i = 0; i < state->handCount[currentPlayer]; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  781:	{
+    #####:  782:	  if (state->hand[currentPlayer][i] == j)
+branch  0 never executed
+branch  1 never executed
+        -:  783:	    {
+    #####:  784:	      discardCard(i, currentPlayer, state, 0);			
+call    0 never executed
+    #####:  785:	      break;
+        -:  786:	    }
+        -:  787:	}
+        -:  788:
+        -:  789:
+    #####:  790:      return 0;
+        -:  791:		//******************Smithy****************************************************************
+        -:  792:    case smithy:
+        -:  793:      //+3 Cards
+        7:  794:      return playSmithy(currentPlayer, state, handPos);
+call    0 returned 100%
+        -:  795:		//******************Village***************************************************************
+        -:  796:    case village:
+    #####:  797:     return playVillage(currentPlayer, state, handPos);
+call    0 never executed
+        -:  798:		
+        -:  799:    case baron:
+    #####:  800:      state->numBuys++;//Increase buys by 1!
+    #####:  801:      if (choice1 > 0){//Boolean true or going to discard an estate
+branch  0 never executed
+branch  1 never executed
+    #####:  802:	int p = 0;//Iterator for hand!
+    #####:  803:	int card_not_discarded = 1;//Flag for discard set!
+    #####:  804:	while(card_not_discarded){
+branch  0 never executed
+branch  1 never executed
+    #####:  805:	  if (state->hand[currentPlayer][p] == estate){//Found an estate card!
+branch  0 never executed
+branch  1 never executed
+    #####:  806:	    state->coins += 4;//Add 4 coins to the amount of coins
+    #####:  807:	    state->discard[currentPlayer][state->discardCount[currentPlayer]] = state->hand[currentPlayer][p];
+    #####:  808:	    state->discardCount[currentPlayer]++;
+    #####:  809:	    for (;p < state->handCount[currentPlayer]; p++){
+branch  0 never executed
+branch  1 never executed
+    #####:  810:	      state->hand[currentPlayer][p] = state->hand[currentPlayer][p+1];
+        -:  811:	    }
+    #####:  812:	    state->hand[currentPlayer][state->handCount[currentPlayer]] = -1;
+    #####:  813:	    state->handCount[currentPlayer]--;
+    #####:  814:	    card_not_discarded = 0;//Exit the loop
+        -:  815:	  }
+    #####:  816:	  else if (p > state->handCount[currentPlayer]){
+branch  0 never executed
+branch  1 never executed
+        -:  817:	    if(DEBUG) {
+        -:  818:	      printf("No estate cards in your hand, invalid choice\n");
+        -:  819:	      printf("Must gain an estate if there are any\n");
+        -:  820:	    }
+    #####:  821:	    if (supplyCount(estate, state) > 0){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  822:	      gainCard(estate, state, 0, currentPlayer);
+call    0 never executed
+    #####:  823:	      state->supplyCount[estate]--;//Decrement estates
+    #####:  824:	      if (supplyCount(estate, state) == 0){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  825:		isGameOver(state);
+call    0 never executed
+        -:  826:	      }
+        -:  827:	    }
+    #####:  828:	    card_not_discarded = 0;//Exit the loop
+        -:  829:	  }
+        -:  830:			    
+        -:  831:	  else{
+    #####:  832:	    p++;//Next card
+        -:  833:	  }
+        -:  834:	}
+        -:  835:      }
+        -:  836:			    
+        -:  837:      else{
+    #####:  838:	if (supplyCount(estate, state) > 0){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  839:	  gainCard(estate, state, 0, currentPlayer);//Gain an estate
+call    0 never executed
+    #####:  840:	  state->supplyCount[estate]--;//Decrement Estates
+    #####:  841:	  if (supplyCount(estate, state) == 0){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  842:	    isGameOver(state);
+call    0 never executed
+        -:  843:	  }
+        -:  844:	}
+        -:  845:      }
+        -:  846:	    
+        -:  847:      
+    #####:  848:      return 0;
+        -:  849:		
+        -:  850:    case great_hall:
+        5:  851:      return playGreatHall(currentPlayer, state, handPos);
+call    0 returned 100%
+        -:  852:		
+        -:  853:    case minion:
+        -:  854:      //+1 action
+    #####:  855:      state->numActions++;
+        -:  856:			
+        -:  857:      //discard card from hand
+    #####:  858:      discardCard(handPos, currentPlayer, state, 0);
+call    0 never executed
+        -:  859:			
+    #####:  860:      if (choice1)		//+2 coins
+branch  0 never executed
+branch  1 never executed
+        -:  861:	{
+    #####:  862:	  state->coins = state->coins + 2;
+        -:  863:	}
+        -:  864:			
+    #####:  865:      else if (choice2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
+branch  0 never executed
+branch  1 never executed
+        -:  866:	{
+        -:  867:	  //discard hand
+    #####:  868:	  while(numHandCards(state) > 0)
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  869:	    {
+    #####:  870:	      discardCard(handPos, currentPlayer, state, 0);
+call    0 never executed
+        -:  871:	    }
+        -:  872:				
+        -:  873:	  //draw 4
+    #####:  874:	  for (i = 0; i < 4; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  875:	    {
+    #####:  876:	      drawCard(currentPlayer, state);
+call    0 never executed
+        -:  877:	    }
+        -:  878:				
+        -:  879:	  //other players discard hand and redraw if hand size > 4
+    #####:  880:	  for (i = 0; i < state->numPlayers; i++)
+branch  0 never executed
+branch  1 never executed
+        -:  881:	    {
+    #####:  882:	      if (i != currentPlayer)
+branch  0 never executed
+branch  1 never executed
+        -:  883:		{
+    #####:  884:		  if ( state->handCount[i] > 4 )
+branch  0 never executed
+branch  1 never executed
+        -:  885:		    {
+        -:  886:		      //discard hand
+    #####:  887:		      while( state->handCount[i] > 0 )
+branch  0 never executed
+branch  1 never executed
+        -:  888:			{
+    #####:  889:			  discardCard(handPos, i, state, 0);
+call    0 never executed
+        -:  890:			}
+        -:  891:							
+        -:  892:		      //draw 4
+    #####:  893:		      for (j = 0; j < 4; j++)
+branch  0 never executed
+branch  1 never executed
+        -:  894:			{
+    #####:  895:			  drawCard(i, state);
+call    0 never executed
+        -:  896:			}
+        -:  897:		    }
+        -:  898:		}
+        -:  899:	    }
+        -:  900:				
+        -:  901:	}
+    #####:  902:      return 0;
+        -:  903:		
+        -:  904:    case steward:
+    #####:  905:      if (choice1 == 1)
+branch  0 never executed
+branch  1 never executed
+        -:  906:	{
+        -:  907:	  //+2 cards
+    #####:  908:	  drawCard(currentPlayer, state);
+call    0 never executed
+    #####:  909:	  drawCard(currentPlayer, state);
+call    0 never executed
+        -:  910:	}
+    #####:  911:      else if (choice1 == 2)
+branch  0 never executed
+branch  1 never executed
+        -:  912:	{
+        -:  913:	  //+2 coins
+    #####:  914:	  state->coins = state->coins + 2;
+        -:  915:	}
+        -:  916:      else
+        -:  917:	{
+        -:  918:	  //trash 2 cards in hand
+    #####:  919:	  discardCard(choice2, currentPlayer, state, 1);
+call    0 never executed
+    #####:  920:	  discardCard(choice3, currentPlayer, state, 1);
+call    0 never executed
+        -:  921:	}
+        -:  922:			
+        -:  923:      //discard card from hand
+    #####:  924:      discardCard(handPos, currentPlayer, state, 0);
+call    0 never executed
+    #####:  925:      return 0;
+        -:  926:		
+        -:  927:    case tribute:
+    #####:  928:      if ((state->discardCount[nextPlayer] + state->deckCount[nextPlayer]) <= 1){
+branch  0 never executed
+branch  1 never executed
+    #####:  929:	if (state->deckCount[nextPlayer] > 0){
+branch  0 never executed
+branch  1 never executed
+    #####:  930:	  tributeRevealedCards[0] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];
+    #####:  931:	  state->deckCount[nextPlayer]--;
+        -:  932:	}
+    #####:  933:	else if (state->discardCount[nextPlayer] > 0){
+branch  0 never executed
+branch  1 never executed
+    #####:  934:	  tributeRevealedCards[0] = state->discard[nextPlayer][state->discardCount[nextPlayer]-1];
+    #####:  935:	  state->discardCount[nextPlayer]--;
+        -:  936:	}
+        -:  937:	else{
+        -:  938:	  //No Card to Reveal
+        -:  939:	  if (DEBUG){
+        -:  940:	    printf("No cards to reveal\n");
+        -:  941:	  }
+        -:  942:	}
+        -:  943:      }
+        -:  944:	    
+        -:  945:      else{
+    #####:  946:	if (state->deckCount[nextPlayer] == 0){
+branch  0 never executed
+branch  1 never executed
+    #####:  947:	  for (i = 0; i < state->discardCount[nextPlayer]; i++){
+branch  0 never executed
+branch  1 never executed
+    #####:  948:	    state->deck[nextPlayer][i] = state->discard[nextPlayer][i];//Move to deck
+    #####:  949:	    state->deckCount[nextPlayer]++;
+    #####:  950:	    state->discard[nextPlayer][i] = -1;
+    #####:  951:	    state->discardCount[nextPlayer]--;
+        -:  952:	  }
+        -:  953:			    
+    #####:  954:	  shuffle(nextPlayer,state);//Shuffle the deck
+call    0 never executed
+        -:  955:	} 
+    #####:  956:	tributeRevealedCards[0] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];
+    #####:  957:	state->deck[nextPlayer][state->deckCount[nextPlayer]--] = -1;
+    #####:  958:	state->deckCount[nextPlayer]--;
+    #####:  959:	tributeRevealedCards[1] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];
+    #####:  960:	state->deck[nextPlayer][state->deckCount[nextPlayer]--] = -1;
+    #####:  961:	state->deckCount[nextPlayer]--;
+        -:  962:      }    
+        -:  963:		       
+    #####:  964:      if (tributeRevealedCards[0] == tributeRevealedCards[1]){//If we have a duplicate card, just drop one 
+branch  0 never executed
+branch  1 never executed
+    #####:  965:	state->playedCards[state->playedCardCount] = tributeRevealedCards[1];
+    #####:  966:	state->playedCardCount++;
+    #####:  967:	tributeRevealedCards[1] = -1;
+        -:  968:      }
+        -:  969:
+    #####:  970:      for (i = 0; i <= 2; i ++){
+branch  0 never executed
+branch  1 never executed
+    #####:  971:	if (tributeRevealedCards[i] == copper || tributeRevealedCards[i] == silver || tributeRevealedCards[i] == gold){//Treasure cards
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  972:	  state->coins += 2;
+        -:  973:	}
+        -:  974:		    
+    #####:  975:	else if (tributeRevealedCards[i] == estate || tributeRevealedCards[i] == duchy || tributeRevealedCards[i] == province || tributeRevealedCards[i] == gardens || tributeRevealedCards[i] == great_hall){//Victory Card Found
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  976:	  drawCard(currentPlayer, state);
+call    0 never executed
+    #####:  977:	  drawCard(currentPlayer, state);
+call    0 never executed
+        -:  978:	}
+        -:  979:	else{//Action Card
+    #####:  980:	  state->numActions = state->numActions + 2;
+        -:  981:	}
+        -:  982:      }
+        -:  983:	    
+    #####:  984:      return 0;
+        -:  985:		
+        -:  986:    case ambassador:
+    #####:  987:      j = 0;		//used to check if player has enough cards to discard
+        -:  988:
+    #####:  989:      if (choice2 > 2 || choice2 < 0)
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:  990:	{
+    #####:  991:	  return -1;				
+        -:  992:	}
+        -:  993:
+    #####:  994:      if (choice1 == handPos)
+branch  0 never executed
+branch  1 never executed
+        -:  995:	{
+    #####:  996:	  return -1;
+        -:  997:	}
+        -:  998:
+    #####:  999:      for (i = 0; i < state->handCount[currentPlayer]; i++)
+branch  0 never executed
+branch  1 never executed
+        -: 1000:	{
+    #####: 1001:	  if (i != handPos && i == state->hand[currentPlayer][choice1] && i != choice1)
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+        -: 1002:	    {
+    #####: 1003:	      j++;
+        -: 1004:	    }
+        -: 1005:	}
+    #####: 1006:      if (j < choice2)
+branch  0 never executed
+branch  1 never executed
+        -: 1007:	{
+    #####: 1008:	  return -1;				
+        -: 1009:	}
+        -: 1010:
+        -: 1011:      if (DEBUG) 
+        -: 1012:	printf("Player %d reveals card number: %d\n", currentPlayer, state->hand[currentPlayer][choice1]);
+        -: 1013:
+        -: 1014:      //increase supply count for choosen card by amount being discarded
+    #####: 1015:      state->supplyCount[state->hand[currentPlayer][choice1]] += choice2;
+        -: 1016:			
+        -: 1017:      //each other player gains a copy of revealed card
+    #####: 1018:      for (i = 0; i < state->numPlayers; i++)
+branch  0 never executed
+branch  1 never executed
+        -: 1019:	{
+    #####: 1020:	  if (i != currentPlayer)
+branch  0 never executed
+branch  1 never executed
+        -: 1021:	    {
+    #####: 1022:	      gainCard(state->hand[currentPlayer][choice1], state, 0, i);
+call    0 never executed
+        -: 1023:	    }
+        -: 1024:	}
+        -: 1025:
+        -: 1026:      //discard played card from hand
+    #####: 1027:      discardCard(handPos, currentPlayer, state, 0);			
+call    0 never executed
+        -: 1028:
+        -: 1029:      //trash copies of cards returned to supply
+    #####: 1030:      for (j = 0; j < choice2; j++)
+branch  0 never executed
+branch  1 never executed
+        -: 1031:	{
+    #####: 1032:	  for (i = 0; i < state->handCount[currentPlayer]; i++)
+branch  0 never executed
+branch  1 never executed
+        -: 1033:	    {
+    #####: 1034:	      if (state->hand[currentPlayer][i] == state->hand[currentPlayer][choice1])
+branch  0 never executed
+branch  1 never executed
+        -: 1035:		{
+    #####: 1036:		  discardCard(i, currentPlayer, state, 1);
+call    0 never executed
+    #####: 1037:		  break;
+        -: 1038:		}
+        -: 1039:	    }
+        -: 1040:	}			
+        -: 1041:
+    #####: 1042:      return 0;
+        -: 1043:		
+        -: 1044:    case cutpurse:
+        -: 1045:
+    #####: 1046:      updateCoins(currentPlayer, state, 2);
+call    0 never executed
+    #####: 1047:      for (i = 0; i < state->numPlayers; i++)
+branch  0 never executed
+branch  1 never executed
+        -: 1048:	{
+    #####: 1049:	  if (i != currentPlayer)
+branch  0 never executed
+branch  1 never executed
+        -: 1050:	    {
+    #####: 1051:	      for (j = 0; j < state->handCount[i]; j++)
+branch  0 never executed
+branch  1 never executed
+        -: 1052:		{
+    #####: 1053:		  if (state->hand[i][j] == copper)
+branch  0 never executed
+branch  1 never executed
+        -: 1054:		    {
+    #####: 1055:		      discardCard(j, i, state, 0);
+call    0 never executed
+    #####: 1056:		      break;
+        -: 1057:		    }
+    #####: 1058:		  if (j == state->handCount[i])
+branch  0 never executed
+branch  1 never executed
+        -: 1059:		    {
+    #####: 1060:		      for (k = 0; k < state->handCount[i]; k++)
+branch  0 never executed
+branch  1 never executed
+        -: 1061:			{
+        -: 1062:			  if (DEBUG)
+        -: 1063:			    printf("Player %d reveals card number %d\n", i, state->hand[i][k]);
+        -: 1064:			}	
+    #####: 1065:		      break;
+        -: 1066:		    }		
+        -: 1067:		}
+        -: 1068:					
+        -: 1069:	    }
+        -: 1070:				
+        -: 1071:	}				
+        -: 1072:
+        -: 1073:      //discard played card from hand
+    #####: 1074:      discardCard(handPos, currentPlayer, state, 0);			
+call    0 never executed
+        -: 1075:
+    #####: 1076:      return 0;
+        -: 1077:
+        -: 1078:		
+        -: 1079:    case embargo: 
+        -: 1080:      //+2 Coins
+    #####: 1081:      state->coins = state->coins + 2;
+        -: 1082:			
+        -: 1083:      //see if selected pile is in play
+    #####: 1084:      if ( state->supplyCount[choice1] == -1 )
+branch  0 never executed
+branch  1 never executed
+        -: 1085:	{
+    #####: 1086:	  return -1;
+        -: 1087:	}
+        -: 1088:			
+        -: 1089:      //add embargo token to selected supply pile
+    #####: 1090:      state->embargoTokens[choice1]++;
+        -: 1091:			
+        -: 1092:      //trash card
+    #####: 1093:      discardCard(handPos, currentPlayer, state, 1);		
+call    0 never executed
+    #####: 1094:      return 0;
+        -: 1095:		
+        -: 1096:    case outpost:
+        -: 1097:      //set outpost flag
+    #####: 1098:      state->outpostPlayed++;
+        -: 1099:			
+        -: 1100:      //discard card
+    #####: 1101:      discardCard(handPos, currentPlayer, state, 0);
+call    0 never executed
+    #####: 1102:      return 0;
+        -: 1103:		
+        -: 1104:    case salvager:
+        -: 1105:      //+1 buy
+    #####: 1106:      state->numBuys++;
+        -: 1107:			
+    #####: 1108:      if (choice1)
+branch  0 never executed
+branch  1 never executed
+        -: 1109:	{
+        -: 1110:	  //gain coins equal to trashed card
+    #####: 1111:	  state->coins = state->coins + getCost( handCard(choice1, state) );
+call    0 never executed
+call    1 never executed
+        -: 1112:	  //trash card
+    #####: 1113:	  discardCard(choice1, currentPlayer, state, 1);	
+call    0 never executed
+        -: 1114:	}
+        -: 1115:			
+        -: 1116:      //discard card
+    #####: 1117:      discardCard(handPos, currentPlayer, state, 0);
+call    0 never executed
+    #####: 1118:      return 0;
+        -: 1119:		
+        -: 1120:    case sea_hag:
+    #####: 1121:      for (i = 0; i < state->numPlayers; i++){
+branch  0 never executed
+branch  1 never executed
+    #####: 1122:	if (i != currentPlayer){
+branch  0 never executed
+branch  1 never executed
+    #####: 1123:	  state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    state->deckCount[i]--;
+    #####: 1124:	  state->discardCount[i]++;
+    #####: 1125:	  state->deck[i][state->deckCount[i]--] = curse;//Top card now a curse
+        -: 1126:	}
+        -: 1127:      }
+    #####: 1128:      return 0;
+        -: 1129:		
+        -: 1130:    case treasure_map:
+        -: 1131:      //search hand for another treasure_map
+    #####: 1132:      index = -1;
+    #####: 1133:      for (i = 0; i < state->handCount[currentPlayer]; i++)
+branch  0 never executed
+branch  1 never executed
+        -: 1134:	{
+    #####: 1135:	  if (state->hand[currentPlayer][i] == treasure_map && i != handPos)
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+        -: 1136:	    {
+    #####: 1137:	      index = i;
+    #####: 1138:	      break;
+        -: 1139:	    }
+        -: 1140:	}
+    #####: 1141:      if (index > -1)
+branch  0 never executed
+branch  1 never executed
+        -: 1142:	{
+        -: 1143:	  //trash both treasure cards
+    #####: 1144:	  discardCard(handPos, currentPlayer, state, 1);
+call    0 never executed
+    #####: 1145:	  discardCard(index, currentPlayer, state, 1);
+call    0 never executed
+        -: 1146:
+        -: 1147:	  //gain 4 Gold cards
+    #####: 1148:	  for (i = 0; i < 4; i++)
+branch  0 never executed
+branch  1 never executed
+        -: 1149:	    {
+    #####: 1150:	      gainCard(gold, state, 1, currentPlayer);
+call    0 never executed
+        -: 1151:	    }
+        -: 1152:				
+        -: 1153:	  //return success
+    #####: 1154:	  return 1;
+        -: 1155:	}
+        -: 1156:			
+        -: 1157:      //no second treasure_map found in hand
+    #####: 1158:      return -1;
+        -: 1159:    }
+        -: 1160:	
+    #####: 1161:  return -1;
+        -: 1162:}
+        -: 1163:
+function playAdventurer called 14 returned 100% blocks executed 100%
+       14: 1164:int playAdventurer(int player, struct gameState *state)
+        -: 1165:{
+       14: 1166:    int drawnTreasure = 0;
+        -: 1167:    int cardDrawn;
+        -: 1168:    int tempHand[MAX_HAND];
+       14: 1169:    int z = 0;
+        -: 1170:
+    13324: 1171:    while(drawnTreasure<=2)
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
+        -: 1172:    {
+    13296: 1173:        if (state->deckCount[player] <1)
+branch  0 taken 99% (fallthrough)
+branch  1 taken 1%
+        -: 1174:        {//if the deck is empty we need to shuffle discard and add to deck
+    13250: 1175:            shuffle(player, state);
+call    0 returned 100%
+        -: 1176:        }
+    13296: 1177:        drawCard(player, state);
+call    0 returned 100%
+    13296: 1178:        cardDrawn = state->hand[player][state->handCount[player]-1];//top card of hand is most recently drawn card.
+    13296: 1179:        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+branch  0 taken 99% (fallthrough)
+branch  1 taken 1%
+branch  2 taken 99% (fallthrough)
+branch  3 taken 1%
+branch  4 taken 1% (fallthrough)
+branch  5 taken 99%
+       42: 1180:        drawnTreasure++;
+        -: 1181:        else
+        -: 1182:        {
+    13254: 1183:            tempHand[z]=cardDrawn;
+    13254: 1184:            state->handCount[player]--; //this should just remove the top card (the most recently drawn one).
+    13254: 1185:            z++;
+        -: 1186:        }
+        -: 1187:    }
+      230: 1188:    while(z-1>=0)
+branch  0 taken 94%
+branch  1 taken 6% (fallthrough)
+        -: 1189:    {
+      202: 1190:        state->discard[player][state->discardCount[player]++]=tempHand[z-1]; // discard all cards in play that have been drawn
+      202: 1191:        z=z-1;
+        -: 1192:    }
+       14: 1193:    return 0;
+        -: 1194:}
+        -: 1195:
+        -: 1196:
+function playSmithy called 7 returned 100% blocks executed 100%
+        7: 1197:int playSmithy(int player, struct gameState *state, int handPos)
+        -: 1198:{
+        -: 1199:  // +3 cards
+        -: 1200:  int i;
+       35: 1201:  for (i = 0; i < 4; i++)
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -: 1202:  {
+       28: 1203:    drawCard(player, state);
+call    0 returned 100%
+        -: 1204:  } 
+        -: 1205:
+        -: 1206:  //discard card from hand
+        7: 1207:  discardCard(handPos, player, state, 0);
+call    0 returned 100%
+        7: 1208:  return 0;
+        -: 1209:}
+        -: 1210:
+function playCouncilRoom called 6 returned 100% blocks executed 100%
+        6: 1211:int playCouncilRoom(int player, struct gameState *state, int handPos)
+        -: 1212:{
+        -: 1213:  //+4 Cards
+        -: 1214:  int i;
+       30: 1215:  for (i = 0; i < 4; i++)
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -: 1216:  {
+       24: 1217:    drawCard(player, state);
+call    0 returned 100%
+        -: 1218:  }
+        -: 1219:   
+        -: 1220:  //+1 Buy
+        -: 1221:  //state->numBuys++;
+        -: 1222:      
+        -: 1223:  //Each other player draws a card
+       18: 1224:  for (i = 0; i < state->numPlayers; i++)
+branch  0 taken 67%
+branch  1 taken 33% (fallthrough)
+        -: 1225:  {
+       12: 1226:    if ( i != player )
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+        -: 1227:    {
+        6: 1228:      drawCard(i, state);
+call    0 returned 100%
+        -: 1229:    }
+        -: 1230:  }
+        -: 1231:      
+        -: 1232:  //put played card in played card pile
+        6: 1233:  discardCard(handPos, player, state, 0);
+call    0 returned 100%
+        -: 1234:      
+        6: 1235:  return 0;
+        -: 1236:}
+        -: 1237:
+function playVillage called 0 returned 0% blocks executed 0%
+    #####: 1238:int playVillage(int player, struct gameState *state, int handPos)
+        -: 1239:{
+        -: 1240:  //+1 Card
+    #####: 1241:  drawCard(player, state);
+call    0 never executed
+        -: 1242:      
+        -: 1243:  //+2 Actions
+    #####: 1244:  state->numActions = state->numActions + 2;
+        -: 1245:      
+        -: 1246:  //discard played card from hand
+    #####: 1247:  discardCard(handPos, player, state, 0);
+call    0 never executed
+    #####: 1248:  return 0;
+        -: 1249:}
+        -: 1250:
+function playGreatHall called 5 returned 100% blocks executed 100%
+        5: 1251:int playGreatHall(int player, struct gameState *state, int handPos)
+        -: 1252:{
+        -: 1253:  //+1 Card
+        5: 1254:  drawCard(player, state);
+call    0 returned 100%
+        -: 1255:      
+        -: 1256:  //+1 Actions
+        -: 1257:  //state->numActions++;
+        -: 1258:      
+        -: 1259:  //discard card from hand
+        5: 1260:  discardCard(handPos, player, state, 0);
+call    0 returned 100%
+        5: 1261:  return 0;
+        -: 1262:}
+        -: 1263:
+        -: 1264:
+        -: 1265:
+        -: 1266:
+        -: 1267:
+        -: 1268:
+        -: 1269:
+        -: 1270:
+        -: 1271:
+        -: 1272:
+        -: 1273:
+function discardCard called 18 returned 100% blocks executed 78%
+       18: 1274:int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)
+        -: 1275:{
+        -: 1276:	
+        -: 1277:  //if card is not trashed, added to Played pile 
+       18: 1278:  if (trashFlag < 1)
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+        -: 1279:    {
+        -: 1280:      //add card to played pile
+       18: 1281:      state->playedCards[state->playedCardCount] = state->hand[currentPlayer][handPos]; 
+       18: 1282:      state->playedCardCount++;
+        -: 1283:    }
+        -: 1284:	
+        -: 1285:  //set played card to -1
+       18: 1286:  state->hand[currentPlayer][handPos] = -1;
+        -: 1287:	
+        -: 1288:  //remove card from player's hand
+       18: 1289:  if ( handPos == (state->handCount[currentPlayer] - 1) ) 	//last card in hand array is played
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -: 1290:    {
+        -: 1291:      //reduce number of cards in hand
+    #####: 1292:      state->handCount[currentPlayer]--;
+        -: 1293:    }
+       18: 1294:  else if ( state->handCount[currentPlayer] == 1 ) //only one card in hand
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -: 1295:    {
+        -: 1296:      //reduce number of cards in hand
+    #####: 1297:      state->handCount[currentPlayer]--;
+        -: 1298:    }
+        -: 1299:  else 	
+        -: 1300:    {
+        -: 1301:      //replace discarded card with last card in hand
+       18: 1302:      state->hand[currentPlayer][handPos] = state->hand[currentPlayer][ (state->handCount[currentPlayer] - 1)];
+        -: 1303:      //set last card to -1
+       18: 1304:      state->hand[currentPlayer][state->handCount[currentPlayer] - 1] = -1;
+        -: 1305:      //reduce number of cards in hand
+       18: 1306:      state->handCount[currentPlayer]--;
+        -: 1307:    }
+        -: 1308:	
+       18: 1309:  return 0;
+        -: 1310:}
+        -: 1311:
+function gainCard called 0 returned 0% blocks executed 0%
+    #####: 1312:int gainCard(int supplyPos, struct gameState *state, int toFlag, int player)
+        -: 1313:{
+        -: 1314:  //Note: supplyPos is enum of choosen card
+        -: 1315:	
+        -: 1316:  //check if supply pile is empty (0) or card is not used in game (-1)
+    #####: 1317:  if ( supplyCount(supplyPos, state) < 1 )
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -: 1318:    {
+    #####: 1319:      return -1;
+        -: 1320:    }
+        -: 1321:	
+        -: 1322:  //added card for [whoseTurn] current player:
+        -: 1323:  // toFlag = 0 : add to discard
+        -: 1324:  // toFlag = 1 : add to deck
+        -: 1325:  // toFlag = 2 : add to hand
+        -: 1326:
+    #####: 1327:  if (toFlag == 1)
+branch  0 never executed
+branch  1 never executed
+        -: 1328:    {
+    #####: 1329:      state->deck[ player ][ state->deckCount[player] ] = supplyPos;
+    #####: 1330:      state->deckCount[player]++;
+        -: 1331:    }
+    #####: 1332:  else if (toFlag == 2)
+branch  0 never executed
+branch  1 never executed
+        -: 1333:    {
+    #####: 1334:      state->hand[ player ][ state->handCount[player] ] = supplyPos;
+    #####: 1335:      state->handCount[player]++;
+        -: 1336:    }
+        -: 1337:  else
+        -: 1338:    {
+    #####: 1339:      state->discard[player][ state->discardCount[player] ] = supplyPos;
+    #####: 1340:      state->discardCount[player]++;
+        -: 1341:    }
+        -: 1342:	
+        -: 1343:  //decrease number in supply pile
+    #####: 1344:  state->supplyCount[supplyPos]--;
+        -: 1345:	 
+    #####: 1346:  return 0;
+        -: 1347:}
+        -: 1348:
+function updateCoins called 3042 returned 100% blocks executed 100%
+     3042: 1349:int updateCoins(int player, struct gameState *state, int bonus)
+        -: 1350:{
+        -: 1351:  int i;
+        -: 1352:	
+        -: 1353:  //reset coin count
+     3042: 1354:  state->coins = 0;
+        -: 1355:
+        -: 1356:  //add coins for each Treasure card in player's hand
+    12312: 1357:  for (i = 0; i < state->handCount[player]; i++)
+branch  0 taken 75%
+branch  1 taken 25% (fallthrough)
+        -: 1358:    {
+     9270: 1359:      if (state->hand[player][i] == copper)
+branch  0 taken 35% (fallthrough)
+branch  1 taken 65%
+        -: 1360:	{
+     3258: 1361:	  state->coins += 1;
+        -: 1362:	}
+     6012: 1363:      else if (state->hand[player][i] == silver)
+branch  0 taken 49% (fallthrough)
+branch  1 taken 51%
+        -: 1364:	{
+     2970: 1365:	  state->coins += 2;
+        -: 1366:	}
+     3042: 1367:      else if (state->hand[player][i] == gold)
+branch  0 taken 98% (fallthrough)
+branch  1 taken 2%
+        -: 1368:	{
+     2970: 1369:	  state->coins += 3;
+        -: 1370:	}	
+        -: 1371:    }	
+        -: 1372:
+        -: 1373:  //add bonus
+     3042: 1374:  state->coins += bonus;
+        -: 1375:
+     3042: 1376:  return 0;
+        -: 1377:}
+        -: 1378:
+        -: 1379:
+        -: 1380://end of dominion.c
+        -: 1381:
