@@ -33,8 +33,8 @@ void assertCustom(int boolean, char * passMsg, char * failMsg){
 void gameTests(int player,struct gameState G, struct gameState testG){
     int failed = FALSE;
     int i;
-    assertCustom(testG.handCount[player] == G.handCount[player] + 3, "Player 1 receives 1 card", "Incorrect number of cards drawn");
-    assertCustom(testG.deckCount[player] == G.deckCount[player] - 4, "Card came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
+    assertCustom(testG.handCount[player] == G.handCount[player] + 3, "Player 1 receives 4 cards", "Incorrect number of cards drawn");
+    assertCustom(testG.deckCount[player] == G.deckCount[player] - 4, "Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
     assertCustom(testG.handCount[player+1] == G.handCount[player+1] + 1, "Player 2 receives 1 card", "Player 2 hand count incorrect");
     assertCustom(testG.deckCount[player+1] == G.deckCount[player+1] - 1, "Card came from Player 2's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
     assertCustom(testG.coins == G.coins, "No extra coins received","Extra coins recieved");
