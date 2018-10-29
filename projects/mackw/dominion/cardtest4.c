@@ -79,22 +79,10 @@ void gameTests(int player,struct gameState G, struct gameState testG){
 
 
 int main() {
-    //int newCards = 0;
-    //int discarded = 1;
-    //int xtraCoins = 0;
-    //int shuffledCards = 0;
-    //int numBuys = 0;
-    //int numActions = 0;
-    //int handCount;
-    //int deckcount;
-    //int newDeckCount;
-    //int i;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-    //int remove1, remove2;
     int seed = 1000;
     int numPlayers = 2;
     int player = 0;
-    //int nextPlayer = 1;
     struct gameState G, testG;
     int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};

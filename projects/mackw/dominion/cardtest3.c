@@ -75,13 +75,13 @@ int main() {
 
     printf("----------------- Testing Card: %s -------------------\n", TESTCARD);
        
-    //copy game state
+    // copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
 
-    //play card
+    // play card
     cardEffect(council_room, choice1, choice2, choice3, &testG, handpos, &bonus);
 
-    //Council Room Player draws 4 cards and gets one buy, each other player draws a card.
+    // Council Room Player draws 4 cards and gets one buy, each other player draws a card.
     gameTests(player, G, testG);
 
     printf("----------------- End of card test for: %s ----------------\n\n\n", TESTCARD);

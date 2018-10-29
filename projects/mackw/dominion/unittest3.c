@@ -54,7 +54,6 @@ int main() {
     int seed = 1000;
     int numPlayers = 2;
     int player = 0;
-    //int bonus = 0;
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
@@ -64,17 +63,18 @@ int main() {
 
    	printf("----------------- Unit test for function: %s ----------------\n", TESTFXN);
    
-    //copy game state
+    // copy game state
     memcpy(&testG, &G, sizeof(struct gameState));
 
 
     // province pile empty
     testG.supplyCount[province] = NO_CARDS;
 
-    //copy game state for both test games
+    // copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
 
     printf("** Test no province cards left **\n");
+
     // test that the game is over
     assertCustom(isGameOver(&testG) == TRUE, "Game over: No province Cards", "Game NOT over but not province cards left");
     gameTests(player, G, testG);
@@ -87,7 +87,7 @@ int main() {
     testG.supplyCount[curse] = NO_CARDS;
     testG.supplyCount[adventurer] = NO_CARDS;
 
-    //copy game state for both test games
+    // copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
 
     printf("** Test 2 piles with no cards left **\n");
@@ -98,7 +98,7 @@ int main() {
     testG.supplyCount[gold] = NO_CARDS;
     printf("** Test 3 piles with no cards left **\n");
 
-    //copy game state for both test games
+    // copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
 
     assertCustom(isGameOver(&testG)== TRUE, "Game over: Curse, Adventurer, Gold have no Cards", "Game NOT over even though 3 supply piles are empty");
@@ -108,7 +108,7 @@ int main() {
     testG.supplyCount[province] = NO_CARDS;
     printf("** Test 3 piles with no cards left and no provinces **\n");
 
-    //copy game state for both test games
+    // copy game state for both test games
     memcpy(&G, &testG, sizeof(struct gameState));
 
     assertCustom(isGameOver(&testG)== TRUE, "Game over: Curse, Adventurer, Gold and Province no Cards", "Game NOT over even though 3 supply piles and provinces are empty");

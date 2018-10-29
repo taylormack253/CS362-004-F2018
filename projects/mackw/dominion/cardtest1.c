@@ -75,7 +75,7 @@ int main() {
 
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 
-    //copy game state of test game
+    // copy game state of test game
     memcpy(&testG, &G, sizeof(struct gameState));
 
     // play card
