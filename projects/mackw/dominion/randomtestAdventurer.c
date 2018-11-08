@@ -1,4 +1,4 @@
-// randomtestAdventurer.c
+// randomtestadventurer.c
 // By: William Taylor Mack
 // CS362 Assignment-4
 
@@ -80,8 +80,6 @@ int main() {
         numPlayers = randomInt(numPlayers) + 2;
         initializeGame(numPlayers, k, seed, &G);
 
-        //Smithy should receive exactly 3-cards
-        //copy game state
 
         //add cards to deck, hand and discard vary number of players
         int player, positionToAddCard, testDeckSize;
