@@ -39,8 +39,6 @@ int main(int argc, char** argv) {
     srand(time(NULL));
  
     for(i = 0; i < 10; i++){
-        //set random number of players
-        numPlayers = randomInt(numPlayers) + 2;
 
         initializeGame(numPlayers, k, atoi(argv[1]), &G);
 
