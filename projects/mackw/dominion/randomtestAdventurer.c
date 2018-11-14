@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     struct gameState G;
     //int seed = 1000;
     int numPlayers = 2;
-    int curPlayer = 0;
+    int player = 0;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
             sea_hag, tribute, smithy, council_room};  
     int deckSize;
@@ -35,6 +35,7 @@ int main(int argc, char** argv) {
     int testPassed = 0;
     int drawTestFailed = 0;
     int discardTestFailed = 0;
+    int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     
     srand(time(NULL));
    //randomize hand size
@@ -68,34 +69,35 @@ int main(int argc, char** argv) {
             }
         } 
         
-        for(m = 0; m < G.handCount[curPlayer]; m++){
-            if(G.hand[curPlayer][m] == copper || G.hand[curPlayer][m] == silver || G.hand[curPlayer][m] == gold){
+        for(m = 0; m < G.handCount[player]; m++){
+            if(G.hand[player][m] == copper || G.hand[player][m] == silver || G.hand[player][m] == gold){
                 coinCountBefore++;
             }
         }
         //printf("Coin Count before: %d\n", coinCount);
-        //printf("discard count before: %d\n", G.discardCount[curPlayer]);
+        //printf("discard count before: %d\n", G.discardCount[player]);
         //printf("deckSize: %d, deck: %d, and hand: %d\n", deckSize, G.deckCount[0], G.handCount[0]); 
-        adventurerEffect(curPlayer, &G);   
-        
+        //adventurerEffect(player, &G);   
+        cardEffect(adventurer,choice1, choice2, choice3, &G, handPos, &bonus);
+
         coinCount = 0;
         
-        for(m = 0; m < G.handCount[curPlayer]; m++){
-            if(G.hand[curPlayer][m] == copper || G.hand[curPlayer][m] == silver || G.hand[curPlayer][m] == gold){
+        for(m = 0; m < G.handCount[player]; m++){
+            if(G.hand[player][m] == copper || G.hand[player][m] == silver || G.hand[player][m] == gold){
                 coinCount++;
             }
         }
         //printf("Coin Count after: %d\n", coinCount);
-        //printf("discard count after: %d\n", G.discardCount[curPlayer]);
+        //printf("discard count after: %d\n", G.discardCount[player]);
         discardCopper = 0;
         discardSilver = 0;
         discardGold = 0;
-        for(x = 0; x < G.discardCount[curPlayer]; x++){
-            if(G.discard[curPlayer][x] == copper) {
+        for(x = 0; x < G.discardCount[player]; x++){
+            if(G.discard[player][x] == copper) {
                 discardCopper++;
-            } else if(G.discard[curPlayer][x] == silver) {
+            } else if(G.discard[player][x] == silver) {
                 discardSilver++;
-            } else if(G.discard[curPlayer][x] == gold) {
+            } else if(G.discard[player][x] == gold) {
                 discardGold++;
             }
         }
@@ -137,8 +139,8 @@ int main(int argc, char** argv) {
    
    printf("\n\n");
    printf("# of Tests Passed: %d\n", testPassed);
-   printf("# of Cards Drawn To Hand Failed: %d\n", handFailure);
-   printf("# of Smithy Discarded Fails: %d\n\n", discardFailure);
+   printf("# of Draw Test Failures: %d\n", drawTestFailed++;);
+   printf("# of Discarded Test Failures: %d\n\n", discardTestFailed);
    
    return 0;
 }
