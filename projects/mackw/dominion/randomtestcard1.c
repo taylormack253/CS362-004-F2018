@@ -61,7 +61,7 @@ int main() {
         
         
         //smithyEffect(handPos, curPlayer, &G);
-        cardEffect(smithy, choice1, choice2, choice3, &G, handpos, &bonus);
+        cardEffect(smithy, choice1, choice2, choice3, &G, handPos, &bonus);
         
         deckAfter = G.deckCount[0];
         //printf("deck after %d\n", deckAfter);
