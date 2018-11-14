@@ -78,7 +78,7 @@ int main(int argc, char** argv) {
         //printf("discard count before: %d\n", G.discardCount[player]);
         //printf("deckSize: %d, deck: %d, and hand: %d\n", deckSize, G.deckCount[0], G.handCount[0]); 
         //adventurerEffect(player, &G);   
-        cardEffect(adventurer,choice1, choice2, choice3, &G, handPos, &bonus);
+        playAdventurer(player, &G);
 
         coinCount = 0;
         
@@ -139,7 +139,7 @@ int main(int argc, char** argv) {
    
    printf("\n\n");
    printf("# of Tests Passed: %d\n", testPassed);
-   printf("# of Draw Test Failures: %d\n", drawTestFailed++;);
+   printf("# of Draw Test Failures: %d\n", drawTestFailed++);
    printf("# of Discarded Test Failures: %d\n\n", discardTestFailed);
    
    return 0;
