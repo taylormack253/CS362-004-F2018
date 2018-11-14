@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     int testPassed = 0;
     int drawTestFailed = 0;
     int discardTestFailed = 0;
-    int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+    //int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     
     srand(time(NULL));
    //randomize hand size
@@ -132,7 +132,7 @@ int main(int argc, char** argv) {
         }
 
         if(passed == 1){
-            printf("All Tests: Passed\n\n");
+            printf("All Tests Passed\n\n");
             testPassed++;
         }
    }
