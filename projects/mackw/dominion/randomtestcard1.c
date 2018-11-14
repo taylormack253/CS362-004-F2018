@@ -12,7 +12,7 @@
 #include <time.h>
 
 
-int main() {
+int main(int argc, char** argv) {
     struct gameState G;
     int seed = 1000;
     int numPlayers = 2;
@@ -39,7 +39,7 @@ int main() {
     srand(time(NULL));
  
     for(i = 0; i < 10; i++){
-        initializeGame(numPlayers, k, seed, &G);
+        initializeGame(numPlayers, k, atoi(argv[1]), &G);
 
         // set random deck size
         deckSize = rand() % (MAX_DECK + 1);
