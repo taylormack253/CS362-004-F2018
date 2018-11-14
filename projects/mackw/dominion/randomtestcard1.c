@@ -36,6 +36,7 @@ int main() {
     int discardFailure = 0;
     int testPassed = 0;
     int passed;
+    int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     
     srand(time(NULL));
    //randomize hand size
@@ -59,7 +60,8 @@ int main() {
         //printf("Discard before %d\n", discardBefore);
         
         
-        smithyEffect(handPos, curPlayer, &G);
+        //smithyEffect(handPos, curPlayer, &G);
+        cardEffect(smithy, choice1, choice2, choice3, &G, handpos, &bonus);
         
         deckAfter = G.deckCount[0];
         //printf("deck after %d\n", deckAfter);
