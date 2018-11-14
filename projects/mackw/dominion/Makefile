@@ -76,5 +76,19 @@ unittestresults: playdom unittest1 unittest2 unittest3 unittest4 cardtest1 cardt
 	gcov -b dominion.c >> unittestresults.out
 	cat dominion.c.gcov >> unittestresults.out
 
+randomtest1: randomtestcard1.c dominion.o 
+	gcc -o randomtest1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+
+randomtest2: randomtestcard2.c dominion.o 
+	gcc -o randomtest2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+
+randomtestadventurer: randomtestadventurer.c dominion.o 
+	gcc -o randomtestadventurer -g randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
+
+randomtestresults: randomtest1 randomtest2 randomtestadventurer
+	./randomtest1 >> randomtestcard1.out
+	./randomtest2 >> randomtestcard2.out
+	./randomtest1 >> randomtestadventurer.out
+
 clean:
 	rm -f *.o playdom.exe playdom player *.gcov *.gcda *.gcno *.so *.out testDrawCard 
