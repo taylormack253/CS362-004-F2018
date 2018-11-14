@@ -11,9 +11,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main(int argc, char** argv) {
     struct gameState G;
-    int seed = 1000;
+    //int seed = 1000;
     int numPlayers = 2;
     int curPlayer = 0;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
@@ -39,10 +39,11 @@ int main() {
     srand(time(NULL));
    //randomize hand size
     for(i = 0; i < 10; i++){
-        initializeGame(numPlayers, k, seed, &G);
+        initializeGame(numPlayers, k, atoi(argv[1]), &G);
         coinCountBefore = 0;
+        // set random decksize
         deckSize = rand() % (MAX_DECK + 1);
-   //set handsize
+        //set random handsize
         handSize = rand() % (deckSize + 1);
       
         

@@ -14,7 +14,7 @@
 
 int main(int argc, char** argv) {
     struct gameState G;
-    int seed = 1000;
+    //int seed = 1000;
     int numPlayers = 2;
     int player = 0;
     int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
@@ -39,6 +39,9 @@ int main(int argc, char** argv) {
     srand(time(NULL));
  
     for(i = 0; i < 10; i++){
+        //set random number of players
+        numPlayers = randomInt(numPlayers) + 2;
+
         initializeGame(numPlayers, k, atoi(argv[1]), &G);
 
         // set random deck size
@@ -47,10 +50,12 @@ int main(int argc, char** argv) {
         // set random handsize
         handSize = rand() % (deckSize + 1);
       
+
+
         
         G.deckCount[0] = deckSize - handSize;
         G.handCount[0] = handSize;
-        
+
         handPos = G.hand[player][G.handCount[player] - 1];
         //personal checks
         deckBefore = G.deckCount[0];
@@ -96,7 +101,7 @@ int main(int argc, char** argv) {
         
         // all tests passed
         if(passed == 1){
-            printf("All Tests Passed!! lucky us!\n\n");
+            printf("All Tests Passed!!\n\n");
             testPassed++;
         }
         
