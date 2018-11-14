@@ -12,15 +12,13 @@
 #include <time.h>
 
 
-//testing smithy
 int main() {
-    
     struct gameState G;
     int seed = 1000;
     int numPlayers = 2;
-    int curPlayer = 0;
-    int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
-            sea_hag, tribute, smithy, council_room};  
+    int player = 0;
+    int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
+                 sea_hag, tribute, smithy, council_room}; 
     int deckSize;
     int handSize;
     int handPos;
@@ -39,18 +37,21 @@ int main() {
     int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     
     srand(time(NULL));
-   //randomize hand size
+ 
     for(i = 0; i < 10; i++){
         initializeGame(numPlayers, k, seed, &G);
+
+        // set random deck size
         deckSize = rand() % (MAX_DECK + 1);
-    //set handsize
+        
+        // set random handsize
         handSize = rand() % (deckSize + 1);
       
         
         G.deckCount[0] = deckSize - handSize;
         G.handCount[0] = handSize;
         
-        handPos = G.hand[curPlayer][G.handCount[curPlayer] - 1];
+        handPos = G.hand[player][G.handCount[player] - 1];
         //personal checks
         deckBefore = G.deckCount[0];
         //printf("deck before %d\n", deckBefore);
@@ -60,7 +61,7 @@ int main() {
         //printf("Discard before %d\n", discardBefore);
         
         
-        //smithyEffect(handPos, curPlayer, &G);
+        //smithyEffect(handPos, player, &G);
         cardEffect(smithy, choice1, choice2, choice3, &G, handPos, &bonus);
         
         deckAfter = G.deckCount[0];
@@ -72,31 +73,36 @@ int main() {
         
         passed = 1;
         
+        // test 2 cards are drawn
         if(handAfter != (handBefore + 2)){
             printf("Incorrect amount of cards drawn: Test Failed\n\n");
             handFailure++;
             passed = 0;
         }
         
+        // test 3 cards are removed from the deck
         if(deckAfter != (deckBefore - 3)){
             printf("Incorrect number of cards removed from deck: Test Failed\n\n");
             deckFailure++;
             passed = 0;
         }
         
+        // test 1 card was discarded
         if(discardAfter != (discardBefore + 1)){
             printf("Smithy Not Discarded after use: Test Failed\n\n");
             discardFailure++;
             passed = 0;
         }
         
+        // all tests passed
         if(passed == 1){
-            printf("All Tests Passed!! Horray lucky us!\n\n");
+            printf("All Tests Passed!! lucky us!\n\n");
             testPassed++;
         }
         
     }
         
+    // Print test results
    printf("\n\n");
    printf("# of Tests Passed: %d\n", testPassed);
    printf("# of Cards Drawn To Hand Failed: %d\n", handFailure);
