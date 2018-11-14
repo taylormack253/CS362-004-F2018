@@ -82,7 +82,7 @@ randomtest1: randomtestcard1.c dominion.o
 randomtest2: randomtestcard2.c dominion.o 
 	gcc -o randomtest2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)
 
-randomtestadventurer: randomtestadventurer.c dominion.o 
+randomtestadv: randomtestadventurer.c dominion.o 
 	gcc -o randomtestadventurer -g randomtestadventurer.c dominion.o rngs.o $(CFLAGS)
 
 randomtestresults: randomtest1 randomtest2 randomtestadventurer
