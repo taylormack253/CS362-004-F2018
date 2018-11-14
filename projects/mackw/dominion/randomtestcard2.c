@@ -34,9 +34,6 @@ int main(int argc, char** argv) {
     copperCard = copper;
     srand(time(NULL));
     
-    /* Don't test the case where both your deck and discard pile are empty.
-    That's an improbable scenario, and there are no safety features built into
-    the game to check for this. */
     for (test = 0; test < NUM_TESTS; test++) {  
         
         /* "money" is a Boolean that indicates 
