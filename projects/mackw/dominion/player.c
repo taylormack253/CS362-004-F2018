@@ -116,7 +116,6 @@ int main(int argc, char* argv[]) {
 			
 			break; //Exit out of the game/while loop
 		}         
-		
 
 		if(isBot[currentPlayer] == TRUE) {
 				executeBotTurn(currentPlayer, &turnNum, game);

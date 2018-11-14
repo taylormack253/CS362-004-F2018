@@ -115,11 +115,11 @@ int main (int argc, char** argv) {
         numAdventurers++;
       }else if (money >= 6){
         printf("1: bought gold\n");
-	    buyCard(gold, &G);
+      buyCard(gold, &G);
         }
       else if (money >= 3){
         printf("1: bought silver\n");
-	    buyCard(silver, &G);
+      buyCard(silver, &G);
       }
       printf("1: endTurn\n");
 
