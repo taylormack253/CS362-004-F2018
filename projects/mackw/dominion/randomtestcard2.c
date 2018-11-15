@@ -10,10 +10,13 @@
 #include <stdlib.h>
 #include <tgmath.h>
 #include <time.h>
+
+#define TRUE 1
+#define FALSE 0
+#define NUM_CARDS 27
 #define TESTCARD "Great Hall"
 #define TESTRUNS 10
 #define TESTRUNS_SIZE (TESTRUNS * MAX_DECK * MAX_PLAYERS * 10)
-#define DEBUG 0
 
 static double randomNumbers[TESTRUNS * MAX_DECK * MAX_PLAYERS * 10];
 static int positionInRandomNumbers = 0;
@@ -31,7 +34,6 @@ void init_randomNumbers(){
 int randomInt(int intMax){
   // int random = (int) (Random() * intMax);
    int random = (int)(intMax * randomNumbers[positionInRandomNumbers++]);
-    if(DEBUG){printf("Random Number: %d\t", random);}
     return random;
 }
 
@@ -69,7 +71,7 @@ int main() {
          initializeGame(numPlayers, k, seed, &G);
 
          //add cards to deck, hand and discard vary number of players
-         int positionToAddCard, testDeckSize;
+         int positionToAddCard, testDeckSize, passed = 1;
 
          testDeckSize = randomInt(MAX_DECK) + 1;
 
