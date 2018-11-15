@@ -69,7 +69,8 @@ int main() {
     int numPlayers = 3;
     int thisPlayer = 0;
    
-    int handCountFail = 0, coinCountFail =  0;
+    int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0
+        numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
     
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
@@ -82,7 +83,7 @@ int main() {
     init_randomNumbers();
 
     for(i = 0; i < TESTRUNS; i++) {
-        printf("----------------- Test Number %d, Card: %s (ONLY FAILURES PRINTED)----------------\n", i,  TESTCARD);
+        printf("----------------- Smithy Test Number %d, ----------------\n\n", i);
          numPlayers = randomInt(numPlayers) + 2;
          //numPlayers = rand() % 4 + 2;
          initializeGame(numPlayers, k, seed, &G);
@@ -163,34 +164,72 @@ int main() {
         //assertCustom(testG.handCount[thisPlayer] = G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", 
                      //"player does NOT recive 3 cards");
         
-        // test palyer receives 3 cards
+        // test player receives 3 cards
         if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
-            printf("TEST FAILED: player does NOT recive 3 cards\n");
+            printf("TEST FAILED: player does NOT recive 3 cards\n\n");
             handCountFail++;
             passed = 0;
         }
 
          //assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards, fail, 
                       //"Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
-         
+        // test cards came from players deck
+        if(testG.deckCount[thisPlayer] != G.deckCount[thisPlayer] - newCards + shuffledCards){
+            printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
+            deckCountFail++;
+            passed = 0;
+        } 
+
          //assertCustom(testG.coins == G.coins + xtraCoins, fail, "No extra coins received","Extra coins recieved");
+        // test no extra coins given
         if(testG.coins != G.coins + xtraCoins){
-            printf("TEST FAILED: Extra coins recieved\n");
+            printf("TEST FAILED: Extra coins recieved\n\n");
             coinCountFail++;
             passed = 0;
         } 
 
+        //assertCustom(testG.whoseTurn == G.whoseTurn, fail, "Same Players Turn", "NOT same players turn");
+        // test same players turn
+        if(testG.whoseTurn != G.whoseTurn){
+            printf("TEST FAILED: NOT same players turn\n\n");
+            whoseTurnFail++;
+            passed = 0;
+        } 
 
-         //assertCustom(testG.whoseTurn == G.whoseTurn, fail, "Same Players Turn", "NOT same players turn");
          //assertCustom(testG.numActions == G.numActions, fail, "Number of actions same", "Number of actions changed");
+        // test number of actions is same
+        if(testG.numActions != G.numActions){
+            printf("TEST FAILED: Number of actions changed\n\n");
+            numActionsFail++;
+            passed = 0;
+        } 
          //assertCustom(testG.numBuys == G.numBuys, fail, "Number of buys same", "Number of buys changed");
+         
+        if(testG.numBuys != G.numBuys){
+            printf("TEST FAILED: Number of buys changed\n\n");
+            numBuysFail++;
+            passed = 0;
+        } 
+
          //assertCustom(testG.playedCardCount == G.playedCardCount + discarded, fail, "1 card played", "Played card count incorrect");
+        if(testG.playedCardCount != G.playedCardCount + discarded){
+            printf("TEST FAILED: Played card count incorrect\n\n");
+            playedCardFail++;
+            passed = 0;
+        } 
          //assertGameState(thisPlayer + 1, &G, &testG);
 
+        if (passed)
+            passedTestCount++;
     }
 
     printf("# of hand count fails: %d\n", handCountFail);
     printf("# of coin count fails: %d\n", coinCountFail);
+    printf("# of whose turn fails: %d\n", whoseTurnFail);
+    printf("# of num actions fails: %d\n", numActionsFail);
+    printf("# of num actions fails: %d\n", numBuysFail);
+    printf("# of played card count fails: %d\n", playedCardFail);
+    printf("# of successful tests: %d\n", passedTestCount);
 
     return 0;
 }
