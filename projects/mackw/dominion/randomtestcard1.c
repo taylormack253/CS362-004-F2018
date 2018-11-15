@@ -69,7 +69,7 @@ int main() {
     int numPlayers = 3;
     int thisPlayer = 0;
    
-    int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0
+    int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
         numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
     
     struct gameState G, testG;
