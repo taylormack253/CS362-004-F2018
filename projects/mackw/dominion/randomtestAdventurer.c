@@ -39,6 +39,8 @@ int randomInt(int intMax){
 
 
 int main() {
+    srand((unsigned int)(time(NULL)));
+
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
@@ -52,13 +54,12 @@ int main() {
 
     int i;
 
-    srand((unsigned int)(time(NULL)));
+   
 
     init_randomNumbers();
 
     for(i = 0; i < TESTRUNS; i++) {
         printf("----------------- Adventurer Test Number %d ----------------\n\n", i);
-
 
         numPlayers = randomInt(3) + 2;
         initializeGame(numPlayers, k, seed, &G);
