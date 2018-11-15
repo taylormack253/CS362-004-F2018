@@ -108,43 +108,44 @@ int main() {
 
          // test player receives 3 cards
         if(testG.handCount[player] != G.handCount[player] + 2 - 1){
-            printf("TEST FAILED: player does NOT receive 2 cards\n\n");
-            handCountFail++;
-            passed = 0;
+        printf("TEST FAILED: player does NOT receive 2 cards\n\n");
+        handCountFail++;
+        passed = 0;
         }
         // test cards came from players deck
         if(testG.deckCount[player] != G.deckCount[player] - 2){
-            printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
-            deckCountFail++;
-            passed = 0;
+        printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
+        deckCountFail++;
+        passed = 0;
         } 
         // test no extra coins given
         if(testG.coins != G.coins){
-            printf("TEST FAILED: Extra coins recieved\n\n");
-            coinCountFail++;
-            passed = 0;
+        printf("TEST FAILED: Extra coins recieved\n\n");
+        coinCountFail++;
+        passed = 0;
         } 
         // test same players turn
         if(testG.whoseTurn != G.whoseTurn){
-            printf("TEST FAILED: NOT same players turn\n\n");
-            whoseTurnFail++;
-            passed = 0;
+        printf("TEST FAILED: NOT same players turn\n\n");
+        whoseTurnFail++;
+        passed = 0;
         } 
         // test number of actions is same
         if(testG.numActions != G.numActions){
-            printf("TEST FAILED: Number of actions changed\n\n");
-            numActionsFail++;
-            passed = 0;
+        printf("TEST FAILED: Number of actions changed\n\n");
+        numActionsFail++;
+        passed = 0;
         } 
         // test number of buys is same
         if(testG.numBuys != G.numBuys){
-            printf("TEST FAILED: Number of buys changed\n\n");
-            numBuysFail++;
-            passed = 0;
+        printf("TEST FAILED: Number of buys changed\n\n");
+        numBuysFail++;
+        passed = 0;
         } 
+        
         // all tests passed
         if (passed)
-            passedTestCount++;
+        passedTestCount++;
     }
 
     printf("# of hand count fails: %d\n", handCountFail);
@@ -153,6 +154,7 @@ int main() {
     printf("# of whose turn fails: %d\n", whoseTurnFail);
     printf("# of num actions fails: %d\n", numActionsFail);
     printf("# of num actions fails: %d\n", numBuysFail);
+
     printf("# of successful tests: %d\n", passedTestCount);
 
     return 0;
