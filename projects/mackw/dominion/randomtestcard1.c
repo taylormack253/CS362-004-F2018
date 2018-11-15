@@ -145,9 +145,6 @@ int main() {
 
          memcpy(&testG, &G, sizeof(struct gameState));
 
-
-         newCards = 3;
-
          cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
 
 
