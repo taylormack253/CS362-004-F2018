@@ -41,15 +41,14 @@ int randomInt(int intMax){
     return random;
 }
 
-void assertCustom(int boolean, char * passMsg, char * failMsg){
+void assertCustom(int boolean, int fail, char * passMsg, char * failMsg){
 
     if(boolean == TRUE){
-
         printf("TEST PASSED: %s\n", passMsg );
     }
     if(boolean == FALSE){
-
         printf("TEST FAILED: %s\n", failMsg );
+        fail = 1;
     }
 }
 
@@ -61,14 +60,17 @@ int main() {
     int discarded = 1;
     int xtraCoins = 0;
     int shuffledCards = 0;
-    int numBuys = 0;
-    int numActions =0;
-    int minimumHandSize = 5;
+    //int numBuys = 0;
+    //int numActions =0;
+    //int minimumHandSize = 5;
 
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers = 3;
     int thisPlayer = 0;
+   
+    int fail = 0;
+    
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
@@ -82,6 +84,7 @@ int main() {
     for(i = 0; i < TESTRUNS; i++) {
         printf("----------------- Test Number %d, Card: %s (ONLY FAILURES PRINTED)----------------\n", i,  TESTCARD);
          //numPlayers = randomInt(numPlayers) + 2;
+        fail = 0;
          numPlayers = rand() % 4 + 2;
          initializeGame(numPlayers, k, seed, &G);
 
@@ -156,21 +159,22 @@ int main() {
          cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
 
 
-        assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", 
+
+
+        //assertCustom(testG.handCount[thisPlayer] = G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", 
                      "player does NOT recive 3 cards");
-        /*if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
+        if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
             printf("TEST FAILED: player does NOT recive 3 cards");
+            handCountFail++;
         }
-        else
-            printf("TEST PASSED: Player receives 3 cards");
-*/
-         assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards,
-                      "Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
-         assertCustom(testG.coins == G.coins + xtraCoins, "No extra coins received","Extra coins recieved");
-         assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn", "NOT same players turn");
-         assertCustom(testG.numActions == G.numActions, "Number of actions same", "Number of actions changed");
-         assertCustom(testG.numBuys == G.numBuys, "Number of buys same", "Number of buys changed");
-         assertCustom(testG.playedCardCount == G.playedCardCount + discarded, "1 card played", "Played card count incorrect");
+
+         //assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards, fail, 
+                      //"Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
+         //assertCustom(testG.coins == G.coins + xtraCoins, fail, "No extra coins received","Extra coins recieved");
+         //assertCustom(testG.whoseTurn == G.whoseTurn, fail, "Same Players Turn", "NOT same players turn");
+         //assertCustom(testG.numActions == G.numActions, fail, "Number of actions same", "Number of actions changed");
+         //assertCustom(testG.numBuys == G.numBuys, fail, "Number of buys same", "Number of buys changed");
+         //assertCustom(testG.playedCardCount == G.playedCardCount + discarded, fail, "1 card played", "Played card count incorrect");
          //assertGameState(thisPlayer + 1, &G, &testG);
 
     }
