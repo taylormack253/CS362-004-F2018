@@ -1,169 +1,210 @@
 // randomtestcard2.c
 // By: William Taylor Mack
 // CS362 Assignment-4
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include "assert.h"
 #include "dominion.h"
+#include "dominion_helpers.h"
+#include <string.h>
+#include <stdio.h>
+#include <assert.h>
 #include "rngs.h"
+#include "assertCustom.h"
+#include <stdlib.h>
+#include <tgmath.h>
+#include <time.h>
+#define TESTCARD "Great Hall"
+#define TESTRUNS 10
+#define TESTRUNS_SIZE (TESTRUNS * MAX_DECK * MAX_PLAYERS * 10)
+#define DEBUG 0
 
-#define NUM_TESTS 10000
-#define MAX_HAND_COUNT 15
-#define MAX_DISCARD_COUNT 50
-#define MAX_DECK_COUNT 50
+static double randomNumbers[TESTRUNS * MAX_DECK * MAX_PLAYERS * 10];
+static int positionInRandomNumbers = 0;
 
-int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus);
+void init_randomNumbers(){
+    int i;
+    for(i = 0; i < TESTRUNS_SIZE; i++){
 
-int main(int argc, char** argv) {
-    
-    struct gameState* state = newGame();
-    int card, ret_val, currentPlayer, verbose;
-    int initialNumActions, initialHandCount, initialNumBuys, initialCoins, test;
-    int initialDiscardCount, initialDeckCount, empty, copperCount;
-    int initialPlayedCardCount, money, player, curCard;
-    enum CARD cutpurseCard;
-    enum CARD copperCard;
-    
-    verbose = 1; /* Set verbose to 1 to see final and initial values */
-    empty = -523; /* This number indicates that a spot in an array does not have a card */
-    currentPlayer = 0;  
-    cutpurseCard = cutpurse;
-    copperCard = copper;
-    srand(time(NULL));
-    
-    for (test = 0; test < NUM_TESTS; test++) {  
-        
-        /* "money" is a Boolean that indicates 
-        whether or not players' hands are filled with copper */ 
-        money = rand() % 2;
-        
-        initialDeckCount = 10 + rand() % (MAX_DECK_COUNT - 9);
-        initialHandCount = 1 + rand() % MAX_HAND_COUNT;
-        initialDiscardCount = rand() % MAX_DISCARD_COUNT;
-        initialNumActions = rand() % 10;
-        initialNumBuys = rand() % 5;
-        initialPlayedCardCount = rand() % 5;
-        initialCoins = rand() % 8;
-        
-        state->numPlayers = MAX_PLAYERS - (rand() % 2);
-        state->deckCount[currentPlayer] = initialDeckCount;
-        for (player = 0; player < state->numPlayers; player++)
-            state->handCount[player] = initialHandCount;
-        state->discardCount[currentPlayer] = initialDiscardCount;
-        state->numActions = initialNumActions;
-        state->numBuys = initialNumBuys;
-        state->playedCardCount = initialPlayedCardCount;
-        state->coins = initialCoins;
-        
-        
-        /* Put some cards in hand */
-        for (player = 0; player < state->numPlayers; player++) {
-            for (card = 0; card < MAX_HAND; card++) {
-                state->hand[player][card] = empty;
-            }
-            
-            for (card = 0; card < state->handCount[player]; card++) {
-                state->hand[player][card] = money * copperCard;
-                if (verbose) printf("%d ", state->hand[player][card]);
-            }
-            if (verbose) printf("    ");
-        }
-        if (verbose) printf("\n");
-        
-        /* initialize deck and discard pile to empty */
-        for (card = 0; card < MAX_DECK; card++) {
-            state->discard[currentPlayer][card] = empty;
-            state->deck[currentPlayer][card] = empty;
-        }
-        
-        /* Put some cards in discard pile */
-        for (card = 0; card < state->discardCount[currentPlayer]; card++) {
-            state->discard[currentPlayer][card] = 0;
-        }
-        
-        /* Put some cards in deck */
-        for (card = 0; card < state->deckCount[currentPlayer]; card++) {
-            state->deck[currentPlayer][card] = 0;
-        }
-        
-        
-        if (verbose)
-            printf("calling cardEffect()...\n");
-        ret_val = cardEffect(cutpurseCard, 0, 0, 0, state, 2, NULL);
-        
-        if (verbose) {
-            for (player = 0; player < state->numPlayers; player++) {
-                for (card = 0; card < state->handCount[player]; card++) {
-                    printf("%d ", state->hand[player][card]);
-                }
-                printf("    ");
-            }
-            printf("\n");
-        }
-        
-        if (verbose) {
-            printf("initialNumBuys: %d\n", initialNumBuys);
-            printf("state->numBuys: %d\n", state->numBuys);
-            printf("initialCoins: %d\n", initialCoins);
-            printf("state->coins: %d\n", state->coins);
-            printf("initialNumActions: %d\n", initialNumActions);
-            printf("state->numActions: %d\n", state->numActions);
-            printf("initialHandCount: %d\n", initialHandCount);
-            printf("state->handCount[currentPlayer]: %d\n", state->handCount[currentPlayer]);
-            printf("initialDiscardCount: %d\n", initialDiscardCount);
-            printf("state->discardCount[currentPlayer]: %d\n", state->discardCount[currentPlayer]);
-            printf("initialPlayedCardCount: %d\n", initialPlayedCardCount);
-            printf("state->playedCardCount: %d\n\n", state->playedCardCount);
-        }
-        
-        assert(0 == ret_val);
-        assert(initialNumActions == state->numActions);
-        assert(initialNumBuys == state->numBuys);
-        
-        /* I don't even know what purpose state->coins serves in dominion.c */
-        //assert(initialCoins - state->numPlayers == state->coins);
-        
-        /* Make sure opponents' purses have been cut!  */
-        for (player = 0; player < state->numPlayers; player++) {
-            
-            copperCount = 0;                    
-            for (curCard = 0; curCard < state->handCount[player]; curCard++) {
-                if (state->hand[player][curCard] == copperCard)
-                    copperCount++;
-            }
-                                    
-            if (!money) {               
-                assert(initialPlayedCardCount + 1 == state->playedCardCount);
-                assert(copperCount == 0);
-            }
-            
-            else {              
-                assert(initialPlayedCardCount + state->numPlayers == state->playedCardCount);
-                
-                if (player != currentPlayer)
-                    assert(copperCount == initialHandCount - 1);
-                    
-                else
-                    assert(copperCount == state->handCount[player]);
-            }               
-        }
+    randomNumbers[i] = Random();
 
-        
-        /* Make sure discard pile hasn't somehow been messed up*/
-        for (card = 0; card < state->discardCount[currentPlayer]; card++) {
-            assert(state->discard[currentPlayer][card] != empty);
-        }
-        
-        /* Make sure deck hasn't somehow been messed up*/
-        for (card = 0; card < state->deckCount[currentPlayer]; card++) {
-            assert(state->deck[currentPlayer][card] == 0);
-        }           
     }
-    
-    printf("Cutpurse card passed all tests\n");
-    
-    return 1;
+
+}
+
+int randomInt(int intMax){
+  // int random = (int) (Random() * intMax);
+   int random = (int)(intMax * randomNumbers[positionInRandomNumbers++]);
+    if(DEBUG){printf("Random Number: %d\t", random);}
+    return random;
+}
+
+
+int main() {
+   
+    struct gameState G, testG;
+    int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+                 sea_hag, tribute, smithy, council_room};
+
+
+  //const int newCards = 1;
+    //int discarded = 1;
+  //const int xtraCoins = 0;
+    //int shuffledCards = 0;
+    //int numBuys = 0;
+  //const int numActions = 1;
+    int minimumHandSize = 5;
+    int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+    int seed = 1000;
+    int numPlayers;
+    int player = 0;
+    int i;
+    int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
+        numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
+
+
+    srand((unsigned int)(time(NULL)));
+
+    init_randomNumbers();
+
+    for(i = 0; i < TESTRUNS; i++) {
+        printf("----------------- Great Hall Test Number %d ----------------\n\n", i);
+         numPlayers = randomInt(3) + 2;
+         initializeGame(numPlayers, k, seed, &G);
+
+         //add cards to deck, hand and discard vary number of players
+         int positionToAddCard, testDeckSize;
+
+         testDeckSize = randomInt(MAX_DECK) + 1;
+
+        for (player = 0; player < numPlayers; player++) {
+
+            if(testDeckSize > minimumHandSize){
+                if(Random() < .95) {
+                    G.handCount[player] = minimumHandSize;
+                }
+                else{
+                    int bigHand =   (int) (minimumHandSize * 10 * Random());
+                    G.handCount[player] = bigHand > testDeckSize ? testDeckSize : bigHand;
+                }
+            }
+
+            else{
+                G.handCount[player] = testDeckSize;
+            }
+
+            testDeckSize -= G.handCount[player];
+
+
+            for (positionToAddCard = 0; positionToAddCard < G.handCount[player]; positionToAddCard++) {
+
+                G.hand[player][positionToAddCard] = randomInt(NUM_CARDS);
+
+
+            }
+
+        }
+
+
+
+        for (player = 0; player < numPlayers; player++) {
+
+             G.deckCount[player] = randomInt(testDeckSize);
+             testDeckSize -= G.deckCount[player];
+
+             for (positionToAddCard = 0; positionToAddCard < G.deckCount[player]; positionToAddCard++) {
+
+                 G.deck[player][positionToAddCard] = randomInt(NUM_CARDS);
+
+
+             }
+         }
+
+
+
+
+         for (player = 0; player < numPlayers; player++) {
+
+             G.discardCount[player] = testDeckSize;
+
+             for (positionToAddCard = 0; positionToAddCard < G.discardCount[player]; positionToAddCard++) {
+
+                 G.discard[player][positionToAddCard] = randomInt(NUM_CARDS);
+
+
+             }
+         }
+
+        if(handpos < G.handCount[player]){
+            G.hand[player][handpos] = great_hall;
+        }
+        else{
+            G.hand[player][0] = great_hall;
+        }
+
+
+         memcpy(&testG, &G, sizeof(struct gameState));
+
+
+
+         cardEffect(great_hall, choice1, choice2, choice3, &testG, handpos, &bonus);
+
+
+        // test player receives 1 card
+        if(testG.handCount[player] != G.handCount[player]){
+            printf("TEST FAILED: player does NOT receive 1 card\n\n");
+            handCountFail++;
+            passed = 0;
+        }
+        // test cards came from players deck
+        if(testG.deckCount[player] != G.deckCount[player] - 1){
+            printf("TEST FAILED: Card DID NOT come from player's deck or incorrect number of cards drawn\n\n");
+            deckCountFail++;
+            passed = 0;
+        } 
+        // test no extra coins given
+        if(testG.coins != G.coins){
+            printf("TEST FAILED: Extra coins recieved\n\n");
+            coinCountFail++;
+            passed = 0;
+        } 
+        // test same players turn
+        if(testG.whoseTurn != G.whoseTurn){
+            printf("TEST FAILED: NOT same players turn\n\n");
+            whoseTurnFail++;
+            passed = 0;
+        } 
+        // test number of actions is same
+        if(testG.numActions != G.numActions){
+            printf("TEST FAILED: Number of actions changed\n\n");
+            numActionsFail++;
+            passed = 0;
+        } 
+        // test number of buys is same
+        if(testG.numBuys != G.numBuys){
+            printf("TEST FAILED: Number of buys changed\n\n");
+            numBuysFail++;
+            passed = 0;
+        } 
+          // test played card count
+        if(testG.playedCardCount != G.playedCardCount + 1){
+            printf("TEST FAILED: Played card count incorrect\n\n");
+            playedCardFail++;
+            passed = 0;
+        } 
+        // all tests passed
+        if (passed)
+            passedTestCount++;
+
+    }
+
+
+    printf("# of hand count fails: %d\n", handCountFail);
+    printf("# of deck count fails: %d\n", deckCountFail);
+    printf("# of coin count fails: %d\n", coinCountFail);
+    printf("# of whose turn fails: %d\n", whoseTurnFail);
+    printf("# of num actions fails: %d\n", numActionsFail);
+    printf("# of num buys fails: %d\n", numBuysFail);
+    printf("# of played card count fails: %d\n", playedCardFail);
+    printf("# of successful tests: %d\n", passedTestCount);
+
+
+    return 0;
 }
