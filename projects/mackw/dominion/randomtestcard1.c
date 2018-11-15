@@ -19,7 +19,6 @@
 #define TESTCARD "smithy"
 #define TESTRUNS 10
 #define TESTRUNS_SIZE (TESTRUNS * MAX_DECK * MAX_PLAYERS * 10)
-#define DEBUG 0
 
 static double randomNumbers[TESTRUNS * MAX_DECK * MAX_PLAYERS * 10];
 static int positionInRandomNumbers = 0;
@@ -35,56 +34,32 @@ void init_randomNumbers(){
 }
 
 int randomInt(int intMax){
-  // int random = (int) (Random() * intMax);
-   int random = (int)(intMax * randomNumbers[positionInRandomNumbers++]);
-    if(DEBUG){printf("Random Number: %d\t", random);}
+    // int random = (int) (Random() * intMax);
+    int random = (int)(intMax * randomNumbers[positionInRandomNumbers++]);
     return random;
 }
 
-void assertCustom(int boolean, int fail, char * passMsg, char * failMsg){
-
-    if(boolean == TRUE){
-        printf("TEST PASSED: %s\n", passMsg );
-    }
-    if(boolean == FALSE){
-        printf("TEST FAILED: %s\n", failMsg );
-        fail = 1;
-    }
-}
-
 int main() {
-    srand((unsigned int)(time(NULL)));
-
-
-    //int newCards = 0;
-    //int discarded = 1;
-    //int xtraCoins = 0;
-    //int shuffledCards = 0;
-    //int numBuys = 0;
-    //int numActions =0;
-    //int minimumHandSize = 5;
-
-    int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-    int seed = 1000;
-    int numPlayers = 3;
-    int player = 0;
-   
-    int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
-        numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
-    
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
-
-    // initialize a game state and player cards
-
+    int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+    int seed = 1000;
+    int numPlayers;
+    int player = 0;
+    int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
+        numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
+    
     int i;
+
+    srand((unsigned int)(time(NULL)));
 
     init_randomNumbers();
 
     for(i = 0; i < TESTRUNS; i++) {
         printf("----------------- Smithy Test Number %d ----------------\n\n", i);
-         numPlayers = randomInt(numPlayers) + 2;
+         numPlayers = randomInt(3) + 2;
+         printf("numPlayers: %d\n", numPlayers);
          //numPlayers = rand() % 4 + 2;
          initializeGame(numPlayers, k, seed, &G);
 
@@ -152,7 +127,7 @@ int main() {
 
         // test player receives 3 cards
         if(testG.handCount[player] != G.handCount[player] + 3 - 1){
-            printf("TEST FAILED: player does NOT recive 3 cards\n\n");
+            printf("TEST FAILED: player does NOT receive 3 cards\n\n");
             handCountFail++;
             passed = 0;
         }
