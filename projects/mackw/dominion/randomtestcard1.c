@@ -69,7 +69,7 @@ int main() {
     int numPlayers = 3;
     int thisPlayer = 0;
    
-    int handCountFail = 0;
+    int handCountFail = 0, coinCountFail =  0;
     
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
@@ -88,7 +88,7 @@ int main() {
          initializeGame(numPlayers, k, seed, &G);
 
          //add cards to deck, hand and discard vary number of players
-         int player, positionToAddCard, testDeckSize;
+         int player, positionToAddCard, testDeckSize, passed = 1;
 
          testDeckSize = randomInt(MAX_DECK);
 
@@ -162,14 +162,25 @@ int main() {
 
         //assertCustom(testG.handCount[thisPlayer] = G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", 
                      //"player does NOT recive 3 cards");
+        
+        // test palyer receives 3 cards
         if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
-            printf("TEST FAILED: player does NOT recive 3 cards");
+            printf("TEST FAILED: player does NOT recive 3 cards\n");
             handCountFail++;
+            passed = 0;
         }
 
          //assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards, fail, 
                       //"Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
+         
          //assertCustom(testG.coins == G.coins + xtraCoins, fail, "No extra coins received","Extra coins recieved");
+        if(testG.coins != G.coins + xtraCoins){
+            printf("TEST FAILED: Extra coins recieved\n");
+            coinCountFail++;
+            passed = 0;
+        } 
+
+
          //assertCustom(testG.whoseTurn == G.whoseTurn, fail, "Same Players Turn", "NOT same players turn");
          //assertCustom(testG.numActions == G.numActions, fail, "Number of actions same", "Number of actions changed");
          //assertCustom(testG.numBuys == G.numBuys, fail, "Number of buys same", "Number of buys changed");
@@ -179,6 +190,7 @@ int main() {
     }
 
     printf("# of hand count fails: %d\n", handCountFail);
+    printf("# of coin count fails: %d\n", coinCountFail);
 
     return 0;
 }
