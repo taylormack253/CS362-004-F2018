@@ -58,8 +58,8 @@ int main() {
 
     int newCards = 0;
     int discarded = 1;
-    int xtraCoins = 0;
-    int shuffledCards = 0;
+    //int xtraCoins = 0;
+    //int shuffledCards = 0;
     //int numBuys = 0;
     //int numActions =0;
     //int minimumHandSize = 5;
@@ -178,7 +178,7 @@ int main() {
 
     }
 
-    printf("# of hand count fails: %s\n", handCountFail);
+    printf("# of hand count fails: %d\n", handCountFail);
 
     return 0;
 }
