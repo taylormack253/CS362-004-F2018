@@ -67,69 +67,37 @@ int main() {
 
     for(i = 0; i < TESTRUNS; i++) {
         printf("----------------- Great Hall Test Number %d ----------------\n\n", i);
-         numPlayers = randomInt(3) + 2;
-         initializeGame(numPlayers, k, seed, &G);
+        
+        numPlayers = randomInt(3) + 2;
+        initializeGame(numPlayers, k, seed, &G);
 
-         //add cards to deck, hand and discard vary number of players
-         int positionToAddCard, testDeckSize, passed = 1;
+        //add cards to deck, hand and discard vary number of players
+        int positionToAddCard, testDeckSize, passed = 1;
 
-         testDeckSize = randomInt(MAX_DECK) + 1;
-
-        for (player = 0; player < numPlayers; player++) {
-
-            if(testDeckSize > minimumHandSize){
-                if(Random() < .95) {
-                    G.handCount[player] = minimumHandSize;
-                }
-                else{
-                    int bigHand =   (int) (minimumHandSize * 10 * Random());
-                    G.handCount[player] = bigHand > testDeckSize ? testDeckSize : bigHand;
-                }
-            }
-
-            else{
-                G.handCount[player] = testDeckSize;
-            }
-
-            testDeckSize -= G.handCount[player];
-
-
-            for (positionToAddCard = 0; positionToAddCard < G.handCount[player]; positionToAddCard++) {
-
-                G.hand[player][positionToAddCard] = randomInt(NUM_CARDS);
-
-
-            }
-
-        }
-
-
+        testDeckSize = randomInt(MAX_DECK) + 1;
 
         for (player = 0; player < numPlayers; player++) {
-
              G.deckCount[player] = randomInt(testDeckSize);
              testDeckSize -= G.deckCount[player];
-
              for (positionToAddCard = 0; positionToAddCard < G.deckCount[player]; positionToAddCard++) {
-
                  G.deck[player][positionToAddCard] = randomInt(NUM_CARDS);
-
-
              }
          }
 
+         for (player = 0; player < numPlayers; player++) {
+             G.handCount[player] = randomInt(testDeckSize);
+             testDeckSize -= G.handCount[player];
+             for (positionToAddCard = 0; positionToAddCard < G.handCount[player]; positionToAddCard++) {
+                 G.hand[player][positionToAddCard] = randomInt(NUM_CARDS);
+             }
 
-
+         }
 
          for (player = 0; player < numPlayers; player++) {
 
              G.discardCount[player] = testDeckSize;
-
              for (positionToAddCard = 0; positionToAddCard < G.discardCount[player]; positionToAddCard++) {
-
                  G.discard[player][positionToAddCard] = randomInt(NUM_CARDS);
-
-
              }
          }
 
@@ -173,8 +141,8 @@ int main() {
             passed = 0;
         } 
         // test number of actions is same
-        if(testG.numActions != G.numActions){
-            printf("TEST FAILED: Number of actions changed\n\n");
+        if(testG.numActions != G.numActions + 1){
+            printf("TEST FAILED: Number of actions incorrect\n\n");
             numActionsFail++;
             passed = 0;
         } 

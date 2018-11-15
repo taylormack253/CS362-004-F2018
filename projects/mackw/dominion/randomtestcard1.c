@@ -69,44 +69,27 @@ int main() {
          testDeckSize = randomInt(MAX_DECK);
 
          for (player = 0; player < numPlayers; player++) {
-
              G.deckCount[player] = randomInt(testDeckSize);
              testDeckSize -= G.deckCount[player];
-
              for (positionToAddCard = 0; positionToAddCard < G.deckCount[player]; positionToAddCard++) {
-
                  G.deck[player][positionToAddCard] = randomInt(NUM_CARDS);
-
-
              }
          }
-
 
          for (player = 0; player < numPlayers; player++) {
-
              G.handCount[player] = randomInt(testDeckSize);
              testDeckSize -= G.handCount[player];
-
-
              for (positionToAddCard = 0; positionToAddCard < G.handCount[player]; positionToAddCard++) {
-
                  G.hand[player][positionToAddCard] = randomInt(NUM_CARDS);
-
-
              }
 
          }
-
 
          for (player = 0; player < numPlayers; player++) {
 
              G.discardCount[player] = testDeckSize;
-
              for (positionToAddCard = 0; positionToAddCard < G.discardCount[player]; positionToAddCard++) {
-
                  G.discard[player][positionToAddCard] = randomInt(NUM_CARDS);
-
-
              }
          }
 
