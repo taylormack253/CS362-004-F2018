@@ -145,12 +145,12 @@ int main() {
         if(testG.hand[player][testG.handCount[player]-1] != copper || testG.hand[player][testG.handCount[player]-1] != silver || testG.hand[player][testG.handCount[player]-1] != gold){
             //printf("TEST PASSED: 1st card kept was a treasure card\n");
             treasureFail++;
-            pased = 0;
+            passed = 0;
         }
         if(testG.hand[player][testG.handCount[player]-2] != copper || testG.hand[player][testG.handCount[player]-2] != silver || testG.hand[player][testG.handCount[player]-2] != gold){
-            if(testG.hand[player][testG.handCount[player]-1] != copper || testG.hand[player][testG.handCount[player]-1] != silver || testG.hand[player][testG.handCount[player]-1] != gold){
+            if(testG.hand[player][testG.handCount[player]-1] == copper || testG.hand[player][testG.handCount[player]-1] == silver || testG.hand[player][testG.handCount[player]-1] == gold){
                 treasureFail++;
-                pased = 0;
+                passed = 0;
             }
             //printf("TEST PASSED: 2nd card kept was a treasure card\n");
         }
