@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <assert.h>
 #include "rngs.h"
-#include "assertCustom.h"
 #include <stdlib.h>
 #include <tgmath.h>
 #include <time.h>
@@ -50,8 +49,6 @@ int randomInt(int intMax){
 
 int main() {
     
-
-
   struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
