@@ -139,7 +139,7 @@ int main(int argc, char** argv) {
    
    printf("\n\n");
    printf("# of Tests Passed: %d\n", testPassed);
-   printf("# of Draw Test Failures: %d\n", drawTestFailed++);
+   printf("# of Draw Test Failures: %d\n", drawTestFailed);
    printf("# of Discarded Test Failures: %d\n\n", discardTestFailed);
    
    return 0;

@@ -69,7 +69,7 @@ int main() {
     int numPlayers = 3;
     int thisPlayer = 0;
    
-    int fail = 0;
+    int handCountFail = 0;
     
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
@@ -162,7 +162,7 @@ int main() {
 
 
         //assertCustom(testG.handCount[thisPlayer] = G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", 
-                     "player does NOT recive 3 cards");
+                     //"player does NOT recive 3 cards");
         if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
             printf("TEST FAILED: player does NOT recive 3 cards");
             handCountFail++;
@@ -178,6 +178,8 @@ int main() {
          //assertGameState(thisPlayer + 1, &G, &testG);
 
     }
+
+    printf("# of hand count fails: %s\n", handCountFail);
 
     return 0;
 }
