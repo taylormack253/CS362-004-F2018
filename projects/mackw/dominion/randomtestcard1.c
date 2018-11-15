@@ -156,7 +156,8 @@ int main() {
          cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
 
 
-        assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", player does NOT recive 3 cards);
+        assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", 
+                     "player does NOT recive 3 cards");
         /*if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
             printf("TEST FAILED: player does NOT recive 3 cards");
         }
