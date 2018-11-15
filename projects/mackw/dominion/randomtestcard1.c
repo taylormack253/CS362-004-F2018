@@ -84,7 +84,6 @@ int main() {
     for(i = 0; i < TESTRUNS; i++) {
         printf("----------------- Test Number %d, Card: %s (ONLY FAILURES PRINTED)----------------\n", i,  TESTCARD);
          //numPlayers = randomInt(numPlayers) + 2;
-        fail = 0;
          numPlayers = rand() % 4 + 2;
          initializeGame(numPlayers, k, seed, &G);
 
