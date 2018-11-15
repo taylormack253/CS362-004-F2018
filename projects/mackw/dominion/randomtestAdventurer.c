@@ -50,7 +50,7 @@ int main() {
     int player = 0;
 
     int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
-        numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
+        numActionsFail = 0, numBuysFail = 0;
 
     int i;
 
@@ -59,7 +59,7 @@ int main() {
     init_randomNumbers();
 
     for(i = 0; i < TESTRUNS; i++) {
-        printf("----------------- Adventurer Test Number %d ----------------\n\n", i);
+        printf("----------------- Adventurer Test Number %d ----------------\n\n", (i + 1);
 
         numPlayers = randomInt(3) + 2;
         initializeGame(numPlayers, k, seed, &G);
@@ -142,12 +142,7 @@ int main() {
         numBuysFail++;
         passed = 0;
         } 
-        // test played card count
-        if(testG.playedCardCount != G.playedCardCount + 1){
-        printf("TEST FAILED: Played card count incorrect\n\n");
-        playedCardFail++;
-        passed = 0;
-        } 
+        
         // all tests passed
         if (passed)
         passedTestCount++;
@@ -159,7 +154,7 @@ int main() {
     printf("# of whose turn fails: %d\n", whoseTurnFail);
     printf("# of num actions fails: %d\n", numActionsFail);
     printf("# of num actions fails: %d\n", numBuysFail);
-    printf("# of played card count fails: %d\n", playedCardFail);
+
     printf("# of successful tests: %d\n", passedTestCount);
 
     return 0;
