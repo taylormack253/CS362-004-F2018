@@ -17,7 +17,7 @@
 #define FALSE 0
 #define NUM_CARDS 27
 #define TESTCARD "smithy"
-#define TESTRUNS 80
+#define TESTRUNS 10
 #define TESTRUNS_SIZE (TESTRUNS * MAX_DECK * MAX_PLAYERS * 10)
 #define DEBUG 0
 
