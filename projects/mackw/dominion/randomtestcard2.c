@@ -39,19 +39,9 @@ int randomInt(int intMax){
 
 
 int main() {
-   
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
-
-
-  //const int newCards = 1;
-    //int discarded = 1;
-  //const int xtraCoins = 0;
-    //int shuffledCards = 0;
-    //int numBuys = 0;
-  //const int numActions = 1;
-    int minimumHandSize = 5;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers;
