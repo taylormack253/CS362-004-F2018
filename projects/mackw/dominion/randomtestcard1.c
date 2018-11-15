@@ -83,8 +83,8 @@ int main() {
 
     for(i = 0; i < TESTRUNS; i++) {
         printf("----------------- Test Number %d, Card: %s (ONLY FAILURES PRINTED)----------------\n", i,  TESTCARD);
-         //numPlayers = randomInt(numPlayers) + 2;
-         numPlayers = rand() % 4 + 2;
+         numPlayers = randomInt(numPlayers) + 2;
+         //numPlayers = rand() % 4 + 2;
          initializeGame(numPlayers, k, seed, &G);
 
          //add cards to deck, hand and discard vary number of players
