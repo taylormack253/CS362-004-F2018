@@ -16,7 +16,7 @@
 #define FALSE 0
 #define NUM_CARDS 27
 #define TESTCARD "smithy"
-#define TESTRUNS 10
+#define TESTRUNS 1000
 #define TESTRUNS_SIZE (TESTRUNS * MAX_DECK * MAX_PLAYERS * 10)
 
 static double randomNumbers[TESTRUNS * MAX_DECK * MAX_PLAYERS * 10];
