@@ -67,7 +67,7 @@ int main() {
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers = 3;
-    int thisPlayer = 0;
+    int player = 0;
    
     int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
         numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
@@ -136,10 +136,10 @@ int main() {
          }
 
         if(handpos < G.handCount[player]){
-            G.hand[thisPlayer][handpos] = smithy;
+            G.hand[player][handpos] = smithy;
         }
         else{
-            G.hand[thisPlayer][0] = smithy;
+            G.hand[player][0] = smithy;
         }
 
 
@@ -149,9 +149,9 @@ int main() {
          newCards = 3;
          xtraCoins = 0;
          shuffledCards = 0;
-         if (testG.deckCount[thisPlayer] <= newCards) {
+         if (testG.deckCount[player] <= newCards) {
 
-             shuffledCards = testG.discardCount[thisPlayer];
+             shuffledCards = testG.discardCount[player];
 
          }
 
@@ -161,64 +161,49 @@ int main() {
 
 
 
-        //assertCustom(testG.handCount[thisPlayer] = G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards", 
-                     //"player does NOT recive 3 cards");
-        
         // test player receives 3 cards
-        if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
+        if(testG.handCount[player] != G.handCount[player] + newCards - discarded){
             printf("TEST FAILED: player does NOT recive 3 cards\n\n");
             handCountFail++;
             passed = 0;
         }
-
-         //assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards, fail, 
-                      //"Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
         // test cards came from players deck
-        if(testG.deckCount[thisPlayer] != G.deckCount[thisPlayer] - newCards + shuffledCards){
+        if(testG.deckCount[player] != G.deckCount[player] - newCards){
             printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
             deckCountFail++;
             passed = 0;
         } 
-
-         //assertCustom(testG.coins == G.coins + xtraCoins, fail, "No extra coins received","Extra coins recieved");
         // test no extra coins given
-        if(testG.coins != G.coins + xtraCoins){
+        if(testG.coins != G.coins){
             printf("TEST FAILED: Extra coins recieved\n\n");
             coinCountFail++;
             passed = 0;
         } 
-
-        //assertCustom(testG.whoseTurn == G.whoseTurn, fail, "Same Players Turn", "NOT same players turn");
         // test same players turn
         if(testG.whoseTurn != G.whoseTurn){
             printf("TEST FAILED: NOT same players turn\n\n");
             whoseTurnFail++;
             passed = 0;
         } 
-
-         //assertCustom(testG.numActions == G.numActions, fail, "Number of actions same", "Number of actions changed");
         // test number of actions is same
         if(testG.numActions != G.numActions){
             printf("TEST FAILED: Number of actions changed\n\n");
             numActionsFail++;
             passed = 0;
         } 
-         //assertCustom(testG.numBuys == G.numBuys, fail, "Number of buys same", "Number of buys changed");
-         
+        // test number of buys is same
         if(testG.numBuys != G.numBuys){
             printf("TEST FAILED: Number of buys changed\n\n");
             numBuysFail++;
             passed = 0;
         } 
-
-         //assertCustom(testG.playedCardCount == G.playedCardCount + discarded, fail, "1 card played", "Played card count incorrect");
+        // test played card count
         if(testG.playedCardCount != G.playedCardCount + discarded){
             printf("TEST FAILED: Played card count incorrect\n\n");
             playedCardFail++;
             passed = 0;
         } 
-         //assertGameState(thisPlayer + 1, &G, &testG);
-
+        // all tests passed
         if (passed)
             passedTestCount++;
     }
