@@ -50,7 +50,7 @@ int main() {
     int player = 0;
 
     int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
-        numActionsFail = 0, numBuysFail = 0, treasureFail = 0;
+        numActionsFail = 0, numBuysFail = 0;
 
     int i;
 
@@ -108,52 +108,40 @@ int main() {
 
          // test player receives 3 cards
         if(testG.handCount[player] != G.handCount[player] + 2 - 1){
-           // printf("TEST FAILED: player does NOT receive 2 cards\n\n");
+            printf("TEST FAILED: player does NOT receive 2 cards\n\n");
             handCountFail++;
             passed = 0;
         }
         // test cards came from players deck
         if(testG.deckCount[player] != G.deckCount[player] - 2){
-           // printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
+            printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
             deckCountFail++;
             passed = 0;
         } 
         // test no extra coins given
         if(testG.coins != G.coins){
-           // printf("TEST FAILED: Extra coins recieved\n\n");
+            printf("TEST FAILED: Extra coins recieved\n\n");
             coinCountFail++;
             passed = 0;
         } 
         // test same players turn
         if(testG.whoseTurn != G.whoseTurn){
-           //printf("TEST FAILED: NOT same players turn\n\n");
+            printf("TEST FAILED: NOT same players turn\n\n");
             whoseTurnFail++;
             passed = 0;
         } 
         // test number of actions is same
         if(testG.numActions != G.numActions){
-            //printf("TEST FAILED: Number of actions changed\n\n");
+            printf("TEST FAILED: Number of actions changed\n\n");
             numActionsFail++;
             passed = 0;
         } 
         // test number of buys is same
         if(testG.numBuys != G.numBuys){
-            //printf("TEST FAILED: Number of buys changed\n\n");
+            printf("TEST FAILED: Number of buys changed\n\n");
             numBuysFail++;
             passed = 0;
         } 
-        if(testG.hand[player][testG.handCount[player]-1] != copper || testG.hand[player][testG.handCount[player]-1] != silver || testG.hand[player][testG.handCount[player]-1] != gold){
-            //printf("TEST PASSED: 1st card kept was a treasure card\n");
-            treasureFail++;
-            passed = 0;
-        }
-        if(testG.hand[player][testG.handCount[player]-2] != copper || testG.hand[player][testG.handCount[player]-2] != silver || testG.hand[player][testG.handCount[player]-2] != gold){
-            if(testG.hand[player][testG.handCount[player]-1] == copper || testG.hand[player][testG.handCount[player]-1] == silver || testG.hand[player][testG.handCount[player]-1] == gold){
-                treasureFail++;
-                passed = 0;
-            }
-            //printf("TEST PASSED: 2nd card kept was a treasure card\n");
-        }
         // all tests passed
         if (passed)
             passedTestCount++;
@@ -165,7 +153,6 @@ int main() {
     printf("# of whose turn fails: %d\n", whoseTurnFail);
     printf("# of num actions fails: %d\n", numActionsFail);
     printf("# of num actions fails: %d\n", numBuysFail);
-    printf("# of treasure kept not valid fails %d\n", treasureFail);
     printf("# of successful tests: %d\n", passedTestCount);
 
     return 0;
