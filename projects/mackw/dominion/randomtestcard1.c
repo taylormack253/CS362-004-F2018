@@ -147,8 +147,7 @@ int main() {
 
 
          newCards = 3;
-         xtraCoins = 0;
-         shuffledCards = 0;
+         
          if (testG.deckCount[player] <= newCards) {
 
              shuffledCards = testG.discardCount[player];
