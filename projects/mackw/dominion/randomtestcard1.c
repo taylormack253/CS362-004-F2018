@@ -83,7 +83,7 @@ int main() {
     init_randomNumbers();
 
     for(i = 0; i < TESTRUNS; i++) {
-        printf("----------------- Smithy Test Number %d, ----------------\n\n", i);
+        printf("----------------- Smithy Test Number %d ----------------\n\n", i);
          numPlayers = randomInt(numPlayers) + 2;
          //numPlayers = rand() % 4 + 2;
          initializeGame(numPlayers, k, seed, &G);
@@ -224,6 +224,7 @@ int main() {
     }
 
     printf("# of hand count fails: %d\n", handCountFail);
+    printf("# of deck count fails: %d\n", deckCountFail);
     printf("# of coin count fails: %d\n", coinCountFail);
     printf("# of whose turn fails: %d\n", whoseTurnFail);
     printf("# of num actions fails: %d\n", numActionsFail);
