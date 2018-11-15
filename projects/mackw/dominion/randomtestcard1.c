@@ -27,14 +27,13 @@ void init_randomNumbers(){
     int i;
     for(i = 0; i < TESTRUNS_SIZE; i++){
 
-    randomNumbers[i] = Random();
+        randomNumbers[i] = Random();
 
     }
 
 }
 
 int randomInt(int intMax){
-    // int random = (int) (Random() * intMax);
     int random = (int)(intMax * randomNumbers[positionInRandomNumbers++]);
     return random;
 }
@@ -42,14 +41,14 @@ int randomInt(int intMax){
 int main() {
     struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
-                 sea_hag, tribute, smithy, council_room};
+       sea_hag, tribute, smithy, council_room};
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers;
     int player = 0;
     int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
         numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
-    
+
     int i;
 
     srand((unsigned int)(time(NULL)));
@@ -58,40 +57,38 @@ int main() {
 
     for(i = 0; i < TESTRUNS; i++) {
         printf("----------------- Smithy Test Number %d ----------------\n\n", i);
-         numPlayers = randomInt(3) + 2;
-         printf("numPlayers: %d\n", numPlayers);
+        numPlayers = randomInt(3) + 2;
+        printf("numPlayers: %d\n", numPlayers);
          //numPlayers = rand() % 4 + 2;
-         initializeGame(numPlayers, k, seed, &G);
+        initializeGame(numPlayers, k, seed, &G);
 
          //add cards to deck, hand and discard vary number of players
-         int positionToAddCard, testDeckSize, passed = 1;
+        int positionToAddCard, testDeckSize, passed = 1;
 
-         testDeckSize = randomInt(MAX_DECK);
+        testDeckSize = randomInt(MAX_DECK);
 
-         for (player = 0; player < numPlayers; player++) {
-             G.deckCount[player] = randomInt(testDeckSize);
-             testDeckSize -= G.deckCount[player];
-             for (positionToAddCard = 0; positionToAddCard < G.deckCount[player]; positionToAddCard++) {
-                 G.deck[player][positionToAddCard] = randomInt(NUM_CARDS);
-             }
-         }
+        for (player = 0; player < numPlayers; player++) {
+            G.deckCount[player] = randomInt(testDeckSize);
+            testDeckSize -= G.deckCount[player];
+            for (positionToAddCard = 0; positionToAddCard < G.deckCount[player]; positionToAddCard++) {
+                G.deck[player][positionToAddCard] = randomInt(NUM_CARDS);
+            }
+        }
 
-         for (player = 0; player < numPlayers; player++) {
-             G.handCount[player] = randomInt(testDeckSize);
-             testDeckSize -= G.handCount[player];
-             for (positionToAddCard = 0; positionToAddCard < G.handCount[player]; positionToAddCard++) {
-                 G.hand[player][positionToAddCard] = randomInt(NUM_CARDS);
-             }
+        for (player = 0; player < numPlayers; player++) {
+            G.handCount[player] = randomInt(testDeckSize);
+            testDeckSize -= G.handCount[player];
+            for (positionToAddCard = 0; positionToAddCard < G.handCount[player]; positionToAddCard++) {
+                G.hand[player][positionToAddCard] = randomInt(NUM_CARDS);
+            }
+        }
 
-         }
-
-         for (player = 0; player < numPlayers; player++) {
-
-             G.discardCount[player] = testDeckSize;
-             for (positionToAddCard = 0; positionToAddCard < G.discardCount[player]; positionToAddCard++) {
-                 G.discard[player][positionToAddCard] = randomInt(NUM_CARDS);
-             }
-         }
+        for (player = 0; player < numPlayers; player++) {
+            G.discardCount[player] = testDeckSize;
+            for (positionToAddCard = 0; positionToAddCard < G.discardCount[player]; positionToAddCard++) {
+                G.discard[player][positionToAddCard] = randomInt(NUM_CARDS);
+            }
+        }
 
         if(handpos < G.handCount[player]){
             G.hand[player][handpos] = smithy;
@@ -101,59 +98,59 @@ int main() {
         }
 
 
-         memcpy(&testG, &G, sizeof(struct gameState));
+        memcpy(&testG, &G, sizeof(struct gameState));
 
-         cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
+        cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
 
 
 
 
         // test player receives 3 cards
         if(testG.handCount[player] != G.handCount[player] + 3 - 1){
-            printf("TEST FAILED: player does NOT receive 3 cards\n\n");
-            handCountFail++;
-            passed = 0;
+        printf("TEST FAILED: player does NOT receive 3 cards\n\n");
+        handCountFail++;
+        passed = 0;
         }
         // test cards came from players deck
         if(testG.deckCount[player] != G.deckCount[player] - 3){
-            printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
-            deckCountFail++;
-            passed = 0;
+        printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
+        deckCountFail++;
+        passed = 0;
         } 
         // test no extra coins given
         if(testG.coins != G.coins){
-            printf("TEST FAILED: Extra coins recieved\n\n");
-            coinCountFail++;
-            passed = 0;
+        printf("TEST FAILED: Extra coins recieved\n\n");
+        coinCountFail++;
+        passed = 0;
         } 
         // test same players turn
         if(testG.whoseTurn != G.whoseTurn){
-            printf("TEST FAILED: NOT same players turn\n\n");
-            whoseTurnFail++;
-            passed = 0;
+        printf("TEST FAILED: NOT same players turn\n\n");
+        whoseTurnFail++;
+        passed = 0;
         } 
         // test number of actions is same
         if(testG.numActions != G.numActions){
-            printf("TEST FAILED: Number of actions changed\n\n");
-            numActionsFail++;
-            passed = 0;
+        printf("TEST FAILED: Number of actions changed\n\n");
+        numActionsFail++;
+        passed = 0;
         } 
         // test number of buys is same
         if(testG.numBuys != G.numBuys){
-            printf("TEST FAILED: Number of buys changed\n\n");
-            numBuysFail++;
-            passed = 0;
+        printf("TEST FAILED: Number of buys changed\n\n");
+        numBuysFail++;
+        passed = 0;
         } 
         // test played card count
         if(testG.playedCardCount != G.playedCardCount + 1){
-            printf("TEST FAILED: Played card count incorrect\n\n");
-            playedCardFail++;
-            passed = 0;
+        printf("TEST FAILED: Played card count incorrect\n\n");
+        playedCardFail++;
+        passed = 0;
         } 
         // all tests passed
         if (passed)
-            passedTestCount++;
-    }
+        passedTestCount++;
+}
 
     printf("# of hand count fails: %d\n", handCountFail);
     printf("# of deck count fails: %d\n", deckCountFail);
