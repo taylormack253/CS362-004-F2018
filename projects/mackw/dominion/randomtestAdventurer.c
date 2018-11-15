@@ -19,13 +19,6 @@
 #define TESTRUNS 10
 #define TESTRUNS_SIZE (TESTRUNS * MAX_DECK * MAX_PLAYERS * 10)
 
-
-struct drawnTreasurerByAdventure{
-  int type;
-  int location;
-};
-
-
 static double randomNumbers[TESTRUNS * MAX_DECK * MAX_PLAYERS * 100];
 static int positionInRandomNumbers = 0;
 
@@ -34,9 +27,7 @@ static int positionInRandomNumbers = 0;
 void init_randomNumbers(){
     int i;
     for(i = 0; i < TESTRUNS_SIZE; i++){
-
     randomNumbers[i] = Random();
-
     }
 
 }
@@ -48,8 +39,7 @@ int randomInt(int intMax){
 
 
 int main() {
-    
-  struct gameState G, testG;
+    struct gameState G, testG;
     int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
                  sea_hag, tribute, smithy, council_room};
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
