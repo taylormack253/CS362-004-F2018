@@ -56,8 +56,8 @@ int main() {
     srand((unsigned int)(time(NULL)));
 
 
-    int newCards = 0;
-    int discarded = 1;
+    //int newCards = 0;
+    //int discarded = 1;
     //int xtraCoins = 0;
     //int shuffledCards = 0;
     //int numBuys = 0;
@@ -67,7 +67,7 @@ int main() {
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers = 3;
-    //int player = 0;
+    int player = 0;
    
     int passedTestCount = 0, handCountFail = 0, deckCountFail = 0, coinCountFail =  0, whoseTurnFail = 0,
         numActionsFail = 0, numBuysFail = 0, playedCardFail = 0;
@@ -89,7 +89,7 @@ int main() {
          initializeGame(numPlayers, k, seed, &G);
 
          //add cards to deck, hand and discard vary number of players
-         int player, positionToAddCard, testDeckSize, passed = 1;
+         int positionToAddCard, testDeckSize, passed = 1;
 
          testDeckSize = randomInt(MAX_DECK);
 
