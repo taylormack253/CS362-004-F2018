@@ -59,7 +59,7 @@ int main() {
     init_randomNumbers();
 
     for(i = 0; i < TESTRUNS; i++) {
-        printf("----------------- Adventurer Test Number %d ----------------\n\n", (i + 1);
+        printf("----------------- Adventurer Test Number %d ----------------\n\n", (i + 1));
 
         numPlayers = randomInt(3) + 2;
         initializeGame(numPlayers, k, seed, &G);
