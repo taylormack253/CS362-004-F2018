@@ -1,4 +1,4 @@
-// randomtestcard1.c
+// randomtestcard2.c
 // By: William Taylor Mack
 // CS362 Assignment-4
 
@@ -8,108 +8,168 @@
 #include <stdio.h>
 #include <assert.h>
 #include "rngs.h"
+//#include "assertCustom.h"
 #include <stdlib.h>
+#include <tgmath.h>
 #include <time.h>
+#define TESTCARD "smithy"
+#define TESTRUNS 80
+#define TESTRUNS_SIZE (TESTRUNS * MAX_DECK * MAX_PLAYERS * 10)
+#define DEBUG 0
 
+static double randomNumbers[TESTRUNS * MAX_DECK * MAX_PLAYERS * 10];
+static int positionInRandomNumbers = 0;
 
-int main(int argc, char** argv) {
-    struct gameState G;
-    //int seed = 1000;
-    int numPlayers = 2;
-    int player = 0;
-    int k[10] = {adventurer, great_hall, village, minion, mine, cutpurse,
-                 sea_hag, tribute, smithy, council_room}; 
-    int deckSize;
-    int handSize;
-    int handPos;
-    int deckBefore;
-    int deckAfter;
-    int handBefore;
-    int handAfter;
-    int discardBefore;
-    int discardAfter;
+void init_randomNumbers(){
     int i;
-    int deckFailure = 0;
-    int handFailure = 0;
-    int discardFailure = 0;
-    int testPassed = 0;
-    int passed;
-    int choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-    
-    srand(time(NULL));
- 
-    for(i = 0; i < 10; i++){
+    for(i = 0; i < TESTRUNS_SIZE; i++){
 
-        initializeGame(numPlayers, k, atoi(argv[1]), &G);
+    randomNumbers[i] = Random();
 
-        // set random deck size
-        deckSize = rand() % (MAX_DECK + 1);
-        
-        // set random handsize
-        handSize = rand() % (deckSize + 1);
-      
-
-
-        
-        G.deckCount[0] = deckSize - handSize;
-        G.handCount[0] = handSize;
-
-        handPos = G.hand[player][G.handCount[player] - 1];
-        //personal checks
-        deckBefore = G.deckCount[0];
-        //printf("deck before %d\n", deckBefore);
-        handBefore = G.handCount[0];
-        //printf("Hand before %d\n",handBefore);
-        discardBefore = G.playedCardCount;
-        //printf("Discard before %d\n", discardBefore);
-        
-        
-        //smithyEffect(handPos, player, &G);
-        cardEffect(smithy, choice1, choice2, choice3, &G, handPos, &bonus);
-        
-        deckAfter = G.deckCount[0];
-        //printf("deck after %d\n", deckAfter);
-        handAfter = G.handCount[0];
-        //printf("hand After %d\n", handAfter);
-        discardAfter = G.playedCardCount;
-        //printf("Discard After %d\n\n", discardAfter);
-        
-        passed = 1;
-        
-        // test 2 cards are drawn
-        if(handAfter != (handBefore + 2)){
-            printf("Incorrect amount of cards drawn: Test Failed\n\n");
-            handFailure++;
-            passed = 0;
-        }
-        
-        // test 3 cards are removed from the deck
-        if(deckAfter != (deckBefore - 3)){
-            printf("Incorrect number of cards removed from deck: Test Failed\n\n");
-            deckFailure++;
-            passed = 0;
-        }
-        
-        // test 1 card was discarded
-        if(discardAfter != (discardBefore + 1)){
-            printf("Smithy Not Discarded after use: Test Failed\n\n");
-            discardFailure++;
-            passed = 0;
-        }
-        
-        // all tests passed
-        if(passed == 1){
-            printf("All Tests Passed!!\n\n");
-            testPassed++;
-        }
-        
     }
-        
-    // Print test results
-   printf("\n\n");
-   printf("# of Tests Passed: %d\n", testPassed);
-   printf("# of Cards Drawn To Hand Failed: %d\n", handFailure);
-   printf("# of Smithy Discarded Fails: %d\n\n", discardFailure);        
-   
-   return 0;
+
+}
+
+int randomInt(int intMax){
+  // int random = (int) (Random() * intMax);
+   int random = (int)(intMax * randomNumbers[positionInRandomNumbers++]);
+    if(DEBUG){printf("Random Number: %d\t", random);}
+    return random;
+}
+
+void assertCustom(int boolean, char * passMsg, char * failMsg){
+
+    if(boolean == TRUE){
+
+        printf("TEST PASSED: %s\n", passMsg );
+    }
+    if(boolean == FALSE){
+
+        printf("TEST FAILED: %s\n", failMsg );
+    }
+}
+
+int main() {
+    srand((unsigned int)(time(NULL)));
+
+
+    int newCards = 0;
+    int discarded = 1;
+    int xtraCoins = 0;
+    int shuffledCards = 0;
+    int numBuys = 0;
+    int numActions =0;
+    int minimumHandSize = 5;
+
+    int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+    int seed = 1000;
+    int numPlayers = 3;
+    int thisPlayer = 0;
+    struct gameState G, testG;
+    int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+                 sea_hag, tribute, smithy, council_room};
+
+    // initialize a game state and player cards
+
+    int i;
+
+    init_randomNumbers();
+
+    for(i = 0; i < TESTRUNS; i++) {
+        printf("----------------- Test Number %d, Card: %s (ONLY FAILURES PRINTED)----------------\n", i,  TESTCARD);
+         //numPlayers = randomInt(numPlayers) + 2;
+         numPlayers = rand() % 4 + 2;
+         initializeGame(numPlayers, k, seed, &G);
+
+         //add cards to deck, hand and discard vary number of players
+         int player, positionToAddCard, testDeckSize;
+
+         testDeckSize = randomInt(MAX_DECK);
+
+         for (player = 0; player < numPlayers; player++) {
+
+             G.deckCount[player] = randomInt(testDeckSize);
+             testDeckSize -= G.deckCount[player];
+
+             for (positionToAddCard = 0; positionToAddCard < G.deckCount[player]; positionToAddCard++) {
+
+                 G.deck[player][positionToAddCard] = randomInt(NUM_CARDS);
+
+
+             }
+         }
+
+
+         for (player = 0; player < numPlayers; player++) {
+
+             G.handCount[player] = randomInt(testDeckSize);
+             testDeckSize -= G.handCount[player];
+
+
+             for (positionToAddCard = 0; positionToAddCard < G.handCount[player]; positionToAddCard++) {
+
+                 G.hand[player][positionToAddCard] = randomInt(NUM_CARDS);
+
+
+             }
+
+         }
+
+
+         for (player = 0; player < numPlayers; player++) {
+
+             G.discardCount[player] = testDeckSize;
+
+             for (positionToAddCard = 0; positionToAddCard < G.discardCount[player]; positionToAddCard++) {
+
+                 G.discard[player][positionToAddCard] = randomInt(NUM_CARDS);
+
+
+             }
+         }
+
+        if(handpos < G.handCount[player]){
+            G.hand[thisPlayer][handpos] = smithy;
+        }
+        else{
+            G.hand[thisPlayer][0] = smithy;
+        }
+
+
+         memcpy(&testG, &G, sizeof(struct gameState));
+
+
+         newCards = 3;
+         xtraCoins = 0;
+         shuffledCards = 0;
+         if (testG.deckCount[thisPlayer] <= newCards) {
+
+             shuffledCards = testG.discardCount[thisPlayer];
+
+         }
+
+
+         cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
+
+
+        assertCustom(testG.handCount[thisPlayer] == G.handCount[thisPlayer] + newCards - discarded, "Player receives 3 cards",
+                     player does NOT recive 3 cards);
+        /*if(testG.handCount[thisPlayer] != G.handCount[thisPlayer] + newCards - discarded){
+            printf("TEST FAILED: player does NOT recive 3 cards");
+        }
+        else
+            printf("TEST PASSED: Player receives 3 cards");
+*/
+         assertCustom(testG.deckCount[thisPlayer] == G.deckCount[thisPlayer] - newCards + shuffledCards,
+                      "Cards came from Player 1's deck", "Cards DID NOT come from Player 1's deck or incorrect number of cards drawn");
+         assertCustom(testG.coins == G.coins + xtraCoins, "No extra coins received","Extra coins recieved");
+         assertCustom(testG.whoseTurn == G.whoseTurn, "Same Players Turn", "NOT same players turn");
+         assertCustom(testG.numActions == G.numActions, "Number of actions same", "Number of actions changed");
+         assertCustom(testG.numBuys == G.numBuys, "Number of buys same", "Number of buys changed");
+         assertCustom(testG.playedCardCount == G.playedCardCount + discarded, "1 card played", "Played card count incorrect");
+         //assertGameState(thisPlayer + 1, &G, &testG);
+
+    }
+
+    return 0;
 }
