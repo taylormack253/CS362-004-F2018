@@ -147,13 +147,6 @@ int main() {
 
 
          newCards = 3;
-         
-         if (testG.deckCount[player] <= newCards) {
-
-             shuffledCards = testG.discardCount[player];
-
-         }
-
 
          cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
 
@@ -161,13 +154,13 @@ int main() {
 
 
         // test player receives 3 cards
-        if(testG.handCount[player] != G.handCount[player] + newCards - discarded){
+        if(testG.handCount[player] != G.handCount[player] + 3 - 1){
             printf("TEST FAILED: player does NOT recive 3 cards\n\n");
             handCountFail++;
             passed = 0;
         }
         // test cards came from players deck
-        if(testG.deckCount[player] != G.deckCount[player] - newCards){
+        if(testG.deckCount[player] != G.deckCount[player] - 3){
             printf("TEST FAILED: Cards DID NOT come from player's deck or incorrect number of cards drawn\n\n");
             deckCountFail++;
             passed = 0;
@@ -197,7 +190,7 @@ int main() {
             passed = 0;
         } 
         // test played card count
-        if(testG.playedCardCount != G.playedCardCount + discarded){
+        if(testG.playedCardCount != G.playedCardCount + 1){
             printf("TEST FAILED: Played card count incorrect\n\n");
             playedCardFail++;
             passed = 0;
