@@ -1,7 +1,9 @@
+package test;
 
 
 import junit.framework.TestCase;
-
+import src.UrlValidator;
+import java.util.Random;
 
 
 public class UrlValidatorTest extends TestCase {
@@ -66,4 +68,5 @@ public class UrlValidatorTest extends TestCase {
    
 
 
+   }
 }

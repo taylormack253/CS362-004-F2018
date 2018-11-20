@@ -1,3 +1,4 @@
+package src;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -1201,7 +1202,7 @@ public class DomainValidator implements Serializable {
         "sex", // sex ICM Registry SX LLC
         "sexy", // sexy Uniregistry, Corp.
         "sfr", // sfr Societe Francaise du Radiotelephone - SFR
-        "shangrila", // shangrila Shangri‐La International Hotel Management Limited
+        "shangrila", // shangrila Shangri�?La International Hotel Management Limited
         "sharp", // sharp Sharp Corporation
         "shaw", // shaw Shaw Cablesystems G.P.
         "shell", // shell Shell Information Technology International Inc
@@ -1418,23 +1419,23 @@ public class DomainValidator implements Serializable {
         "xn--3oq18vl8pn36a", // 大众汽车 Volkswagen (China) Investment Co., Ltd.
         "xn--3pxu8k", // 点看 VeriSign Sarl
         "xn--42c2d9a", // คอม VeriSign Sarl
-        "xn--45q11c", // 八卦 Zodiac Scorpio Limited
+        "xn--45q11c", // 八�?� Zodiac Scorpio Limited
         "xn--4gbrim", // موقع Suhub Electronic Establishment
         "xn--55qw42g", // 公益 China Organizational Name Administration Center
-        "xn--55qx5d", // 公司 Computer Network Information Center of Chinese Academy of Sciences （China Internet Network Information Center）
-        "xn--5su34j936bgsg", // 香格里拉 Shangri‐La International Hotel Management Limited
+        "xn--55qx5d", // 公�?� Computer Network Information Center of Chinese Academy of Sciences （China Internet Network Information Center）
+        "xn--5su34j936bgsg", // 香格里拉 Shangri�?La International Hotel Management Limited
         "xn--5tzm5g", // 网站 Global Website TLD Asia Limited
         "xn--6frz82g", // 移动 Afilias Limited
         "xn--6qq986b3xl", // 我爱你 Tycoon Treasure Limited
-        "xn--80adxhks", // москва Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)
+        "xn--80adxhks", // мо�?ква Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)
         "xn--80aqecdr1a", // католик Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)
         "xn--80asehdb", // онлайн CORE Association
-        "xn--80aswg", // сайт CORE Association
-        "xn--8y0a063a", // 联通 China United Network Communications Corporation Limited
+        "xn--80aswg", // �?айт CORE Association
+        "xn--8y0a063a", // �?�通 China United Network Communications Corporation Limited
         "xn--90ae", // бг Imena.BG Plc (NAMES.BG Plc)
-        "xn--9dbq2a", // קום VeriSign Sarl
+        "xn--9dbq2a", // קו�? VeriSign Sarl
         "xn--9et52u", // 时尚 RISE VICTORY LIMITED
-        "xn--9krt00a", // 微博 Sina Corporation
+        "xn--9krt00a", // 微�?� Sina Corporation
         "xn--b4w605ferd", // 淡马锡 Temasek Holdings (Private) Limited
         "xn--bck1b9a5dre4c", // ファッション Amazon Registry Services, Inc.
         "xn--c1avg", // орг Public Interest Registry
@@ -1444,15 +1445,15 @@ public class DomainValidator implements Serializable {
         "xn--czr694b", // 商标 HU YI GLOBAL INFORMATION RESOURCES(HOLDING) COMPANY.HONGKONG LIMITED
         "xn--czrs0t", // 商店 Wild Island, LLC
         "xn--czru2d", // 商城 Zodiac Aquarius Limited
-        "xn--d1acj3b", // дети The Foundation for Network Initiatives “The Smart Internet”
-        "xn--eckvdtc9d", // ポイント Amazon Registry Services, Inc.
-        "xn--efvy88h", // 新闻 Xinhua News Agency Guangdong Branch 新华通讯社广东分社
+        "xn--d1acj3b", // дети The Foundation for Network Initiatives “The Smart Internet�?
+        "xn--eckvdtc9d", // �?イント Amazon Registry Services, Inc.
+        "xn--efvy88h", // 新闻 Xinhua News Agency Guangdong Branch 新�?�通讯社广东分社
         "xn--estv75g", // 工行 Industrial and Commercial Bank of China Limited
         "xn--fct429k", // 家電 Amazon Registry Services, Inc.
         "xn--fhbei", // كوم VeriSign Sarl
         "xn--fiq228c5hs", // 中文网 TLD REGISTRY LIMITED
         "xn--fiq64b", // 中信 CITIC Group Corporation
-        "xn--fjq720a", // 娱乐 Will Bloom, LLC
+        "xn--fjq720a", // 娱�? Will Bloom, LLC
         "xn--flw351e", // 谷歌 Charleston Road Registry Inc.
         "xn--fzys8d69uvgm", // 電訊盈科 PCCW Enterprises Limited
         "xn--g2xx48c", // 购物 Minds + Machines Group Limited
@@ -1460,11 +1461,11 @@ public class DomainValidator implements Serializable {
         "xn--gk3at1e", // 通販 Amazon Registry Services, Inc.
         "xn--hxt814e", // 网店 Zodiac Libra Limited
         "xn--i1b6b1a6a2e", // संगठन Public Interest Registry
-        "xn--imr513n", // 餐厅 HU YI GLOBAL INFORMATION RESOURCES (HOLDING) COMPANY. HONGKONG LIMITED
+        "xn--imr513n", // �?厅 HU YI GLOBAL INFORMATION RESOURCES (HOLDING) COMPANY. HONGKONG LIMITED
         "xn--io0a7i", // 网络 Computer Network Information Center of Chinese Academy of Sciences （China Internet Network Information Center）
         "xn--j1aef", // ком VeriSign Sarl
         "xn--jlq61u9w7b", // 诺基亚 Nokia Corporation
-        "xn--jvr189m", // 食品 Amazon Registry Services, Inc.
+        "xn--jvr189m", // 食�? Amazon Registry Services, Inc.
         "xn--kcrx77d1x4a", // 飞利浦 Koninklijke Philips N.V.
         "xn--kpu716f", // 手表 Richemont DNS Inc.
         "xn--kput3i", // 手机 Beijing RITT-Net Technology Development Co., Ltd
@@ -1481,23 +1482,23 @@ public class DomainValidator implements Serializable {
         "xn--ngbe9e0a", // بيتك Kuwait Finance House
         "xn--nqv7f", // 机构 Public Interest Registry
         "xn--nqv7fs00ema", // 组织机构 Public Interest Registry
-        "xn--nyqy26a", // 健康 Stable Tone Limited
-        "xn--p1acf", // рус Rusnames Limited
-        "xn--pbt977c", // 珠宝 Richemont DNS Inc.
+        "xn--nyqy26a", // �?�康 Stable Tone Limited
+        "xn--p1acf", // ру�? Rusnames Limited
+        "xn--pbt977c", // �?��? Richemont DNS Inc.
         "xn--pssy2u", // 大拿 VeriSign Sarl
-        "xn--q9jyb4c", // みんな Charleston Road Registry Inc.
+        "xn--q9jyb4c", // �?�ん�?� Charleston Road Registry Inc.
         "xn--qcka1pmc", // グーグル Charleston Road Registry Inc.
         "xn--rhqv96g", // 世界 Stable Tone Limited
-        "xn--rovu88b", // 書籍 Amazon EU S.à r.l.
-        "xn--ses554g", // 网址 KNET Co., Ltd
+        "xn--rovu88b", // 書�? Amazon EU S.à r.l.
+        "xn--ses554g", // 网�?� KNET Co., Ltd
         "xn--t60b56a", // 닷넷 VeriSign Sarl
         "xn--tckwe", // コム VeriSign Sarl
         "xn--tiq49xqyj", // 天主教 Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)
-        "xn--unup4y", // 游戏 Spring Fields, LLC
+        "xn--unup4y", // 游�? Spring Fields, LLC
         "xn--vermgensberater-ctb", // VERMöGENSBERATER Deutsche Vermögensberatung Aktiengesellschaft DVAG
         "xn--vermgensberatung-pwb", // VERMöGENSBERATUNG Deutsche Vermögensberatung Aktiengesellschaft DVAG
-        "xn--vhquv", // 企业 Dash McCook, LLC
-        "xn--vuq861b", // 信息 Beijing Tele-info Network Technology Co., Ltd.
+        "xn--vhquv", // �?业 Dash McCook, LLC
+        "xn--vuq861b", // 信�?� Beijing Tele-info Network Technology Co., Ltd.
         "xn--w4r85el8fhu5dnra", // 嘉里大酒店 Kerry Trading Co. Limited
         "xn--w4rs40l", // 嘉里 Kerry Trading Co. Limited
         "xn--xhq521b", // 广东 Guangzhou YU Wei Information Technology Co., Ltd.
@@ -1774,21 +1775,21 @@ public class DomainValidator implements Serializable {
         "xn--45brj9c", // ভারত National Internet Exchange of India
         "xn--54b7fta0cc", // বাংলা Posts and Telecommunications Division
         "xn--80ao21a", // қаз Association of IT Companies of Kazakhstan
-        "xn--90a3ac", // срб Serbian National Internet Domain Registry (RNIDS)
+        "xn--90a3ac", // �?рб Serbian National Internet Domain Registry (RNIDS)
         "xn--90ais", // ??? Reliable Software Inc.
-        "xn--clchc0ea0b2g2a9gcd", // சிங்கப்பூர் Singapore Network Information Centre (SGNIC) Pte Ltd
+        "xn--clchc0ea0b2g2a9gcd", // சிங�?கப�?பூர�? Singapore Network Information Centre (SGNIC) Pte Ltd
         "xn--d1alf", // мкд Macedonian Academic Research Network Skopje
         "xn--e1a4c", // ею EURid vzw/asbl
         "xn--fiqs8s", // 中国 China Internet Network Information Center
         "xn--fiqz9s", // 中國 China Internet Network Information Center
-        "xn--fpcrj9c3d", // భారత్ National Internet Exchange of India
-        "xn--fzc2c9e2c", // ලංකා LK Domain Registry
+        "xn--fpcrj9c3d", // భారత�? National Internet Exchange of India
+        "xn--fzc2c9e2c", // ලංක�? LK Domain Registry
         "xn--gecrj9c", // ભારત National Internet Exchange of India
         "xn--h2brj9c", // भारत National Internet Exchange of India
         "xn--j1amh", // укр Ukrainian Network Information Centre (UANIC), Inc.
         "xn--j6w193g", // 香港 Hong Kong Internet Registration Corporation Ltd.
-        "xn--kprw13d", // 台湾 Taiwan Network Information Center (TWNIC)
-        "xn--kpry57d", // 台灣 Taiwan Network Information Center (TWNIC)
+        "xn--kprw13d", // �?�湾 Taiwan Network Information Center (TWNIC)
+        "xn--kpry57d", // �?��?� Taiwan Network Information Center (TWNIC)
         "xn--l1acc", // мон Datacom Co.,Ltd
         "xn--lgbbat1ad8j", // الجزائر CERIST
         "xn--mgb9awbf", // عمان Telecommunications Regulatory Authority (TRA)
@@ -1811,11 +1812,11 @@ public class DomainValidator implements Serializable {
         "xn--s9brj9c", // ਭਾਰਤ National Internet Exchange of India
         "xn--wgbh1c", // مصر National Telecommunication Regulatory Authority - NTRA
         "xn--wgbl6a", // قطر Communications Regulatory Authority
-        "xn--xkc2al3hye2a", // இலங்கை LK Domain Registry
-        "xn--xkc2dl3a5ee0h", // இந்தியா National Internet Exchange of India
+        "xn--xkc2al3hye2a", // இலங�?கை LK Domain Registry
+        "xn--xkc2dl3a5ee0h", // இந�?தியா National Internet Exchange of India
         "xn--y9a3aq", // ??? Internet Society
-        "xn--yfro4i67o", // 新加坡 Singapore Network Information Centre (SGNIC) Pte Ltd
-        "xn--ygbi2ammx", // فلسطين Ministry of Telecom &amp; Information Technology (MTIT)
+        "xn--yfro4i67o", // 新加�?� Singapore Network Information Centre (SGNIC) Pte Ltd
+        "xn--ygbi2ammx", // �?لسطين Ministry of Telecom &amp; Information Technology (MTIT)
         "ye",                 // Yemen
         "yt",                 // Mayotte
         "za",                 // South Africa
