@@ -25,20 +25,15 @@ public class UrlValidatorTest extends TestCase {
       }
 
       if(assertionError != null)
-         System.out.printf("%s %s %n", statement, assertionError);
+         System.out.printf("Test Failed on (%b) URL: %s  (%b) found %n", boolOne, statement, boolTwo);
    }
    
    
    public void testManualTest()
    {
-	   System.out.println("Manual Test....");
+	   System.out.println("******************** Manual Testing ********************");
 	   
 	   String[] trueURLsTwoSlash = {
-	              "http://localhost/", // Typical with slash
-	              "http://machine/", // local address
-	              "http://localhost:8000", // with ports
-	              "ftp://localhost:8000",
-	              "http://machine:0",
 	              "http://www.google.com/test//testfile",
 	              "ftp://www.google.com/test//testfile",
 	              "ftp://www.google.com/file1//test2//test3"
@@ -65,9 +60,8 @@ public class UrlValidatorTest extends TestCase {
 	              "http://www.google.aaab", // bad TLD
 	              "http://www.google.jdifj", // bad TLD case
 	              "ftp://www.google.jdifj", // bad TLD cases
-
 	              "htp:/www.google.com/", // Incorrect Scheme Variations
-	              "http:/www.google.com/",
+	              "invalidhttp:/www.google.com/",
 	              "http:/www.google.com/#", //address with incorrect path option",
 	              "255.255.255.255", // no Scheme
 	              "http://256.256.256.256", // Impossible IP address
@@ -86,22 +80,35 @@ public class UrlValidatorTest extends TestCase {
 	              "ftp://www.google.com/file1//test2//test3"
 	      };
 	   
-	      // setup default UrlValudator with "http,https,ftp" as valid schemes
-	      UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_2_SLASHES);
+	      // setup default UrlValidator with "http,https,ftp" as valid schemes
+	      UrlValidator urlVal = new UrlValidator();
 	   
 	   	  // Run through the true URLs
+	      System.out.println("Test True URLs....");
 	      for(int i = 0; i < trueURLS.length; i++)
 	      {
 	         customAssert(trueURLS[i], true, urlVal.isValid(trueURLS[i]));
 	      }
-
+	      
 	      // Run through the false URLs
+	      System.out.println("Test False URLs....");
 	      for(int i = 0; i < falseURLS.length; i++)
 	      {
 	         customAssert(falseURLS[i], false, urlVal.isValid(falseURLS[i]));
 	      }
 	     
 	      
+	      UrlValidator urlValTwo = new UrlValidator(null, null, UrlValidator.ALLOW_2_SLASHES);
+	      
+	      System.out.println("Test Two Slash URLs....");
+	      // Run through the true URLs with two slashes
+	      for(int i = 0; i < trueURLsTwoSlash.length; i++)
+	      {
+	         customAssert(trueURLsTwoSlash[i], true, urlValTwo.isValid(trueURLsTwoSlash[i]));
+	      }
+	      
+	      
+	      System.out.println("******************** End of Manual Testing *********************");
    }
    
    
@@ -120,15 +127,21 @@ public class UrlValidatorTest extends TestCase {
    
    public void testIsValid()
    {
-	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES );
-      Random rand = new Random();
+	   System.out.println("******************** Unit Testing *********************");
+	   //UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES );
+	   UrlValidator urlVal = new UrlValidator();
+       Random rand = new Random();
 
-      for (int i = 0; i < 10; i++) {
+       for (int i = 0; i < 10; i++) {
          // set random scheme
-         //String URL = URLHelpers.randomValidScheme(5);
+    	 
+    	 //String URL = URLHelpers.randomValidScheme(5);
          // lets start with just http
-         String URL = "http://";
+         String URL = "http";
 
+         //add separator
+         URL += "://";
+         
          // Generate random authority
          URL += URLHelpers.randomValidHost(rand.nextInt(20)+1);
 
@@ -162,7 +175,7 @@ public class UrlValidatorTest extends TestCase {
           }
    }
    
-
+       System.out.println("******************** End of Unit Testing *********************");
 
    }
 }
