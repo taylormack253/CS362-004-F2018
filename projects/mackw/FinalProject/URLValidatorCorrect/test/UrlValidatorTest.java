@@ -112,15 +112,74 @@ public class UrlValidatorTest extends TestCase {
    }
    
    
-   public void testYourFirstPartition()
+   public void testFirstPartition()
    {
-	  //You can use this function to implement your First Partition testing	   
+	   System.out.println("******************** First Partition Testing ********************");
+	  //First partition is a case where a URL scheme does matches a list of provided schemes.
+	   String[] schemes = {
+			   "http",
+			   "ftp"
+	   };
+	   
+	   String[] validURLs = {
+			   "http://www.site.com",
+			   "ftp://www.go.com",
+			   "HTTP://www.web.com" //Schemes are case insensitive
+	   };
+	   
+	   UrlValidator urlVal = new UrlValidator(schemes);
 
+	   //Run through the valid URLs
+	   for (int i = 0; i < validURLs.length; i++)
+	   {
+		   customAssert(validURLs[i], true, urlVal.isValid(validURLs[i]));
+	   }
+	   
+	   System.out.println("******************** End of First Partition Testing ********************");
    }
    
-   public void testYourSecondPartition(){
-		//You can use this function to implement your Second Partition testing	   
-
+   public void testSecondPartition(){
+	   System.out.println("******************** Second Partition Testing ********************");
+		//Second partition is a case where the path segments are separated by 2 forward slashes ALLOW_2_SLASHES
+	   
+	   String[] validURLs = {
+			   "http://www.go.com//first/second",
+			   "http://www.gooogle.net/first//second",
+			   "http://www.netspace.us/first//second/",
+			   "http://www.site.com//first//second//"
+	   };
+	   
+	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_2_SLASHES);
+	   
+	   // Run through the valid URLs
+	   for (int i = 0; i < validURLs.length; i++)
+	   {
+		   customAssert(validURLs[i], true, urlVal.isValid(validURLs[i]));
+	   }
+	   
+	   System.out.println("******************** End of Second Partition Testing ********************");
+   }
+   
+   public void testThirdPartition()
+   {
+	   System.out.println("******************** Third Partition Testing ********************");
+	   //Third partition is a case where the scheme does not match one of the default schemes, but ALLOW_ALL_SCHEMES
+	   // is configured.
+	   
+	   String[] validURLs = {
+			   "ht3://www.web.net",
+			   "utf://www.site.org"
+	   };
+	   
+	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+	   
+	   //Run through the valid URLs
+	   for (int i = 0; i < validURLs.length; i++)
+	   {
+		   customAssert(validURLs[i], true, urlVal.isValid(validURLs[i]));
+	   }
+	   
+	   System.out.println("******************** End of Third Partition Testing ********************");
    }
    
    //You need to create more test cases for your Partitions if you need to 
@@ -131,8 +190,9 @@ public class UrlValidatorTest extends TestCase {
 	   //UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES );
 	   UrlValidator urlVal = new UrlValidator();
        Random rand = new Random();
+       
 
-       for (int i = 0; i < 10; i++) {
+       for (int i = 0; i < 100; i++) {
          // set random scheme
     	 
     	 //String URL = URLHelpers.randomValidScheme(5);
@@ -158,7 +218,7 @@ public class UrlValidatorTest extends TestCase {
          URL += URLHelpers.randomValidQuery(rand.nextInt(30));
 
          // print URL
-         System.out.printf("URL # %d: %s %n",i + 1, URL);
+         //System.out.printf("URL # %d: %s %n",i + 1, URL);
 
          
          try {
@@ -168,13 +228,12 @@ public class UrlValidatorTest extends TestCase {
              boolean actual = urlVal.isValid(URL);
              // check results match
              customAssert(URL, expected, actual);
-             //if (expected != actual) deltaDebug(URL);
           } catch (Exception e) {
              //e.printStackTrace();
              System.out.printf("Caused exception: %s %n",URL);
           }
    }
-   
+       
        System.out.println("******************** End of Unit Testing *********************");
 
    }
